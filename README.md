@@ -23,7 +23,7 @@ In this repository I will gather all the relevant information to the project.
 - Find a Dataset to Address a Problem You’re Curious About:
   1.See other people’s data science projects:
     - [Towards Data Science blog](https://towardsdatascience.com/)
-    - [Kaggle Kernels](https://towardsdatascience.com/)
+    - [Kaggle Kernels](https://www.kaggle.com/kernels)
     
   2.Generate project ideas is to find datasets that interest you:
     - [Google Dataset Search Tool](https://toolbox.google.com/datasetsearch)
