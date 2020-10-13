@@ -13,7 +13,7 @@ In this repository I will gather all the relevant information to the project.
       - Industrial Internet – a digital network that connects machines like jet engines to software and the data cloud
       - With airline profit margins often at just 2 percent of operating expenses, being fuel-efficient is critical → Fuel amounts to more than 20 percent of the average airline’s operating expenses
       - Using FES to manage fuel can reduce annual fuel costs by as much as 2 percent → For example, in 2014, Southwest spent $5.27 billion to buy fuel, meaning the FES system could identify potential fuel-cost savings of up to $105 million each year.
-    - AI and big data anayltics → real-time predictive pricing offers
+  - AI and big data anayltics → real-time predictive pricing offers
 
 
 ## Building up your Data Scientist portfolio
@@ -21,6 +21,7 @@ In this repository I will gather all the relevant information to the project.
 - Talking to Data Scientists
 - Reading Job Postings of Your Dream Job → Make sure to find multiple options you are interested in
 - Find a Dataset to Address a Problem You’re Curious About:
+
   1.See other people’s data science projects:
     - [Towards Data Science blog](https://towardsdatascience.com/)
     - [Kaggle Kernels](https://www.kaggle.com/kernels)
