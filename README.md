@@ -14,6 +14,8 @@ In this repository I will gather all the relevant information to the project.
       - With airline profit margins often at just 2 percent of operating expenses, being fuel-efficient is critical → Fuel amounts to more than 20 percent of the average airline’s operating expenses
       - Using FES to manage fuel can reduce annual fuel costs by as much as 2 percent → For example, in 2014, Southwest spent $5.27 billion to buy fuel, meaning the FES system could identify potential fuel-cost savings of up to $105 million each year.
   - AI and big data anayltics → real-time predictive pricing offers
+  
+**2) Salaries in the field of Data Science**
 
 
 ## Building up your Data Scientist portfolio
@@ -26,7 +28,7 @@ In this repository I will gather all the relevant information to the project.
     - [Towards Data Science blog](https://towardsdatascience.com/)
     - [Kaggle Kernels](https://www.kaggle.com/kernels)
     
-  2.Generate project ideas is to find datasets that interest you:
+  2.Generate project ideas by finding datasets that interest you:
     - [Google Dataset Search Tool](https://toolbox.google.com/datasetsearch)
     - [Reddit Datasets Thread](https://www.reddit.com/r/datasets/)
     - [Awesome Github Repository With a List of Datasets](https://github.com/awesomedata/awesome-public-datasets)
