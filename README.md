@@ -5,6 +5,8 @@ In this repository I will gather all the relevant information to the project.
 
 ## Preliminary ideas
 **1) Aviation industry:**
+
+According to one of the reports by Mckinsey, travel companies and airlines, in particular, have 23x greater likelihood of customer acquisition, 6x customer retention, and 19x larger likelihood of profitability if they have robust data strategies.
   - Predictive aircraft maintenance:
     - [Aviation Maintenance and Reliability Solutions](https://www.geaviation.com/digital/maintenance-and-reliability-services?_ga=2.250629251.40484306.1608470316-79699041.1601919222):
       - Most pressing aintenance challenges:
