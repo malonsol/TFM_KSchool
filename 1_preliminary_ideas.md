@@ -2,7 +2,7 @@
 **1) Aviation industry:**
 
 According to one of the reports by Mckinsey, travel companies and airlines, in particular, have 23x greater likelihood of customer acquisition, 6x customer retention, and 19x larger likelihood of profitability if they have robust data strategies.
-  - Fuel consumption optimization:
+  1. Fuel consumption optimization:
     - In-house solutions based on company data → companies will highly likely be reluctant to sharing data
     - [How Big Data and the Industrial Internet Can Help Southwest Save $100 Million on Fuel](https://www.ge.com/news/reports/big-data-industrial-internet-can-help-southwest-save-100-million-fuel) → use its flight analytics system to improve fuel consumption for its fleet of more than 700 Boeing 737s
       - GE’s Flight Efficiency Services (FES) unit
@@ -24,8 +24,8 @@ According to one of the reports by Mckinsey, travel companies and airlines, in p
         - RNP-AR Precision Guided Approaches, distance savings: 15 miles per landing
         - Arrival ground track, fuel savings: 21 kg
         - Reduced flap / Idle reverse, fuel savings: 17kg
-  - Cost of turbulence alone to airlines → $100M per year for the sector
-  - Predictive aircraft maintenance ([AOG incidents alone incur $150,000 per hour in maintenance cost](https://ww2.jeppesen.com/wp-content/uploads/2020/10/BGS.DSA_.Infographic.Final_.pdf)):
+  2. Cost of turbulence alone to airlines → $100M per year for the sector
+  3. Predictive aircraft maintenance ([AOG incidents alone incur $150,000 per hour in maintenance cost](https://ww2.jeppesen.com/wp-content/uploads/2020/10/BGS.DSA_.Infographic.Final_.pdf)):
     - [Aviation Maintenance and Reliability Solutions](https://www.geaviation.com/digital/maintenance-and-reliability-services?_ga=2.250629251.40484306.1608470316-79699041.1601919222):
       - Most pressing aintenance challenges:
         - Poor data visibility and insights
@@ -33,8 +33,8 @@ According to one of the reports by Mckinsey, travel companies and airlines, in p
         - Investigating and prioritizing maintenance issues
         - Ineffective maintenance fixes
       - Take maintenance from unplanned to planned
-  - AI and big data anayltics → real-time predictive pricing offers
-  - [AI and Data Science in Aviation Industry: 5 Real-life Use Cases](https://www.youtube.com/watch?v=D8NlYPtPgwA&ab_channel=AltexSoft)
+  4. AI and big data anayltics → real-time predictive pricing offers
+  5. [AI and Data Science in Aviation Industry: 5 Real-life Use Cases](https://www.youtube.com/watch?v=D8NlYPtPgwA&ab_channel=AltexSoft)
     * Revenue management → Understanding traveler demands and pricing flights : city pairs, time of the week/day, holidays, seasonality, events, demographics, fuel price...
     * Aviation Rank by *predict HQ* matches historical flight bookings with event data to reveal how much a given event may affect traveler demand
     * Demand for food items in cabin depending on the route (*easyjet*)
