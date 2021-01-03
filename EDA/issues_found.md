@@ -1,4 +1,7 @@
-1. B43_inventory:
+## Airline_On_Time_Performance:
+  - Very useful information with Flights as the aggregation level. However, for since I'm interested in a **Fuel Consumption Regressor** and **Delay Classifier**, I'd also need data about each flight's fuel.
+
+## B43_inventory:
   - Too many MANUFACTURER values, many of which are essentially the same: compliacated cleaning.
   - Same issue with MODEL values, but with a whole lot more different values.
   
