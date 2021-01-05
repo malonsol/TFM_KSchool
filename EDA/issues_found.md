@@ -45,7 +45,8 @@
     - **Fuel Consumption Regressor**
     - **Delay Classifier**
 - **Long-term milestones:**
-  - Identify relevant insights and conclusions to include later on in an eye-catchy, user-friendly frontend.
+  - Identify relevant insights and conclusions to include later on in an eye-catchy, user-friendly frontend (Streamlit?)
+  - Include interactive maps like [these ones with Altair](https://altair-viz.github.io/gallery/airport_connections.html)
 - Further exploration:
   - [P52_op_expenses_US_certified](https://www.transtats.bts.gov/Fields.asp?Table_ID=297&SYS_Table_Name=T_F41SCHEDULE_P52&User_Table_Name=Schedule%20P-5.2&Year_Info=1&First_Year=1990&Last_Year=2020&Rate_Info=0&Frequency=Quarterly&Data_Frequency=Annual,Quarterly) → Aggregation level: each record represents an A/C
     - Direct Operating Expense: Flying operations, Direct Maintenance, Depreciation, Amortization, ...
