@@ -1,0 +1,12 @@
+After the first tutorial session, the project has been reoriented:
+- Fuel consumption prediction will be disregarded due to:
+  - It is impossible to tackle without A/L data at low aggregation level (fligths).
+  - That topic has been broadly investigated, so there is not much room for improvement.
+- **Flight delays** will presumably be the central topic of the project:
+  - Is it better to address it in a numerical predictor (regressor), or a binomial classifier (yes/no, >15min)?
+  - Additional questions to cover, time permitting:
+    - When is the best time of day/day of week/time of year to fly to minimize delays?
+    - Do older planes suffer more delays?
+    - How does the number of people flying between different locations change over time?
+    - How well does weather predict plane delays?
+    - Can you detect cascading failures as delays in one airport create delays in others? Are there critical links in the system?
