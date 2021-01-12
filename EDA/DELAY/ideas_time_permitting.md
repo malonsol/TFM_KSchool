@@ -14,3 +14,4 @@
   - There are various ways to handle this:
     - A popular way is to use **cross-validation** and compute the means in each out-of-fold dataset.
     - Another approach which I much prefer is to use **additive smoothing**.
+- Which metric is the best to score the Delay Classifier (or Regressor)?
