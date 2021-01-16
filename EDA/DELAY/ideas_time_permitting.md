@@ -7,7 +7,11 @@
       - 'NAS_DELAY'
       - 'SECURITY_DELAY'
       - 'LATE_AIRCRAFT_DELAY'
-    
+
+# Visualization:
+- [US domestic flight delays by airport with Tableau](https://www.tableau.com/solutions/workbook/big-data-more-common-now-ever?utm_campaign_id=2017049&utm_campaign=Prospecting-ALL-ALL-ALL-ALL-ALL&utm_medium=Paid+Search&utm_source=Google+Search&utm_language=EN&utm_country=USCA&kw=&adgroup=CTX-Trial-Solutions-DSA&adused=DSA&matchtype=b&placement=&gclid=EAIaIQobChMIha-S96Kh7gIVh7HtCh3D5wYREAAYASAAEgIsBfD_BwE&gclsrc=aw.ds)
+
+
 # Model
 - [Target encoding done the right way](https://maxhalford.github.io/blog/target-encoding/):
   - The problem of target encoding has a name: **over-fitting**.
