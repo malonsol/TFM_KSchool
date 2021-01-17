@@ -31,3 +31,5 @@ A true picture of total weather-related delays requires several steps. First, th
 # Soruces
 
 ### [Airline Service Quality Performance 234 (On-Time performance data)](https://www.bts.dot.gov/browse-statistical-products-and-data/bts-publications/airline-service-quality-performance-234-time)
+
+### [TITLE 14 CODE OF FEDERAL REGULATIONS PARTS 234 - TECHNICAL REPORTING DIRECTIVE #27 - On-Time Disclosure Reports](https://www.bts.gov/sites/bts.dot.gov/files/docs/explore-topics-and-geography/topics/airlines-and-airports/207741/technical-directive-no-27-time-2018.pdf)
