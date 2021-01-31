@@ -1,0 +1,124 @@
+1) XGBoost_1:
+	- XGBoost baseline file
+	- Undersampling: balanced data
+	- Sample size: 1e4
+	- Training (70%) / Test (15%) / Validation (15%)
+	- RandomizedGridSearchCV
+	- parameters = {
+				"n_estimators":[100, 200, 300, 400, 500],
+				"max_depth": [4, 5, 6],
+				"learning_rate":[0.0001, 0.001, 0.01, 0.1],
+				"objective": ["binary:logistic"],
+				"booster":["gbtree"],
+				"tree_method":['auto']
+				 }
+    Results:
+		+ Scorer: make_scorer(f1_score, average=binary)
+		+ Best score: 0.6304209078469049
+		+ Best parameters: {'tree_method': 'auto', 'objective': 'binary:logistic', 'n_estimators': 300, 'max_depth': 4, 'learning_rate': 0.001, 'booster': 'gbtree'}
+		+ TEST / VALIDATION:
+			TEST dataset results
+			<class 'xgboost.sklearn.XGBClassifier'>
+			[[276 463]
+			 [191 570]]
+			F-beta (ß=2) =  0.699
+			F1 =            0.635
+			Recall =        0.749
+			Precision =     0.552
+			Accuracy =      0.564
+			--------------------------------------------------
+			VALIDATION dataset results
+			<class 'xgboost.sklearn.XGBClassifier'>
+			[[286 470]
+			 [188 556]]
+			F-beta (ß=2) =  0.695
+			F1 =            0.628
+			Recall =        0.747
+			Precision =     0.542
+			Accuracy =      0.561
+		
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+		
+2) XGBoost_2: [Pending to run]
+	Changes:
+	- GridSearchCV
+    Results:
+		+ 
+		+ 
+		+ 
+		+ TEST / VALIDATION:
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------		
+
+3) XGBoost_3: [Pending to run]
+	Changes:
+	- Sample size: 1e5
+    Results:
+		+ 
+		+ 
+		+ 
+		+ TEST / VALIDATION:
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------		
+
+4) XGBoost_4: [Pending to run]
+	Changes:
+	- Standard sampling: imbalanced data ("as is")
+    Results:
+		+ 
+		+ 
+		+ 
+		+ TEST / VALIDATION:
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------		
