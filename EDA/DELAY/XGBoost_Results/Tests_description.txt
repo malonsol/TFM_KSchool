@@ -1,9 +1,9 @@
-1) XGBoost_1:
+1) XGBoost_1: [DONE] [Time elapsed:  0h 21min 16s]
 	- XGBoost baseline file
 	- Undersampling: balanced data
 	- Sample size: 1e4
 	- Training (70%) / Test (15%) / Validation (15%)
-	- RandomizedGridSearchCV
+	- RandomizedGridSearchCV - 20min 45s
 	- parameters = {
 				"n_estimators":[100, 200, 300, 400, 500],
 				"max_depth": [4, 5, 6],
@@ -41,84 +41,184 @@
 		
 2) XGBoost_2: [Pending to run]
 	Changes:
-	- GridSearchCV
+	- GridSearchCV - 3h 25m 51s (Windows session was blocked)
     Results:
-		+ 
-		+ 
-		+ 
+		+ Scorer: make_scorer(f1_score, average=binary)
+		+ Best score: 0.659221378704391
+		+ Best parameters: {'booster': 'gbtree', 'learning_rate': 0.0001, 'max_depth': 4, 'n_estimators': 100, 'objective': 'binary:logistic', 'tree_method': 'auto'}
 		+ TEST / VALIDATION:
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+			TEST dataset results
+			<class 'xgboost.sklearn.XGBClassifier'>
+			[[181 594]
+			 [113 612]]
+			F-beta (ß=2) =  0.745
+			F1 =            0.634
+			Recall =        0.844
+			Precision =     0.507
+			Accuracy =      0.529
+			--------------------------------------------------
+			VALIDATION dataset results
+			<class 'xgboost.sklearn.XGBClassifier'>
+			[[169 553]
+			 [101 677]]
+			F-beta (ß=2) =  0.780
+			F1 =            0.674
+			Recall =        0.870
+			Precision =     0.550
+			Accuracy =      0.564
 		
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------		
 
-3) XGBoost_3: [Pending to run]
+3) XGBoost_3: [DONE] [Time elapsed:  3h 45min 18s]
 	Changes:
 	- Sample size: 1e5
+	- RandomizedGridSearchCV - 3h 44m 44s
     Results:
-		+ 
-		+ 
-		+ 
+		+ Scorer: make_scorer(f1_score, average=binary)
+		+ Best score: 0.6611090116305087
+		+ Best parameters: {'tree_method': 'auto', 'objective': 'binary:logistic', 'n_estimators': 100, 'max_depth': 4, 'learning_rate': 0.0001, 'booster': 'gbtree'}
 		+ TEST / VALIDATION:
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+			TEST dataset results
+			<class 'xgboost.sklearn.XGBClassifier'>
+			[[1905 5539]
+			 [1054 6502]]
+			F-beta (ß=2) =  0.769
+			F1 =            0.664
+			Recall =        0.861
+			Precision =     0.540
+			Accuracy =      0.560
+			--------------------------------------------------
+			VALIDATION dataset results
+			<class 'xgboost.sklearn.XGBClassifier'>
+			[[1938 5557]
+			 [1049 6456]]
+			F-beta (ß=2) =  0.768
+			F1 =            0.662
+			Recall =        0.860
+			Precision =     0.537
+			Accuracy =      0.560		
 		
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------		
 
 4) XGBoost_4: [Pending to run]
 	Changes:
 	- Standard sampling: imbalanced data ("as is")
+	- RandomizedGridSearchCV - 25m 8s
     Results:
-		+ 
-		+ 
-		+ 
+		+ Scorer: make_scorer(f1_score, average=binary)
+		+ Best score: 0.10920108487654409
+		+ Best parameters: {'tree_method': 'auto', 'objective': 'binary:logistic', 'n_estimators': 400, 'max_depth': 6, 'learning_rate': 0.1, 'booster': 'gbtree'}
 		+ TEST / VALIDATION:
+			TEST dataset results
+			<class 'xgboost.sklearn.XGBClassifier'>
+			[[1181   27]
+			 [ 280   12]]
+			F-beta (ß=2) =  0.050
+			F1 =            0.073
+			Recall =        0.041
+			Precision =     0.308
+			Accuracy =      0.795
+			--------------------------------------------------
+			VALIDATION dataset results
+			<class 'xgboost.sklearn.XGBClassifier'>
+			[[1157   34]
+			 [ 284   25]]
+			F-beta (ß=2) =  0.097
+			F1 =            0.136
+			Recall =        0.081
+			Precision =     0.424
+			Accuracy =      0.788
 		
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------		
+
+5) XGBoost_5: [Pending to run]
+	Changes:
+	- Sample size: 1e6
+	- RandomizedGridSearchCV - 3h 27m 28s → MemoryError
+    Results:
+		ERROR !!! → In the RandomizedGridSearchCV cell /// MemoryError: Unable to allocate 446. MiB for an array with shape (836, 560000) and data type uint8
 		
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------		
 		
+6) XGBoost_6: [DONE] [Time elapsed:  0h  4min  0s]
+	Changes:
+	- Without ORIGIN/DEST columns
+	- RandomizedGridSearchCV - 3m 36s
+    Results:
+		+ Scorer: make_scorer(f1_score, average=binary)
+		+ Best score: 0.617397366511522
+		+ Best parameters: {'tree_method': 'auto', 'objective': 'binary:logistic', 'n_estimators': 400, 'max_depth': 6, 'learning_rate': 0.001, 'booster': 'gbtree'}
+		+ TEST / VALIDATION:
+			TEST dataset results
+			<class 'xgboost.sklearn.XGBClassifier'>
+			[[334 392]
+			 [247 527]]
+			F-beta (ß=2) =  0.656
+			F1 =            0.623
+			Recall =        0.681
+			Precision =     0.573
+			Accuracy =      0.574
+			--------------------------------------------------
+			VALIDATION dataset results
+			<class 'xgboost.sklearn.XGBClassifier'>
+			[[348 414]
+			 [220 518]]
+			F-beta (ß=2) =  0.667
+			F1 =            0.620
+			Recall =        0.702
+			Precision =     0.556
+			Accuracy =      0.577
+	
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------		
 		
+7) XGBoost_7: [DONE] [Time elapsed:  0h 34min 43s]
+	Changes:
+	- Without ORIGIN/DEST columns
+	- Sample size: 1e5
+	- RandomizedGridSearchCV - 34m 16s
+    Results:
+		+ Scorer: make_scorer(f1_score, average=binary)
+		+ Best score: 0.6600308038399907
+		+ Best parameters: {'tree_method': 'auto', 'objective': 'binary:logistic', 'n_estimators': 500, 'max_depth': 4, 'learning_rate': 0.0001, 'booster': 'gbtree'}
+		+ TEST / VALIDATION:
+			TEST dataset results
+			<class 'xgboost.sklearn.XGBClassifier'>
+			[[1931 5544]
+			 [1026 6499]]
+			F-beta (ß=2) =  0.771
+			F1 =            0.664
+			Recall =        0.864
+			Precision =     0.540
+			Accuracy =      0.562
+			--------------------------------------------------
+			VALIDATION dataset results
+			<class 'xgboost.sklearn.XGBClassifier'>
+			[[1944 5605]
+			 [1023 6428]]
+			F-beta (ß=2) =  0.768
+			F1 =            0.660
+			Recall =        0.863
+			Precision =     0.534
+			Accuracy =      0.558
+	
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------		
 		
+6) XGBoost_6: [Pending to run]
+	Changes:
+	- Without ORIGIN/DEST columns
+	- RandomizedGridSearchCV - XXmin XXs
+    Results:
+
+		+ TEST / VALIDATION:
+	
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------		
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+6) XGBoost_6: [Pending to run]
+	Changes:
+	- Without ORIGIN/DEST columns
+	- RandomizedGridSearchCV - XXmin XXs
+    Results:
+
+		+ TEST / VALIDATION:
+	
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------		
