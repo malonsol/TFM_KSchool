@@ -203,13 +203,67 @@
 	
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------		
 		
-6) XGBoost_6: [Pending to run]
+8) XGBoost_8: [DONE] [Time elapsed:  5h 54min 10s]
 	Changes:
 	- Without ORIGIN/DEST columns
-	- RandomizedGridSearchCV - XXmin XXs
+	- Sample size: 1e6
+	- RandomizedGridSearchCV - 5h 52m 22s
     Results:
-
+		+ Scorer: make_scorer(f1_score, average=binary)
+		+ Best score: 0.660087254937907
+		+ Best parameters: {'tree_method': 'auto', 'objective': 'binary:logistic', 'n_estimators': 300, 'max_depth': 4, 'learning_rate': 0.0001, 'booster': 'gbtree'}
 		+ TEST / VALIDATION:
+			TEST dataset results
+			<class 'xgboost.sklearn.XGBClassifier'>
+			[[19456 55822]
+			 [10641 64081]]
+			F-beta (ß=2) =  0.765
+			F1 =            0.659
+			Recall =        0.858
+			Precision =     0.534
+			Accuracy =      0.557
+			--------------------------------------------------
+			VALIDATION dataset results
+			<class 'xgboost.sklearn.XGBClassifier'>
+			[[19547 55348]
+			 [10620 64485]]
+			F-beta (ß=2) =  0.767
+			F1 =            0.662
+			Recall =        0.859
+			Precision =     0.538
+			Accuracy =      0.560	
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------		
+		
+9) XGBoost_9: [DONE] [Time elapsed:  3h  5min 35s]
+	Changes:
+	- Without ORIGIN/DEST columns
+	- Sample size: 1e5
+	- GridSearchCV - 3h 4m 60s
+    Results:
+		+ Scorer: make_scorer(f1_score, average=binary)
+		+ Best score: 0.6512924499533008
+		+ Best parameters: {'booster': 'gbtree', 'learning_rate': 0.0001, 'max_depth': 4, 'n_estimators': 100, 'objective': 'binary:logistic', 'tree_method': 'auto'}
+		+ TEST / VALIDATION:
+			TEST dataset results
+			<class 'xgboost.sklearn.XGBClassifier'>
+			[[2325 5168]
+			 [1368 6139]]
+			F-beta (ß=2) =  0.743
+			F1 =            0.653
+			Recall =        0.818
+			Precision =     0.543
+			Accuracy =      0.564
+			--------------------------------------------------
+			VALIDATION dataset results
+			<class 'xgboost.sklearn.XGBClassifier'>
+			[[2194 5267]
+			 [1265 6274]]
+			F-beta (ß=2) =  0.752
+			F1 =            0.658
+			Recall =        0.832
+			Precision =     0.544
+			Accuracy =      0.565
 	
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------		
 		
