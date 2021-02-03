@@ -267,6 +267,38 @@
 	
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------		
 		
+10) XGBoost_10: [DONE] [Time elapsed:  4h  5min 37s]
+	Changes:
+	- Without ORIGIN/DEST columns
+	- Sample size: ALL (~ 7e6)	
+	- "No GridSearchCV technique": parameter grid with only one set of options - 3h 25m 4s
+    Results:
+		+ Scorer: make_scorer(f1_score, average=binary)
+		+ Best score: 0.6606335363063738
+		+ Best parameters: {'booster': 'gbtree', 'learning_rate': 0.0001, 'max_depth': 4, 'n_estimators': 300, 'objective': 'binary:logistic', 'tree_method': 'auto'}
+		+ TEST / VALIDATION:
+			TEST dataset results
+			<class 'xgboost.sklearn.XGBClassifier'>
+			[[ 53688 154896]
+			 [ 29425 178767]]
+			F-beta (ß=2) =  0.766
+			F1 =            0.660
+			Recall =        0.859
+			Precision =     0.536
+			Accuracy =      0.558
+			--------------------------------------------------
+			VALIDATION dataset results
+			<class 'xgboost.sklearn.XGBClassifier'>
+			[[ 54029 154059]
+			 [ 29548 179140]]
+			F-beta (ß=2) =  0.767
+			F1 =            0.661
+			Recall =        0.858
+			Precision =     0.538
+			Accuracy =      0.559		
+	
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------		
+		
 6) XGBoost_6: [Pending to run]
 	Changes:
 	- Without ORIGIN/DEST columns
