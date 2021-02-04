@@ -299,6 +299,94 @@
 	
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------		
 		
+11) XGBoost_11: [DONE] [Time elapsed:  0h  9min 36s]
+	Changes:
+	- Sample size: 1e6
+	- Without ORIGIN/DEST columns
+	- Directly running the XGBClassifier [eval_metric='auc'] - 8m 32s
+		Model defined parameters:
+			xgb_model = XGBClassifier(use_label_encoder=False, verbosity=1, random_state=0,
+							  n_estimators=300,
+							  max_depth= 4,
+							  learning_rate=0.0001,
+							  objective= 'binary:logistic',
+							  booster='gbtree',
+							  tree_method='auto')
+    Results:
+		+ TRAINING / TEST / VALIDATION:
+			   TRAINING dataset:
+			[[ 90209 259645]
+			 [ 49330 300816]]
+			F-beta (ß=2) =  0.767
+			F1 =            0.661
+			Recall =        0.859
+			Precision =     0.537
+			Accuracy =      0.559
+			--------------------------------------------------
+			   TEST dataset:
+			[[19344 55885]
+			 [10635 64136]]
+			F-beta (ß=2) =  0.765
+			F1 =            0.659
+			Recall =        0.858
+			Precision =     0.534
+			Accuracy =      0.557
+			--------------------------------------------------
+			   VALIDATION dataset:
+			[[19286 55631]
+			 [10369 64714]]
+			F-beta (ß=2) =  0.769
+			F1 =            0.662
+			Recall =        0.862
+			Precision =     0.538
+			Accuracy =      0.560
+	
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------		
+		
+12) XGBoost_12: [DONE] [Time elapsed:  0h 30min 12s]
+	Changes:
+	- Sample size: ALL (~ 7e6)
+	- Without ORIGIN/DEST columns
+	- Directly running the XGBClassifier [eval_metric='auc'] - 28m 28s
+		Model defined parameters:
+			xgb_model = XGBClassifier(use_label_encoder=False, verbosity=1, random_state=0,
+							  n_estimators=300,
+							  max_depth= 4,
+							  learning_rate=0.0001,
+							  objective= 'binary:logistic',
+							  booster='gbtree',
+							  tree_method='auto')
+    Results:
+		+ TRAINING / TEST / VALIDATION:
+			   TRAINING dataset:
+			[[251472 721156]
+			 [136912 835414]]
+			F-beta (ß=2) =  0.767
+			F1 =            0.661
+			Recall =        0.859
+			Precision =     0.537
+			Accuracy =      0.559
+			--------------------------------------------------
+			   TEST dataset:
+			[[ 53866 154076]
+			 [ 29594 179240]]
+			F-beta (ß=2) =  0.767
+			F1 =            0.661
+			Recall =        0.858
+			Precision =     0.538
+			Accuracy =      0.559
+			--------------------------------------------------
+			   VALIDATION dataset:
+			[[ 53866 154817]
+			 [ 29447 178646]]
+			F-beta (ß=2) =  0.766
+			F1 =            0.660
+			Recall =        0.858
+			Precision =     0.536
+			Accuracy =      0.558
+	
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------		
+		
 6) XGBoost_6: [Pending to run]
 	Changes:
 	- Without ORIGIN/DEST columns
