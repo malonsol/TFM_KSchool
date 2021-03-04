@@ -1,0 +1,95 @@
+digraph {
+    graph [ rankdir=TB ]
+
+    0 [ label="HourlyRelativeHumidity_Dest<68.5" ]
+    0 -> 1 [label="yes, missing" color="#0000FF"]
+    0 -> 2 [label="no" color="#FF0000"]
+
+    1 [ label="ORIGIN_Encoded<0.499830723" ]
+    1 -> 3 [label="yes, missing" color="#0000FF"]
+    1 -> 4 [label="no" color="#FF0000"]
+
+    3 [ label="DEST_Encoded<0.480681479" ]
+    3 -> 7 [label="yes, missing" color="#0000FF"]
+    3 -> 8 [label="no" color="#FF0000"]
+
+    7 [ label="HourlyVisibility_Origin<5.79500008" ]
+    7 -> 15 [label="yes, missing" color="#0000FF"]
+    7 -> 16 [label="no" color="#FF0000"]
+
+    15 [ label="leaf=2.21198152e-05" ]
+
+    16 [ label="leaf=-6.92594986e-05" ]
+
+    8 [ label="DEP_TIME_hour_6<0.5" ]
+    8 -> 17 [label="yes, missing" color="#0000FF"]
+    8 -> 18 [label="no" color="#FF0000"]
+
+    17 [ label="leaf=-2.18239129e-05" ]
+
+    18 [ label="leaf=-9.19334125e-05" ]
+
+    4 [ label="HourlyVisibility_Origin<3.86500001" ]
+    4 -> 9 [label="yes, missing" color="#0000FF"]
+    4 -> 10 [label="no" color="#FF0000"]
+
+    9 [ label="HourlyDryBulbTemperature_Origin<36.5" ]
+    9 -> 19 [label="yes, missing" color="#0000FF"]
+    9 -> 20 [label="no" color="#FF0000"]
+
+    19 [ label="leaf=0.000147453073" ]
+
+    20 [ label="leaf=5.49084834e-05" ]
+
+    10 [ label="DEST_Encoded<0.482654274" ]
+    10 -> 21 [label="yes, missing" color="#0000FF"]
+    10 -> 22 [label="no" color="#FF0000"]
+
+    21 [ label="leaf=-2.60406869e-05" ]
+
+    22 [ label="leaf=1.16058936e-05" ]
+
+    2 [ label="DEP_TIME_hour_6<0.5" ]
+    2 -> 5 [label="yes, missing" color="#0000FF"]
+    2 -> 6 [label="no" color="#FF0000"]
+
+    5 [ label="DEST_Encoded<0.542951763" ]
+    5 -> 11 [label="yes, missing" color="#0000FF"]
+    5 -> 12 [label="no" color="#FF0000"]
+
+    11 [ label="HourlyVisibility_Origin<6.92000008" ]
+    11 -> 23 [label="yes, missing" color="#0000FF"]
+    11 -> 24 [label="no" color="#FF0000"]
+
+    23 [ label="leaf=8.00468551e-05" ]
+
+    24 [ label="leaf=1.66122063e-05" ]
+
+    12 [ label="HourlyAltimeterSetting_Dest<30.0774994" ]
+    12 -> 25 [label="yes, missing" color="#0000FF"]
+    12 -> 26 [label="no" color="#FF0000"]
+
+    25 [ label="leaf=8.3169245e-05" ]
+
+    26 [ label="leaf=3.51245071e-05" ]
+
+    6 [ label="HourlyDryBulbTemperature_Origin<31.25" ]
+    6 -> 13 [label="yes, missing" color="#0000FF"]
+    6 -> 14 [label="no" color="#FF0000"]
+
+    13 [ label="HourlyVisibility_Origin<4.98499966" ]
+    13 -> 27 [label="yes, missing" color="#0000FF"]
+    13 -> 28 [label="no" color="#FF0000"]
+
+    27 [ label="leaf=9.67741871e-05" ]
+
+    28 [ label="leaf=-2.05323176e-05" ]
+
+    14 [ label="ORIGIN_Encoded<0.535087347" ]
+    14 -> 29 [label="yes, missing" color="#0000FF"]
+    14 -> 30 [label="no" color="#FF0000"]
+
+    29 [ label="leaf=-8.63888854e-05" ]
+
+    30 [ label="leaf=-2.71028039e-05" ]
+}

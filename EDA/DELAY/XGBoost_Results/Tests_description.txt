@@ -450,8 +450,561 @@ Directly running the XGBClassifier
 			Recall =        0.859
 			Precision =     0.536
 			Accuracy =      0.559
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------		
+		
+15) XGBoost_15: [DONE] [Time elapsed:  0h  1min 14s]
+	Test description:
+	- Sample size: 1e4
+	- Balanced dataset
+	- ORIGIN/DEST columns → Target Encoding
+	- Directly running the XGBClassifier [eval_metric='auc'] - 7.95s
+		Model defined parameters:
+			xgb_model = XGBClassifier(use_label_encoder=False, verbosity=1, random_state=0,
+							  n_estimators=300,
+							  max_depth= 4,
+							  learning_rate=0.0001,
+							  objective= 'binary:logistic',
+							  booster='gbtree',
+							  tree_method='auto')
+    Results:
 	
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	- Overfitting is detected: great differences between Training and Test/Validation datasets
+	
+			-+-+-+ TRAINING dataset +-+-+-
+
+			Confusion matrix:
+			 [[2042 1458]
+			 [1248 2252]]
+			Normalized confusion matrix:
+			 [[0.58342857 0.41657143]
+			 [0.35657143 0.64342857]] 
+
+						  precision    recall  f1-score   support
+
+				 on-time       0.62      0.58      0.60      3500
+				 delayed       0.61      0.64      0.62      3500
+
+				accuracy                           0.61      7000
+			   macro avg       0.61      0.61      0.61      7000
+			weighted avg       0.61      0.61      0.61      7000
+
+			F-beta (ß=2) =  0.636
+			F1 =            0.625
+			Recall =        0.643
+			Precision =     0.607
+			Accuracy =      0.613
+			-------------------------------------------------------
+
+			-+-+-+ TEST dataset: +-+-+-
+
+			Confusion matrix:
+			 [[411 362]
+			 [306 421]]
+			Normalized confusion matrix:
+			 [[0.5316947  0.4683053 ]
+			 [0.42090784 0.57909216]] 
+
+						  precision    recall  f1-score   support
+
+				 on-time       0.57      0.53      0.55       773
+				 delayed       0.54      0.58      0.56       727
+
+				accuracy                           0.55      1500
+			   macro avg       0.56      0.56      0.55      1500
+			weighted avg       0.56      0.55      0.55      1500
+
+			F-beta (ß=2) =  0.570
+			F1 =            0.558
+			Recall =        0.579
+			Precision =     0.538
+			Accuracy =      0.555
+			-------------------------------------------------------
+
+			-+-+-+ VALIDATION dataset: +-+-+-
+
+			Confusion matrix:
+			 [[390 337]
+			 [326 447]]
+			Normalized confusion matrix:
+			 [[0.53645117 0.46354883]
+			 [0.42173351 0.57826649]] 
+
+						  precision    recall  f1-score   support
+
+				 on-time       0.54      0.54      0.54       727
+				 delayed       0.57      0.58      0.57       773
+
+				accuracy                           0.56      1500
+			   macro avg       0.56      0.56      0.56      1500
+			weighted avg       0.56      0.56      0.56      1500
+
+			F-beta (ß=2) =  0.577
+			F1 =            0.574
+			Recall =        0.578
+			Precision =     0.570
+			Accuracy =      0.558
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------		
+		
+16) XGBoost_16: [DONE] [Time elapsed:  0h 12min 45s]
+	Test description:
+	- Sample size: 1e6
+	- Balanced dataset
+	- ORIGIN/DEST columns → Target Encoding
+	- Directly running the XGBClassifier [eval_metric='auc'] - 11m 11s
+		Model defined parameters:
+			xgb_model = XGBClassifier(use_label_encoder=False, verbosity=1, random_state=0,
+							  n_estimators=300,
+							  max_depth= 4,
+							  learning_rate=0.0001,
+							  objective= 'binary:logistic',
+							  booster='gbtree',
+							  tree_method='auto')
+    Results:
+	
+	- Overfitting is detected: great differences between Training and Test/Validation datasets
+	
+			-+-+-+ TRAINING dataset +-+-+-
+
+			Confusion matrix:
+			 [[165749 184096]
+			 [107860 242295]]
+			Normalized confusion matrix:
+			 [[0.47377839 0.52622161]
+			 [0.30803501 0.69196499]] 
+
+						  precision    recall  f1-score   support
+
+				 on-time       0.61      0.47      0.53    349845
+				 delayed       0.57      0.69      0.62    350155
+
+				accuracy                           0.58    700000
+			   macro avg       0.59      0.58      0.58    700000
+			weighted avg       0.59      0.58      0.58    700000
+
+			F-beta (ß=2) =  0.663
+			F1 =            0.624
+			Recall =        0.692
+			Precision =     0.568
+			Accuracy =      0.583
+			-------------------------------------------------------
+
+			-+-+-+ TEST dataset: +-+-+-
+
+			Confusion matrix:
+			 [[35522 39583]
+			 [23041 51854]]
+			Normalized confusion matrix:
+			 [[0.47296452 0.52703548]
+			 [0.30764403 0.69235597]] 
+
+						  precision    recall  f1-score   support
+
+				 on-time       0.61      0.47      0.53     75105
+				 delayed       0.57      0.69      0.62     74895
+
+				accuracy                           0.58    150000
+			   macro avg       0.59      0.58      0.58    150000
+			weighted avg       0.59      0.58      0.58    150000
+
+			F-beta (ß=2) =  0.663
+			F1 =            0.623
+			Recall =        0.692
+			Precision =     0.567
+			Accuracy =      0.583
+			-------------------------------------------------------
+
+			-+-+-+ VALIDATION dataset: +-+-+-
+
+			Confusion matrix:
+			 [[35487 39563]
+			 [23169 51781]]
+			Normalized confusion matrix:
+			 [[0.47284477 0.52715523]
+			 [0.30912608 0.69087392]] 
+
+						  precision    recall  f1-score   support
+
+				 on-time       0.61      0.47      0.53     75050
+				 delayed       0.57      0.69      0.62     74950
+
+				accuracy                           0.58    150000
+			   macro avg       0.59      0.58      0.58    150000
+			weighted avg       0.59      0.58      0.58    150000
+
+			F-beta (ß=2) =  0.662
+			F1 =            0.623
+			Recall =        0.691
+			Precision =     0.567
+			Accuracy =      0.582
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------		
+		
+17) XGBoost_17: [DONE] [Time elapsed:  0h  3min  6s]
+	Test description:
+	- Sample size: 1e4
+	- Balanced dataset
+	- ORIGIN/DEST columns → Target Encoding
+	- Directly running the XGBClassifier [eval_metric='auc'] - 10.7s
+		Model defined parameters:
+			xgb_model = XGBClassifier(use_label_encoder=False, verbosity=1, random_state=0,
+							  n_estimators=300,
+							  max_depth= 4,
+							  learning_rate=0.0001,
+							  objective= 'binary:logistic',
+							  booster='gbtree',
+							  tree_method='auto')
+    Results:
+	
+	- Overfitting is detected: great differences between Training and Test/Validation datasets
+	
+			-+-+-+ TRAINING dataset +-+-+-
+
+			Confusion matrix:
+			 [[1915 1588]
+			 [1013 2484]]
+			Normalized confusion matrix:
+			 [[0.54667428 0.45332572]
+			 [0.28967687 0.71032313]] 
+
+						  precision    recall  f1-score   support
+
+				 on-time       0.65      0.55      0.60      3503
+				 delayed       0.61      0.71      0.66      3497
+
+				accuracy                           0.63      7000
+			   macro avg       0.63      0.63      0.63      7000
+			weighted avg       0.63      0.63      0.63      7000
+
+			F-beta (ß=2) =  0.688
+			F1 =            0.656
+			Recall =        0.710
+			Precision =     0.610
+			Accuracy =      0.628
+			-------------------------------------------------------
+
+			-+-+-+ TEST dataset: +-+-+-
+
+			Confusion matrix:
+			 [[327 429]
+			 [273 471]]
+			Normalized confusion matrix:
+			 [[0.43253968 0.56746032]
+			 [0.36693548 0.63306452]] 
+
+						  precision    recall  f1-score   support
+
+				 on-time       0.55      0.43      0.48       756
+				 delayed       0.52      0.63      0.57       744
+
+				accuracy                           0.53      1500
+			   macro avg       0.53      0.53      0.53      1500
+			weighted avg       0.53      0.53      0.53      1500
+
+			F-beta (ß=2) =  0.608
+			F1 =            0.573
+			Recall =        0.633
+			Precision =     0.523
+			Accuracy =      0.532
+			-------------------------------------------------------
+
+			-+-+-+ VALIDATION dataset: +-+-+-
+
+			Confusion matrix:
+			 [[340 401]
+			 [291 468]]
+			Normalized confusion matrix:
+			 [[0.45883941 0.54116059]
+			 [0.38339921 0.61660079]] 
+
+						  precision    recall  f1-score   support
+
+				 on-time       0.54      0.46      0.50       741
+				 delayed       0.54      0.62      0.57       759
+
+				accuracy                           0.54      1500
+			   macro avg       0.54      0.54      0.54      1500
+			weighted avg       0.54      0.54      0.54      1500
+
+			F-beta (ß=2) =  0.599
+			F1 =            0.575
+			Recall =        0.617
+			Precision =     0.539
+			Accuracy =      0.539
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------		
+		
+18) XGBoost_18: [DONE] [Time elapsed:  0h  2min 15s]
+	Test description:
+	- Sample size: 1e4
+	- Balanced dataset
+	- ORIGIN/DEST columns → Target Encoding
+	- xgb_model = XGBClassifier(use_label_encoder=False,
+                          verbosity=1,
+                          random_state=0,
+                          num_boost_round=500,
+                          as_pandas=True,
+                          early_stopping_rounds=10)
+	- RandomizedGridSearchCV - 1m 19.3s
+						(xgb_model, parameters, n_jobs=5, 
+                         cv=StratifiedKFold(n_splits=5, shuffle=True), 
+                         scoring='f1', refit=True, n_iter=10)
+	- parameters = {
+            'min_child_weight': [1, 5, 10],
+            'gamma': [0.5, 1, 1.5, 2, 5],
+            'subsample': [0.6, 0.8, 1.0],
+            'colsample_bytree': [0.6, 0.8, 1.0],   
+            "learning_rate":[0.0001, 0.001, 0.01, 0.1],    
+            'max_depth': [3, 4, 5, 6],
+            "objective": ["binary:logistic"],
+            "booster":["gbtree"],
+            "tree_method":['auto']
+             }
+    Results:
+		+ Scorer: make_scorer(f1_score, average=binary)
+		+ Best score: 0.6440814891514266
+		+ Best parameters: {'tree_method': 'auto', 'subsample': 1.0, 'objective': 'binary:logistic', 'min_child_weight': 10, 'max_depth': 4, 'learning_rate': 0.1, 'gamma': 2, 'colsample_bytree': 1.0, 'booster': 'gbtree'}
+		+ TEST / VALIDATION:
+			TEST dataset results
+			Confusion matrix:
+			 [[444 281]
+			 [324 451]]
+			Normalized confusion matrix:
+			 [[0.61241379 0.38758621]
+			 [0.41806452 0.58193548]] 
+
+						  precision    recall  f1-score   support
+
+				 on-time       0.58      0.61      0.59       725
+				 delayed       0.62      0.58      0.60       775
+
+				accuracy                           0.60      1500
+			   macro avg       0.60      0.60      0.60      1500
+			weighted avg       0.60      0.60      0.60      1500
+
+			F-beta (ß=2) =  0.588
+			F1 =            0.599
+			Recall =        0.582
+			Precision =     0.616
+			Accuracy =      0.597
+			--------------------------------------------------
+			VALIDATION dataset results
+			Confusion matrix:
+			 [[445 311]
+			 [314 430]]
+			Normalized confusion matrix:
+			 [[0.58862434 0.41137566]
+			 [0.42204301 0.57795699]] 
+
+						  precision    recall  f1-score   support
+
+				 on-time       0.59      0.59      0.59       756
+				 delayed       0.58      0.58      0.58       744
+
+				accuracy                           0.58      1500
+			   macro avg       0.58      0.58      0.58      1500
+			weighted avg       0.58      0.58      0.58      1500
+
+			F-beta (ß=2) =  0.578
+			F1 =            0.579
+			Recall =        0.578
+			Precision =     0.580
+			Accuracy =      0.583
+	
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------		
+		
+19) XGBoost_19: [DONE] [Time elapsed:  0h  8min  6s]
+	Test description:
+	- Sample size: 1e4
+	- Balanced dataset
+	- ORIGIN/DEST columns → Target Encoding
+	- Directly running the XGBClassifier [eval_metric=f1_eval] - 1m 35.0s
+		Model defined parameters:
+			xgb_model = XGBClassifier(use_label_encoder=False, verbosity=1, random_state=0,
+									  n_estimators=300,
+									  max_depth= 4,
+									  learning_rate=0.0001,
+									  objective= 'binary:logistic',
+									  booster='gbtree',
+									  tree_method='auto')
+    Results:
+		+ TEST / VALIDATION:
+			-+-+-+ TRAINING dataset +-+-+-
+
+			Confusion matrix:
+			 [[17496 17522]
+			 [11594 23388]]
+			Normalized confusion matrix:
+			 [[0.49962876 0.50037124]
+			 [0.33142759 0.66857241]] 
+
+						  precision    recall  f1-score   support
+
+				 on-time       0.60      0.50      0.55     35018
+				 delayed       0.57      0.67      0.62     34982
+
+				accuracy                           0.58     70000
+			   macro avg       0.59      0.58      0.58     70000
+			weighted avg       0.59      0.58      0.58     70000
+
+			F-beta (ß=2) =  0.647
+			F1 =            0.616
+			Recall =        0.669
+			Precision =     0.572
+			Accuracy =      0.584
+			-------------------------------------------------------
+
+			-+-+-+ TEST dataset: +-+-+-
+
+			Confusion matrix:
+			 [[3650 3822]
+			 [2574 4954]]
+			Normalized confusion matrix:
+			 [[0.48849036 0.51150964]
+			 [0.34192349 0.65807651]] 
+
+						  precision    recall  f1-score   support
+
+				 on-time       0.59      0.49      0.53      7472
+				 delayed       0.56      0.66      0.61      7528
+
+				accuracy                           0.57     15000
+			   macro avg       0.58      0.57      0.57     15000
+			weighted avg       0.58      0.57      0.57     15000
+
+			F-beta (ß=2) =  0.637
+			F1 =            0.608
+			Recall =        0.658
+			Precision =     0.564
+			Accuracy =      0.574
+			-------------------------------------------------------
+
+			-+-+-+ VALIDATION dataset: +-+-+-
+
+			Confusion matrix:
+			 [[3689 3821]
+			 [2601 4889]]
+			Normalized confusion matrix:
+			 [[0.49121172 0.50878828]
+			 [0.34726302 0.65273698]] 
+
+						  precision    recall  f1-score   support
+
+				 on-time       0.59      0.49      0.53      7510
+				 delayed       0.56      0.65      0.60      7490
+
+				accuracy                           0.57     15000
+			   macro avg       0.57      0.57      0.57     15000
+			weighted avg       0.57      0.57      0.57     15000
+
+			F-beta (ß=2) =  0.632
+			F1 =            0.604
+			Recall =        0.653
+			Precision =     0.561
+			Accuracy =      0.572
+	
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------		
+		
+20) XGBoost_20: [DONE] [Time elapsed:  1h 23min 59s]
+	Test description:
+	- Sample size: 1e6
+	- Balanced dataset
+	- ORIGIN/DEST columns → Target Encoding
+	- Directly running the XGBClassifier [eval_metric=f1_eval] - 15m 23s
+	- Permutation Feature Importance - 53m 54s
+		+ HourlyDryBulbTemperature_Origin : 0.0014388165588752999 (7)
+		+ HourlyVisibility_Origin : 0.006014738547426024 (5)
+		+ HourlyRelativeHumidity_Dest : 0.01775970638344253 (2)
+		+ DEP_TIME_hour_0 : 0.0032109139959324738 (6)
+		+ DEP_TIME_hour_6 : 0.013928315634667388 (3)
+		+ ORIGIN_Encoded : 0.021107804976406297 (1)
+		+ DEST_Encoded : 0.008913174287297054 (4)
+		Model defined parameters:
+			xgb_model = XGBClassifier(use_label_encoder=False, verbosity=1, random_state=0,
+									  n_estimators=300,
+									  max_depth= 4,
+									  learning_rate=0.0001,
+									  objective= 'binary:logistic',
+									  booster='gbtree',
+									  tree_method='auto')
+    Results:
+		+ TEST / VALIDATION:
+			-+-+-+ TRAINING dataset +-+-+-
+
+			Confusion matrix:
+			 [[154003 195925]
+			 [ 94228 255844]]
+			Normalized confusion matrix:
+			 [[0.44009911 0.55990089]
+			 [0.26916749 0.73083251]] 
+
+						  precision    recall  f1-score   support
+
+				 on-time       0.62      0.44      0.51    349928
+				 delayed       0.57      0.73      0.64    350072
+
+				accuracy                           0.59    700000
+			   macro avg       0.59      0.59      0.58    700000
+			weighted avg       0.59      0.59      0.58    700000
+
+			F-beta (ß=2) =  0.691
+			F1 =            0.638
+			Recall =        0.731
+			Precision =     0.566
+			Accuracy =      0.585
+			-------------------------------------------------------
+
+			-+-+-+ TEST dataset: +-+-+-
+
+			Confusion matrix:
+			 [[33090 42194]
+			 [20269 54447]]
+			Normalized confusion matrix:
+			 [[0.43953563 0.56046437]
+			 [0.27128058 0.72871942]] 
+
+						  precision    recall  f1-score   support
+
+				 on-time       0.62      0.44      0.51     75284
+				 delayed       0.56      0.73      0.64     74716
+
+				accuracy                           0.58    150000
+			   macro avg       0.59      0.58      0.57    150000
+			weighted avg       0.59      0.58      0.57    150000
+
+			F-beta (ß=2) =  0.688
+			F1 =            0.635
+			Recall =        0.729
+			Precision =     0.563
+			Accuracy =      0.584
+			-------------------------------------------------------
+
+			-+-+-+ VALIDATION dataset: +-+-+-
+
+			Confusion matrix:
+			 [[32938 41850]
+			 [20404 54808]]
+			Normalized confusion matrix:
+			 [[0.44041825 0.55958175]
+			 [0.2712865  0.7287135 ]] 
+
+						  precision    recall  f1-score   support
+
+				 on-time       0.62      0.44      0.51     74788
+				 delayed       0.57      0.73      0.64     75212
+
+				accuracy                           0.58    150000
+			   macro avg       0.59      0.58      0.58    150000
+			weighted avg       0.59      0.58      0.58    150000
+
+			F-beta (ß=2) =  0.689
+			F1 =            0.638
+			Recall =        0.729
+			Precision =     0.567
+			Accuracy =      0.585
+	
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------		
 		
 6) XGBoost_6: [Pending to run]
 	Changes:

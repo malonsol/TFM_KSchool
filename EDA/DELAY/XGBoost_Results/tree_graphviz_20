@@ -1,0 +1,95 @@
+digraph {
+    graph [ rankdir=TB ]
+
+    0 [ label="ARR_TIME_hour<0.481859177" ]
+    0 -> 1 [label="yes, missing" color="#0000FF"]
+    0 -> 2 [label="no" color="#FF0000"]
+
+    1 [ label="HourlyVisibility_Origin<5.54500008" ]
+    1 -> 3 [label="yes, missing" color="#0000FF"]
+    1 -> 4 [label="no" color="#FF0000"]
+
+    3 [ label="HourlyDryBulbTemperature_Origin<34.5" ]
+    3 -> 7 [label="yes, missing" color="#0000FF"]
+    3 -> 8 [label="no" color="#FF0000"]
+
+    7 [ label="HourlyVisibility_Origin<2.49499989" ]
+    7 -> 15 [label="yes, missing" color="#0000FF"]
+    7 -> 16 [label="no" color="#FF0000"]
+
+    15 [ label="leaf=0.000132494417" ]
+
+    16 [ label="leaf=8.11344798e-05" ]
+
+    8 [ label="DEP_TIME_hour<0.3821311" ]
+    8 -> 17 [label="yes, missing" color="#0000FF"]
+    8 -> 18 [label="no" color="#FF0000"]
+
+    17 [ label="leaf=-4.71009844e-05" ]
+
+    18 [ label="leaf=2.34508898e-05" ]
+
+    4 [ label="OP_UNIQUE_CARRIER<0.482982695" ]
+    4 -> 9 [label="yes, missing" color="#0000FF"]
+    4 -> 10 [label="no" color="#FF0000"]
+
+    9 [ label="DEP_TIME_hour<0.405741453" ]
+    9 -> 19 [label="yes, missing" color="#0000FF"]
+    9 -> 20 [label="no" color="#FF0000"]
+
+    19 [ label="leaf=-0.00010183316" ]
+
+    20 [ label="leaf=-6.211242e-05" ]
+
+    10 [ label="DEP_TIME_hour<0.3821311" ]
+    10 -> 21 [label="yes, missing" color="#0000FF"]
+    10 -> 22 [label="no" color="#FF0000"]
+
+    21 [ label="leaf=-5.93638215e-05" ]
+
+    22 [ label="leaf=-1.82586446e-05" ]
+
+    2 [ label="HourlyRelativeHumidity_Origin<78.375" ]
+    2 -> 5 [label="yes, missing" color="#0000FF"]
+    2 -> 6 [label="no" color="#FF0000"]
+
+    5 [ label="MONTH<0.505994618" ]
+    5 -> 11 [label="yes, missing" color="#0000FF"]
+    5 -> 12 [label="no" color="#FF0000"]
+
+    11 [ label="DEST<0.550340354" ]
+    11 -> 23 [label="yes, missing" color="#0000FF"]
+    11 -> 24 [label="no" color="#FF0000"]
+
+    23 [ label="leaf=-1.6759117e-05" ]
+
+    24 [ label="leaf=4.02119622e-05" ]
+
+    12 [ label="HourlyRelativeHumidity_Dest<73.75" ]
+    12 -> 25 [label="yes, missing" color="#0000FF"]
+    12 -> 26 [label="no" color="#FF0000"]
+
+    25 [ label="leaf=1.85948211e-05" ]
+
+    26 [ label="leaf=6.28316629e-05" ]
+
+    6 [ label="ORIGIN<0.4907161" ]
+    6 -> 13 [label="yes, missing" color="#0000FF"]
+    6 -> 14 [label="no" color="#FF0000"]
+
+    13 [ label="MONTH<0.528369546" ]
+    13 -> 27 [label="yes, missing" color="#0000FF"]
+    13 -> 28 [label="no" color="#FF0000"]
+
+    27 [ label="leaf=3.40552942e-05" ]
+
+    28 [ label="leaf=7.88748875e-05" ]
+
+    14 [ label="MONTH<0.505994618" ]
+    14 -> 29 [label="yes, missing" color="#0000FF"]
+    14 -> 30 [label="no" color="#FF0000"]
+
+    29 [ label="leaf=7.3647243e-05" ]
+
+    30 [ label="leaf=0.000110002227" ]
+}

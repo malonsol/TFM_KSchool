@@ -1,0 +1,95 @@
+digraph {
+    graph [ rankdir=TB ]
+
+    0 [ label="ORIGIN_Encoded<0.484680831" ]
+    0 -> 1 [label="yes, missing" color="#0000FF"]
+    0 -> 2 [label="no" color="#FF0000"]
+
+    1 [ label="DEST_Encoded<0.530528665" ]
+    1 -> 3 [label="yes, missing" color="#0000FF"]
+    1 -> 4 [label="no" color="#FF0000"]
+
+    3 [ label="ORIGIN_Encoded<0.348345578" ]
+    3 -> 7 [label="yes, missing" color="#0000FF"]
+    3 -> 8 [label="no" color="#FF0000"]
+
+    7 [ label="ORIGIN_Encoded<0.183333337" ]
+    7 -> 15 [label="yes, missing" color="#0000FF"]
+    7 -> 16 [label="no" color="#FF0000"]
+
+    15 [ label="leaf=-0.000182222226" ]
+
+    16 [ label="leaf=-0.000102262449" ]
+
+    8 [ label="HourlyAltimeterSetting_Dest<29.8974991" ]
+    8 -> 17 [label="yes, missing" color="#0000FF"]
+    8 -> 18 [label="no" color="#FF0000"]
+
+    17 [ label="leaf=9.25925917e-07" ]
+
+    18 [ label="leaf=-6.31250005e-05" ]
+
+    4 [ label="DEP_TIME_hour_6<0.5" ]
+    4 -> 9 [label="yes, missing" color="#0000FF"]
+    4 -> 10 [label="no" color="#FF0000"]
+
+    9 [ label="ORIGIN_Encoded<0.390096605" ]
+    9 -> 19 [label="yes, missing" color="#0000FF"]
+    9 -> 20 [label="no" color="#FF0000"]
+
+    19 [ label="leaf=-2.06896548e-05" ]
+
+    20 [ label="leaf=3.7766833e-05" ]
+
+    10 [ label="OP_UNIQUE_CARRIER_DL<0.5" ]
+    10 -> 21 [label="yes, missing" color="#0000FF"]
+    10 -> 22 [label="no" color="#FF0000"]
+
+    21 [ label="leaf=-0.000132075467" ]
+
+    22 [ label="leaf=3.9999999e-05" ]
+
+    2 [ label="DEST_Encoded<0.469669104" ]
+    2 -> 5 [label="yes, missing" color="#0000FF"]
+    2 -> 6 [label="no" color="#FF0000"]
+
+    5 [ label="DEST_Encoded<0.371691585" ]
+    5 -> 11 [label="yes, missing" color="#0000FF"]
+    5 -> 12 [label="no" color="#FF0000"]
+
+    11 [ label="DEST_Encoded<0.160256416" ]
+    11 -> 23 [label="yes, missing" color="#0000FF"]
+    11 -> 24 [label="no" color="#FF0000"]
+
+    23 [ label="leaf=-0.00018518517" ]
+
+    24 [ label="leaf=-6.74846597e-05" ]
+
+    12 [ label="ORIGIN_Encoded<0.564047635" ]
+    12 -> 25 [label="yes, missing" color="#0000FF"]
+    12 -> 26 [label="no" color="#FF0000"]
+
+    25 [ label="leaf=-2.89508625e-05" ]
+
+    26 [ label="leaf=4.35164839e-05" ]
+
+    6 [ label="DEST_Encoded<0.732142866" ]
+    6 -> 13 [label="yes, missing" color="#0000FF"]
+    6 -> 14 [label="no" color="#FF0000"]
+
+    13 [ label="HourlyRelativeHumidity_Dest<78.5" ]
+    13 -> 27 [label="yes, missing" color="#0000FF"]
+    13 -> 28 [label="no" color="#FF0000"]
+
+    27 [ label="leaf=2.76322535e-05" ]
+
+    28 [ label="leaf=7.94285661e-05" ]
+
+    14 [ label="DAY_OF_MONTH_17<0.5" ]
+    14 -> 29 [label="yes, missing" color="#0000FF"]
+    14 -> 30 [label="no" color="#FF0000"]
+
+    29 [ label="leaf=0.000168695653" ]
+
+    30 [ label="leaf=-4.99999987e-05" ]
+}

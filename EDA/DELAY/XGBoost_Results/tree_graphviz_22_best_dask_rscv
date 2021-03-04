@@ -1,0 +1,3923 @@
+digraph {
+    graph [ rankdir=TB ]
+
+    0 [ label="DEP_TIME_hour<0.493672192" ]
+    0 -> 1 [label="yes, missing" color="#0000FF"]
+    0 -> 2 [label="no" color="#FF0000"]
+
+    1 [ label="ORIGIN<0.460954189" ]
+    1 -> 3 [label="yes, missing" color="#0000FF"]
+    1 -> 4 [label="no" color="#FF0000"]
+
+    3 [ label="ORIGIN<0.315037608" ]
+    3 -> 7 [label="yes, missing" color="#0000FF"]
+    3 -> 8 [label="no" color="#FF0000"]
+
+    7 [ label="HourlyDryBulbTemperature_Dest<29.5" ]
+    7 -> 15 [label="yes, missing" color="#0000FF"]
+    7 -> 16 [label="no" color="#FF0000"]
+
+    15 [ label="HourlyAltimeterSetting_Dest<30.0375004" ]
+    15 -> 31 [label="yes, missing" color="#0000FF"]
+    15 -> 32 [label="no" color="#FF0000"]
+
+    31 [ label="leaf=0.000899910054" ]
+
+    32 [ label="leaf=-0.00191984652" ]
+
+    16 [ label="OP_UNIQUE_CARRIER<0.586351216" ]
+    16 -> 33 [label="yes, missing" color="#0000FF"]
+    16 -> 34 [label="no" color="#FF0000"]
+
+    33 [ label="DAY_OF_MONTH<0.520715952" ]
+    33 -> 63 [label="yes, missing" color="#0000FF"]
+    33 -> 64 [label="no" color="#FF0000"]
+
+    63 [ label="leaf=-0.00199373765" ]
+
+    64 [ label="HourlyAltimeterSetting_Dest<30.0649986" ]
+    64 -> 117 [label="yes, missing" color="#0000FF"]
+    64 -> 118 [label="no" color="#FF0000"]
+
+    117 [ label="leaf=-0.00187056628" ]
+
+    118 [ label="ORIGIN<0.125" ]
+    118 -> 203 [label="yes, missing" color="#0000FF"]
+    118 -> 204 [label="no" color="#FF0000"]
+
+    203 [ label="leaf=-0.00194990262" ]
+
+    204 [ label="leaf=-0" ]
+
+    34 [ label="leaf=-0.00031997441" ]
+
+    8 [ label="HourlySkyConditions_Origin<0.510548353" ]
+    8 -> 17 [label="yes, missing" color="#0000FF"]
+    8 -> 18 [label="no" color="#FF0000"]
+
+    17 [ label="HourlyAltimeterSetting_Dest<30.3149986" ]
+    17 -> 35 [label="yes, missing" color="#0000FF"]
+    17 -> 36 [label="no" color="#FF0000"]
+
+    35 [ label="HourlyAltimeterSetting_Dest<30.0174999" ]
+    35 -> 65 [label="yes, missing" color="#0000FF"]
+    35 -> 66 [label="no" color="#FF0000"]
+
+    65 [ label="DAY_OF_MONTH<0.528124988" ]
+    65 -> 119 [label="yes, missing" color="#0000FF"]
+    65 -> 120 [label="no" color="#FF0000"]
+
+    119 [ label="HourlyAltimeterSetting_Origin<29.8549995" ]
+    119 -> 205 [label="yes, missing" color="#0000FF"]
+    119 -> 206 [label="no" color="#FF0000"]
+
+    205 [ label="DEP_TIME_hour<0.459215492" ]
+    205 -> 323 [label="yes, missing" color="#0000FF"]
+    205 -> 324 [label="no" color="#FF0000"]
+
+    323 [ label="HourlyDryBulbTemperature_Dest<70" ]
+    323 -> 489 [label="yes, missing" color="#0000FF"]
+    323 -> 490 [label="no" color="#FF0000"]
+
+    489 [ label="leaf=0.000228558376" ]
+
+    490 [ label="leaf=-0.00191984652" ]
+
+    324 [ label="leaf=0.00111991039" ]
+
+    206 [ label="TAXI_OUT_median<8.5" ]
+    206 -> 325 [label="yes, missing" color="#0000FF"]
+    206 -> 326 [label="no" color="#FF0000"]
+
+    325 [ label="leaf=0.00031997441" ]
+
+    326 [ label="DAY_OF_MONTH<0.498954326" ]
+    326 -> 491 [label="yes, missing" color="#0000FF"]
+    326 -> 492 [label="no" color="#FF0000"]
+
+    491 [ label="HourlyRelativeHumidity_Origin<25.5" ]
+    491 -> 659 [label="yes, missing" color="#0000FF"]
+    491 -> 660 [label="no" color="#FF0000"]
+
+    659 [ label="HourlyRelativeHumidity_Origin<20.5" ]
+    659 -> 807 [label="yes, missing" color="#0000FF"]
+    659 -> 808 [label="no" color="#FF0000"]
+
+    807 [ label="leaf=-0.00189981016" ]
+
+    808 [ label="leaf=0.00189981016" ]
+
+    660 [ label="TAXI_IN_median<8.5" ]
+    660 -> 809 [label="yes, missing" color="#0000FF"]
+    660 -> 810 [label="no" color="#FF0000"]
+
+    809 [ label="HourlyAltimeterSetting_Dest<29.9650002" ]
+    809 -> 955 [label="yes, missing" color="#0000FF"]
+    809 -> 956 [label="no" color="#FF0000"]
+
+    955 [ label="leaf=-0.00184283091" ]
+
+    956 [ label="HourlySkyConditions_Origin<0.461512655" ]
+    956 -> 1115 [label="yes, missing" color="#0000FF"]
+    956 -> 1116 [label="no" color="#FF0000"]
+
+    1115 [ label="HourlyAltimeterSetting_Origin<29.9949989" ]
+    1115 -> 1267 [label="yes, missing" color="#0000FF"]
+    1115 -> 1268 [label="no" color="#FF0000"]
+
+    1267 [ label="leaf=-0.00189981016" ]
+
+    1268 [ label="leaf=0.00059996004" ]
+
+    1116 [ label="leaf=-0.00159994187" ]
+
+    810 [ label="HourlyRelativeHumidity_Origin<72.5" ]
+    810 -> 957 [label="yes, missing" color="#0000FF"]
+    810 -> 958 [label="no" color="#FF0000"]
+
+    957 [ label="HourlyRelativeHumidity_Origin<49.5" ]
+    957 -> 1117 [label="yes, missing" color="#0000FF"]
+    957 -> 1118 [label="no" color="#FF0000"]
+
+    1117 [ label="leaf=-0.000228558376" ]
+
+    1118 [ label="leaf=-0.00194990262" ]
+
+    958 [ label="leaf=0.00059996004" ]
+
+    492 [ label="leaf=-0.00181663653" ]
+
+    120 [ label="HourlyAltimeterSetting_Origin<29.9850006" ]
+    120 -> 207 [label="yes, missing" color="#0000FF"]
+    120 -> 208 [label="no" color="#FF0000"]
+
+    207 [ label="TAXI_OUT_median<15.5" ]
+    207 -> 327 [label="yes, missing" color="#0000FF"]
+    207 -> 328 [label="no" color="#FF0000"]
+
+    327 [ label="TAXI_OUT_median<12.5" ]
+    327 -> 493 [label="yes, missing" color="#0000FF"]
+    327 -> 494 [label="no" color="#FF0000"]
+
+    493 [ label="leaf=-0.00166148739" ]
+
+    494 [ label="HourlyAltimeterSetting_Origin<29.8549995" ]
+    494 -> 665 [label="yes, missing" color="#0000FF"]
+    494 -> 666 [label="no" color="#FF0000"]
+
+    665 [ label="leaf=-0.00111991039" ]
+
+    666 [ label="DAY_OF_MONTH<0.557087064" ]
+    666 -> 811 [label="yes, missing" color="#0000FF"]
+    666 -> 812 [label="no" color="#FF0000"]
+
+    811 [ label="leaf=0.00191984652" ]
+
+    812 [ label="leaf=-0.00031997441" ]
+
+    328 [ label="leaf=-0.00195992179" ]
+
+    208 [ label="DEP_TIME_hour<0.44821167" ]
+    208 -> 329 [label="yes, missing" color="#0000FF"]
+    208 -> 330 [label="no" color="#FF0000"]
+
+    329 [ label="HourlyAltimeterSetting_Origin<30.1075001" ]
+    329 -> 495 [label="yes, missing" color="#0000FF"]
+    329 -> 496 [label="no" color="#FF0000"]
+
+    495 [ label="OP_UNIQUE_CARRIER<0.441549838" ]
+    495 -> 667 [label="yes, missing" color="#0000FF"]
+    495 -> 668 [label="no" color="#FF0000"]
+
+    667 [ label="leaf=-0" ]
+
+    668 [ label="leaf=-0.00191984652" ]
+
+    496 [ label="leaf=0.00111991039" ]
+
+    330 [ label="ORIGIN<0.415476203" ]
+    330 -> 497 [label="yes, missing" color="#0000FF"]
+    330 -> 498 [label="no" color="#FF0000"]
+
+    497 [ label="leaf=0.00195546867" ]
+
+    498 [ label="leaf=-0" ]
+
+    66 [ label="HourlyRelativeHumidity_Origin<31" ]
+    66 -> 121 [label="yes, missing" color="#0000FF"]
+    66 -> 122 [label="no" color="#FF0000"]
+
+    121 [ label="OP_UNIQUE_CARRIER<0.498843193" ]
+    121 -> 209 [label="yes, missing" color="#0000FF"]
+    121 -> 210 [label="no" color="#FF0000"]
+
+    209 [ label="leaf=-0.00144992757" ]
+
+    210 [ label="DAY_OF_MONTH<0.509159446" ]
+    210 -> 333 [label="yes, missing" color="#0000FF"]
+    210 -> 334 [label="no" color="#FF0000"]
+
+    333 [ label="leaf=-0.00059996004" ]
+
+    334 [ label="leaf=0.00191984652" ]
+
+    122 [ label="OP_UNIQUE_CARRIER<0.527073979" ]
+    122 -> 211 [label="yes, missing" color="#0000FF"]
+    122 -> 212 [label="no" color="#FF0000"]
+
+    211 [ label="TAXI_OUT_median<16.5" ]
+    211 -> 335 [label="yes, missing" color="#0000FF"]
+    211 -> 336 [label="no" color="#FF0000"]
+
+    335 [ label="leaf=-0.00188647641" ]
+
+    336 [ label="TAXI_IN_median<4.5" ]
+    336 -> 501 [label="yes, missing" color="#0000FF"]
+    336 -> 502 [label="no" color="#FF0000"]
+
+    501 [ label="leaf=-0" ]
+
+    502 [ label="leaf=-0.00194990262" ]
+
+    212 [ label="HourlyRelativeHumidity_Origin<56" ]
+    212 -> 337 [label="yes, missing" color="#0000FF"]
+    212 -> 338 [label="no" color="#FF0000"]
+
+    337 [ label="leaf=0.00059996004" ]
+
+    338 [ label="leaf=-0.00139996014" ]
+
+    36 [ label="HourlyRelativeHumidity_Origin<57" ]
+    36 -> 67 [label="yes, missing" color="#0000FF"]
+    36 -> 68 [label="no" color="#FF0000"]
+
+    67 [ label="leaf=-0.00137135026" ]
+
+    68 [ label="TAXI_IN_median<7" ]
+    68 -> 123 [label="yes, missing" color="#0000FF"]
+    68 -> 124 [label="no" color="#FF0000"]
+
+    123 [ label="leaf=-0.000228558376" ]
+
+    124 [ label="leaf=0.00194274622" ]
+
+    18 [ label="DAY_OF_MONTH<0.587023258" ]
+    18 -> 37 [label="yes, missing" color="#0000FF"]
+    18 -> 38 [label="no" color="#FF0000"]
+
+    37 [ label="TAXI_IN_median<9.5" ]
+    37 -> 69 [label="yes, missing" color="#0000FF"]
+    37 -> 70 [label="no" color="#FF0000"]
+
+    69 [ label="HourlyAltimeterSetting_Origin<29.875" ]
+    69 -> 125 [label="yes, missing" color="#0000FF"]
+    69 -> 126 [label="no" color="#FF0000"]
+
+    125 [ label="HourlyAltimeterSetting_Dest<29.7600002" ]
+    125 -> 213 [label="yes, missing" color="#0000FF"]
+    125 -> 214 [label="no" color="#FF0000"]
+
+    213 [ label="leaf=-0.000228558376" ]
+
+    214 [ label="leaf=-0.00166397344" ]
+
+    126 [ label="ORIGIN<0.350383639" ]
+    126 -> 215 [label="yes, missing" color="#0000FF"]
+    126 -> 216 [label="no" color="#FF0000"]
+
+    215 [ label="HourlyDryBulbTemperature_Dest<71.5" ]
+    215 -> 341 [label="yes, missing" color="#0000FF"]
+    215 -> 342 [label="no" color="#FF0000"]
+
+    341 [ label="leaf=-0.00174113561" ]
+
+    342 [ label="leaf=-0.000228558376" ]
+
+    216 [ label="DAY_OF_MONTH<0.498954326" ]
+    216 -> 343 [label="yes, missing" color="#0000FF"]
+    216 -> 344 [label="no" color="#FF0000"]
+
+    343 [ label="HourlySkyConditions_Dest<0.468405634" ]
+    343 -> 507 [label="yes, missing" color="#0000FF"]
+    343 -> 508 [label="no" color="#FF0000"]
+
+    507 [ label="leaf=0.000799954345" ]
+
+    508 [ label="OP_UNIQUE_CARRIER<0.486784846" ]
+    508 -> 671 [label="yes, missing" color="#0000FF"]
+    508 -> 672 [label="no" color="#FF0000"]
+
+    671 [ label="leaf=-0.0017683839" ]
+
+    672 [ label="ORIGIN<0.422064781" ]
+    672 -> 815 [label="yes, missing" color="#0000FF"]
+    672 -> 816 [label="no" color="#FF0000"]
+
+    815 [ label="ORIGIN<0.397674441" ]
+    815 -> 959 [label="yes, missing" color="#0000FF"]
+    815 -> 960 [label="no" color="#FF0000"]
+
+    959 [ label="DAY_OF_MONTH<0.467664778" ]
+    959 -> 1119 [label="yes, missing" color="#0000FF"]
+    959 -> 1120 [label="no" color="#FF0000"]
+
+    1119 [ label="leaf=-0.00155993772" ]
+
+    1120 [ label="leaf=0.00111991039" ]
+
+    960 [ label="OP_UNIQUE_CARRIER<0.525456548" ]
+    960 -> 1121 [label="yes, missing" color="#0000FF"]
+    960 -> 1122 [label="no" color="#FF0000"]
+
+    1121 [ label="leaf=0.00191984652" ]
+
+    1122 [ label="leaf=-0" ]
+
+    816 [ label="leaf=-0.00191984652" ]
+
+    344 [ label="DAY_OF_MONTH<0.558831692" ]
+    344 -> 509 [label="yes, missing" color="#0000FF"]
+    344 -> 510 [label="no" color="#FF0000"]
+
+    509 [ label="HourlyAltimeterSetting_Origin<29.9899998" ]
+    509 -> 673 [label="yes, missing" color="#0000FF"]
+    509 -> 674 [label="no" color="#FF0000"]
+
+    673 [ label="leaf=0.00166148739" ]
+
+    674 [ label="HourlyDryBulbTemperature_Dest<45" ]
+    674 -> 819 [label="yes, missing" color="#0000FF"]
+    674 -> 820 [label="no" color="#FF0000"]
+
+    819 [ label="leaf=0.00137135026" ]
+
+    820 [ label="HourlyAltimeterSetting_Dest<30.1850014" ]
+    820 -> 961 [label="yes, missing" color="#0000FF"]
+    820 -> 962 [label="no" color="#FF0000"]
+
+    961 [ label="HourlyDryBulbTemperature_Dest<59" ]
+    961 -> 1123 [label="yes, missing" color="#0000FF"]
+    961 -> 1124 [label="no" color="#FF0000"]
+
+    1123 [ label="leaf=0.00111991039" ]
+
+    1124 [ label="leaf=-0.00111991039" ]
+
+    962 [ label="leaf=-0.00193320448" ]
+
+    510 [ label="HourlyAltimeterSetting_Origin<30.0600014" ]
+    510 -> 675 [label="yes, missing" color="#0000FF"]
+    510 -> 676 [label="no" color="#FF0000"]
+
+    675 [ label="leaf=-0.00191984652" ]
+
+    676 [ label="leaf=-0" ]
+
+    70 [ label="OP_UNIQUE_CARRIER<0.548783183" ]
+    70 -> 127 [label="yes, missing" color="#0000FF"]
+    70 -> 128 [label="no" color="#FF0000"]
+
+    127 [ label="DAY_OF_MONTH<0.498954326" ]
+    127 -> 217 [label="yes, missing" color="#0000FF"]
+    127 -> 218 [label="no" color="#FF0000"]
+
+    217 [ label="TAXI_OUT_median<14.5" ]
+    217 -> 345 [label="yes, missing" color="#0000FF"]
+    217 -> 346 [label="no" color="#FF0000"]
+
+    345 [ label="leaf=0.000177769878" ]
+
+    346 [ label="leaf=-0.00194274622" ]
+
+    218 [ label="leaf=0.00126658229" ]
+
+    128 [ label="leaf=0.00195546867" ]
+
+    38 [ label="leaf=0.00151104399" ]
+
+    4 [ label="OP_UNIQUE_CARRIER<0.493251711" ]
+    4 -> 9 [label="yes, missing" color="#0000FF"]
+    4 -> 10 [label="no" color="#FF0000"]
+
+    9 [ label="ARR_TIME_hour<0.400046289" ]
+    9 -> 19 [label="yes, missing" color="#0000FF"]
+    9 -> 20 [label="no" color="#FF0000"]
+
+    19 [ label="HourlyDryBulbTemperature_Dest<76.5" ]
+    19 -> 39 [label="yes, missing" color="#0000FF"]
+    19 -> 40 [label="no" color="#FF0000"]
+
+    39 [ label="TAXI_IN_median<7.5" ]
+    39 -> 73 [label="yes, missing" color="#0000FF"]
+    39 -> 74 [label="no" color="#FF0000"]
+
+    73 [ label="ORIGIN<0.488857269" ]
+    73 -> 129 [label="yes, missing" color="#0000FF"]
+    73 -> 130 [label="no" color="#FF0000"]
+
+    129 [ label="HourlyAltimeterSetting_Dest<30.1500015" ]
+    129 -> 219 [label="yes, missing" color="#0000FF"]
+    129 -> 220 [label="no" color="#FF0000"]
+
+    219 [ label="HourlySkyConditions_Dest<0.530890524" ]
+    219 -> 347 [label="yes, missing" color="#0000FF"]
+    219 -> 348 [label="no" color="#FF0000"]
+
+    347 [ label="HourlyDryBulbTemperature_Dest<61.5" ]
+    347 -> 513 [label="yes, missing" color="#0000FF"]
+    347 -> 514 [label="no" color="#FF0000"]
+
+    513 [ label="leaf=-0.00151104399" ]
+
+    514 [ label="DAY_OF_MONTH<0.531653464" ]
+    514 -> 679 [label="yes, missing" color="#0000FF"]
+    514 -> 680 [label="no" color="#FF0000"]
+
+    679 [ label="HourlySkyConditions_Dest<0.487769246" ]
+    679 -> 821 [label="yes, missing" color="#0000FF"]
+    679 -> 822 [label="no" color="#FF0000"]
+
+    821 [ label="leaf=0.00144992757" ]
+
+    822 [ label="leaf=-0.00031997441" ]
+
+    680 [ label="leaf=-0.000899910054" ]
+
+    348 [ label="ORIGIN<0.46805644" ]
+    348 -> 515 [label="yes, missing" color="#0000FF"]
+    348 -> 516 [label="no" color="#FF0000"]
+
+    515 [ label="leaf=0.00194990262" ]
+
+    516 [ label="leaf=-0" ]
+
+    220 [ label="HourlyRelativeHumidity_Origin<62" ]
+    220 -> 349 [label="yes, missing" color="#0000FF"]
+    220 -> 350 [label="no" color="#FF0000"]
+
+    349 [ label="leaf=-0.000228558376" ]
+
+    350 [ label="leaf=-0.00195546867" ]
+
+    130 [ label="HourlyAltimeterSetting_Dest<30.3624992" ]
+    130 -> 221 [label="yes, missing" color="#0000FF"]
+    130 -> 222 [label="no" color="#FF0000"]
+
+    221 [ label="OP_UNIQUE_CARRIER<0.488298148" ]
+    221 -> 351 [label="yes, missing" color="#0000FF"]
+    221 -> 352 [label="no" color="#FF0000"]
+
+    351 [ label="HourlyAltimeterSetting_Origin<29.7800007" ]
+    351 -> 517 [label="yes, missing" color="#0000FF"]
+    351 -> 518 [label="no" color="#FF0000"]
+
+    517 [ label="leaf=0.000228558376" ]
+
+    518 [ label="HourlyRelativeHumidity_Origin<87.5" ]
+    518 -> 681 [label="yes, missing" color="#0000FF"]
+    518 -> 682 [label="no" color="#FF0000"]
+
+    681 [ label="HourlyRelativeHumidity_Origin<44" ]
+    681 -> 823 [label="yes, missing" color="#0000FF"]
+    681 -> 824 [label="no" color="#FF0000"]
+
+    823 [ label="HourlyAltimeterSetting_Origin<30.2250004" ]
+    823 -> 965 [label="yes, missing" color="#0000FF"]
+    823 -> 966 [label="no" color="#FF0000"]
+
+    965 [ label="HourlySkyConditions_Origin<0.510548353" ]
+    965 -> 1125 [label="yes, missing" color="#0000FF"]
+    965 -> 1126 [label="no" color="#FF0000"]
+
+    1125 [ label="leaf=-0.00195992179" ]
+
+    1126 [ label="leaf=-0" ]
+
+    966 [ label="leaf=0.00189981016" ]
+
+    824 [ label="DEP_TIME_hour<0.426101208" ]
+    824 -> 967 [label="yes, missing" color="#0000FF"]
+    824 -> 968 [label="no" color="#FF0000"]
+
+    967 [ label="ORIGIN<0.597385347" ]
+    967 -> 1127 [label="yes, missing" color="#0000FF"]
+    967 -> 1128 [label="no" color="#FF0000"]
+
+    1127 [ label="HourlyDryBulbTemperature_Dest<70.5" ]
+    1127 -> 1273 [label="yes, missing" color="#0000FF"]
+    1127 -> 1274 [label="no" color="#FF0000"]
+
+    1273 [ label="leaf=-0.00185261865" ]
+
+    1274 [ label="DEP_TIME_hour<0.342146158" ]
+    1274 -> 1387 [label="yes, missing" color="#0000FF"]
+    1274 -> 1388 [label="no" color="#FF0000"]
+
+    1387 [ label="leaf=-0" ]
+
+    1388 [ label="leaf=-0.00191984652" ]
+
+    1128 [ label="ARR_TIME_hour<0.350460202" ]
+    1128 -> 1275 [label="yes, missing" color="#0000FF"]
+    1128 -> 1276 [label="no" color="#FF0000"]
+
+    1275 [ label="leaf=-0.00194990262" ]
+
+    1276 [ label="leaf=-0" ]
+
+    968 [ label="leaf=-0.000872695586" ]
+
+    682 [ label="HourlyDryBulbTemperature_Dest<66" ]
+    682 -> 825 [label="yes, missing" color="#0000FF"]
+    682 -> 826 [label="no" color="#FF0000"]
+
+    825 [ label="ORIGIN<0.51468122" ]
+    825 -> 969 [label="yes, missing" color="#0000FF"]
+    825 -> 970 [label="no" color="#FF0000"]
+
+    969 [ label="leaf=-0.00194274622" ]
+
+    970 [ label="leaf=-0.000228558376" ]
+
+    826 [ label="leaf=0.000899910054" ]
+
+    352 [ label="leaf=0.000899910054" ]
+
+    222 [ label="leaf=0.000799954345" ]
+
+    74 [ label="HourlyAltimeterSetting_Dest<29.9400005" ]
+    74 -> 131 [label="yes, missing" color="#0000FF"]
+    74 -> 132 [label="no" color="#FF0000"]
+
+    131 [ label="HourlyDryBulbTemperature_Dest<63.5" ]
+    131 -> 223 [label="yes, missing" color="#0000FF"]
+    131 -> 224 [label="no" color="#FF0000"]
+
+    223 [ label="leaf=-0.00168566615" ]
+
+    224 [ label="leaf=-0.000359985599" ]
+
+    132 [ label="HourlyDryBulbTemperature_Dest<67.5" ]
+    132 -> 225 [label="yes, missing" color="#0000FF"]
+    132 -> 226 [label="no" color="#FF0000"]
+
+    225 [ label="HourlyDryBulbTemperature_Dest<45.5" ]
+    225 -> 357 [label="yes, missing" color="#0000FF"]
+    225 -> 358 [label="no" color="#FF0000"]
+
+    357 [ label="HourlySkyConditions_Dest<0.5015167" ]
+    357 -> 519 [label="yes, missing" color="#0000FF"]
+    357 -> 520 [label="no" color="#FF0000"]
+
+    519 [ label="leaf=0.00155993772" ]
+
+    520 [ label="TAXI_IN_median<10" ]
+    520 -> 685 [label="yes, missing" color="#0000FF"]
+    520 -> 686 [label="no" color="#FF0000"]
+
+    685 [ label="leaf=-0.00137135026" ]
+
+    686 [ label="leaf=0.00111991039" ]
+
+    358 [ label="HourlyRelativeHumidity_Origin<58.5" ]
+    358 -> 521 [label="yes, missing" color="#0000FF"]
+    358 -> 522 [label="no" color="#FF0000"]
+
+    521 [ label="leaf=-0.00194990262" ]
+
+    522 [ label="OP_UNIQUE_CARRIER<0.441549838" ]
+    522 -> 687 [label="yes, missing" color="#0000FF"]
+    522 -> 688 [label="no" color="#FF0000"]
+
+    687 [ label="DAY_OF_MONTH<0.471009374" ]
+    687 -> 827 [label="yes, missing" color="#0000FF"]
+    687 -> 828 [label="no" color="#FF0000"]
+
+    827 [ label="leaf=-0.00191984652" ]
+
+    828 [ label="leaf=-0" ]
+
+    688 [ label="ORIGIN<0.533119678" ]
+    688 -> 829 [label="yes, missing" color="#0000FF"]
+    688 -> 830 [label="no" color="#FF0000"]
+
+    829 [ label="leaf=0.00137135026" ]
+
+    830 [ label="leaf=-0.00059996004" ]
+
+    226 [ label="ORIGIN<0.543504715" ]
+    226 -> 359 [label="yes, missing" color="#0000FF"]
+    226 -> 360 [label="no" color="#FF0000"]
+
+    359 [ label="leaf=0.00191984652" ]
+
+    360 [ label="leaf=-0" ]
+
+    40 [ label="HourlySkyConditions_Origin<0.510548353" ]
+    40 -> 75 [label="yes, missing" color="#0000FF"]
+    40 -> 76 [label="no" color="#FF0000"]
+
+    75 [ label="HourlyAltimeterSetting_Origin<29.8725014" ]
+    75 -> 133 [label="yes, missing" color="#0000FF"]
+    75 -> 134 [label="no" color="#FF0000"]
+
+    133 [ label="leaf=-0" ]
+
+    134 [ label="HourlyAltimeterSetting_Origin<30.0375004" ]
+    134 -> 227 [label="yes, missing" color="#0000FF"]
+    134 -> 228 [label="no" color="#FF0000"]
+
+    227 [ label="leaf=-0.00187426433" ]
+
+    228 [ label="HourlyAltimeterSetting_Origin<30.0574989" ]
+    228 -> 363 [label="yes, missing" color="#0000FF"]
+    228 -> 364 [label="no" color="#FF0000"]
+
+    363 [ label="leaf=-0" ]
+
+    364 [ label="leaf=-0.00172901002" ]
+
+    76 [ label="ORIGIN<0.563365698" ]
+    76 -> 135 [label="yes, missing" color="#0000FF"]
+    76 -> 136 [label="no" color="#FF0000"]
+
+    135 [ label="DAY_OF_MONTH<0.504134178" ]
+    135 -> 229 [label="yes, missing" color="#0000FF"]
+    135 -> 230 [label="no" color="#FF0000"]
+
+    229 [ label="leaf=-0.00154071802" ]
+
+    230 [ label="DAY_OF_MONTH<0.5390625" ]
+    230 -> 367 [label="yes, missing" color="#0000FF"]
+    230 -> 368 [label="no" color="#FF0000"]
+
+    367 [ label="leaf=0.00144992757" ]
+
+    368 [ label="leaf=-0.00159994187" ]
+
+    136 [ label="HourlyAltimeterSetting_Dest<29.9899998" ]
+    136 -> 231 [label="yes, missing" color="#0000FF"]
+    136 -> 232 [label="no" color="#FF0000"]
+
+    231 [ label="leaf=0.00191984652" ]
+
+    232 [ label="leaf=-0.000899910054" ]
+
+    20 [ label="HourlyRelativeHumidity_Origin<68.5" ]
+    20 -> 41 [label="yes, missing" color="#0000FF"]
+    20 -> 42 [label="no" color="#FF0000"]
+
+    41 [ label="ORIGIN<0.487924099" ]
+    41 -> 77 [label="yes, missing" color="#0000FF"]
+    41 -> 78 [label="no" color="#FF0000"]
+
+    77 [ label="TAXI_IN_median<6.5" ]
+    77 -> 137 [label="yes, missing" color="#0000FF"]
+    77 -> 138 [label="no" color="#FF0000"]
+
+    137 [ label="HourlyAltimeterSetting_Origin<30.2775002" ]
+    137 -> 233 [label="yes, missing" color="#0000FF"]
+    137 -> 234 [label="no" color="#FF0000"]
+
+    233 [ label="HourlySkyConditions_Origin<0.442980528" ]
+    233 -> 369 [label="yes, missing" color="#0000FF"]
+    233 -> 370 [label="no" color="#FF0000"]
+
+    369 [ label="leaf=-0" ]
+
+    370 [ label="DAY_OF_MONTH<0.587023258" ]
+    370 -> 533 [label="yes, missing" color="#0000FF"]
+    370 -> 534 [label="no" color="#FF0000"]
+
+    533 [ label="HourlyAltimeterSetting_Origin<29.9549999" ]
+    533 -> 689 [label="yes, missing" color="#0000FF"]
+    533 -> 690 [label="no" color="#FF0000"]
+
+    689 [ label="HourlyAltimeterSetting_Origin<29.9150009" ]
+    689 -> 831 [label="yes, missing" color="#0000FF"]
+    689 -> 832 [label="no" color="#FF0000"]
+
+    831 [ label="leaf=-0.00196660124" ]
+
+    832 [ label="leaf=-0" ]
+
+    690 [ label="leaf=-0.00198785472" ]
+
+    534 [ label="leaf=-0.00031997441" ]
+
+    234 [ label="leaf=0.000899910054" ]
+
+    138 [ label="HourlyAltimeterSetting_Dest<29.9650002" ]
+    138 -> 235 [label="yes, missing" color="#0000FF"]
+    138 -> 236 [label="no" color="#FF0000"]
+
+    235 [ label="HourlyAltimeterSetting_Origin<29.9174995" ]
+    235 -> 371 [label="yes, missing" color="#0000FF"]
+    235 -> 372 [label="no" color="#FF0000"]
+
+    371 [ label="leaf=-0" ]
+
+    372 [ label="leaf=-0.00194274622" ]
+
+    236 [ label="DEP_TIME_hour<0.459215492" ]
+    236 -> 373 [label="yes, missing" color="#0000FF"]
+    236 -> 374 [label="no" color="#FF0000"]
+
+    373 [ label="HourlyRelativeHumidity_Origin<43.5" ]
+    373 -> 535 [label="yes, missing" color="#0000FF"]
+    373 -> 536 [label="no" color="#FF0000"]
+
+    535 [ label="leaf=-0.00191984652" ]
+
+    536 [ label="HourlyAltimeterSetting_Dest<30.0849991" ]
+    536 -> 691 [label="yes, missing" color="#0000FF"]
+    536 -> 692 [label="no" color="#FF0000"]
+
+    691 [ label="leaf=-0.000899910054" ]
+
+    692 [ label="leaf=0.00189981016" ]
+
+    374 [ label="HourlyAltimeterSetting_Origin<30.0799999" ]
+    374 -> 537 [label="yes, missing" color="#0000FF"]
+    374 -> 538 [label="no" color="#FF0000"]
+
+    537 [ label="leaf=0.00194274622" ]
+
+    538 [ label="leaf=0.000228558376" ]
+
+    78 [ label="HourlyDryBulbTemperature_Dest<35" ]
+    78 -> 139 [label="yes, missing" color="#0000FF"]
+    78 -> 140 [label="no" color="#FF0000"]
+
+    139 [ label="leaf=-0.00134734018" ]
+
+    140 [ label="HourlyRelativeHumidity_Origin<43.5" ]
+    140 -> 239 [label="yes, missing" color="#0000FF"]
+    140 -> 240 [label="no" color="#FF0000"]
+
+    239 [ label="TAXI_OUT_median<10.5" ]
+    239 -> 377 [label="yes, missing" color="#0000FF"]
+    239 -> 378 [label="no" color="#FF0000"]
+
+    377 [ label="ARR_TIME_hour<0.446405649" ]
+    377 -> 539 [label="yes, missing" color="#0000FF"]
+    377 -> 540 [label="no" color="#FF0000"]
+
+    539 [ label="TAXI_IN_median<5.5" ]
+    539 -> 693 [label="yes, missing" color="#0000FF"]
+    539 -> 694 [label="no" color="#FF0000"]
+
+    693 [ label="leaf=-0.00191984652" ]
+
+    694 [ label="leaf=-0" ]
+
+    540 [ label="HourlyDryBulbTemperature_Dest<66.5" ]
+    540 -> 695 [label="yes, missing" color="#0000FF"]
+    540 -> 696 [label="no" color="#FF0000"]
+
+    695 [ label="leaf=-0" ]
+
+    696 [ label="leaf=0.00195992179" ]
+
+    378 [ label="DAY_OF_MONTH<0.420192361" ]
+    378 -> 541 [label="yes, missing" color="#0000FF"]
+    378 -> 542 [label="no" color="#FF0000"]
+
+    541 [ label="leaf=0.00111991039" ]
+
+    542 [ label="HourlyDryBulbTemperature_Dest<54" ]
+    542 -> 697 [label="yes, missing" color="#0000FF"]
+    542 -> 698 [label="no" color="#FF0000"]
+
+    697 [ label="TAXI_OUT_median<16.5" ]
+    697 -> 833 [label="yes, missing" color="#0000FF"]
+    697 -> 834 [label="no" color="#FF0000"]
+
+    833 [ label="leaf=-0.00137135026" ]
+
+    834 [ label="leaf=0.000949952519" ]
+
+    698 [ label="DAY_OF_MONTH<0.491415828" ]
+    698 -> 835 [label="yes, missing" color="#0000FF"]
+    698 -> 836 [label="no" color="#FF0000"]
+
+    835 [ label="leaf=-0.00197495078" ]
+
+    836 [ label="HourlyAltimeterSetting_Dest<30.1599998" ]
+    836 -> 973 [label="yes, missing" color="#0000FF"]
+    836 -> 974 [label="no" color="#FF0000"]
+
+    973 [ label="HourlyAltimeterSetting_Origin<29.9225006" ]
+    973 -> 1131 [label="yes, missing" color="#0000FF"]
+    973 -> 1132 [label="no" color="#FF0000"]
+
+    1131 [ label="leaf=-0.000228558376" ]
+
+    1132 [ label="leaf=-0.00196917029" ]
+
+    974 [ label="DEP_TIME_hour<0.464429259" ]
+    974 -> 1133 [label="yes, missing" color="#0000FF"]
+    974 -> 1134 [label="no" color="#FF0000"]
+
+    1133 [ label="leaf=-0.00111991039" ]
+
+    1134 [ label="leaf=0.000899910054" ]
+
+    240 [ label="DAY_OF_MONTH<0.520715952" ]
+    240 -> 379 [label="yes, missing" color="#0000FF"]
+    240 -> 380 [label="no" color="#FF0000"]
+
+    379 [ label="HourlyAltimeterSetting_Origin<30.0950012" ]
+    379 -> 543 [label="yes, missing" color="#0000FF"]
+    379 -> 544 [label="no" color="#FF0000"]
+
+    543 [ label="HourlyAltimeterSetting_Origin<29.9650002" ]
+    543 -> 699 [label="yes, missing" color="#0000FF"]
+    543 -> 700 [label="no" color="#FF0000"]
+
+    699 [ label="HourlyAltimeterSetting_Origin<29.8999996" ]
+    699 -> 837 [label="yes, missing" color="#0000FF"]
+    699 -> 838 [label="no" color="#FF0000"]
+
+    837 [ label="DAY_OF_MONTH<0.461095691" ]
+    837 -> 975 [label="yes, missing" color="#0000FF"]
+    837 -> 976 [label="no" color="#FF0000"]
+
+    975 [ label="leaf=-0.00155993772" ]
+
+    976 [ label="leaf=0.00031997441" ]
+
+    838 [ label="TAXI_OUT_median<13.5" ]
+    838 -> 977 [label="yes, missing" color="#0000FF"]
+    838 -> 978 [label="no" color="#FF0000"]
+
+    977 [ label="leaf=-0" ]
+
+    978 [ label="leaf=0.00193320448" ]
+
+    700 [ label="OP_UNIQUE_CARRIER<0.47937572" ]
+    700 -> 839 [label="yes, missing" color="#0000FF"]
+    700 -> 840 [label="no" color="#FF0000"]
+
+    839 [ label="HourlyRelativeHumidity_Origin<58.5" ]
+    839 -> 979 [label="yes, missing" color="#0000FF"]
+    839 -> 980 [label="no" color="#FF0000"]
+
+    979 [ label="leaf=-0.00197495078" ]
+
+    980 [ label="leaf=-0" ]
+
+    840 [ label="leaf=-0" ]
+
+    544 [ label="HourlyAltimeterSetting_Origin<30.1650009" ]
+    544 -> 701 [label="yes, missing" color="#0000FF"]
+    544 -> 702 [label="no" color="#FF0000"]
+
+    701 [ label="DEP_TIME_hour<0.467979729" ]
+    701 -> 841 [label="yes, missing" color="#0000FF"]
+    701 -> 842 [label="no" color="#FF0000"]
+
+    841 [ label="leaf=0.00195546867" ]
+
+    842 [ label="leaf=-0" ]
+
+    702 [ label="HourlySkyConditions_Origin<0.484833062" ]
+    702 -> 843 [label="yes, missing" color="#0000FF"]
+    702 -> 844 [label="no" color="#FF0000"]
+
+    843 [ label="leaf=-0.00193320448" ]
+
+    844 [ label="HourlyAltimeterSetting_Origin<30.2625008" ]
+    844 -> 981 [label="yes, missing" color="#0000FF"]
+    844 -> 982 [label="no" color="#FF0000"]
+
+    981 [ label="leaf=-0.00059996004" ]
+
+    982 [ label="leaf=0.00191984652" ]
+
+    380 [ label="HourlyDryBulbTemperature_Dest<87.5" ]
+    380 -> 545 [label="yes, missing" color="#0000FF"]
+    380 -> 546 [label="no" color="#FF0000"]
+
+    545 [ label="OP_UNIQUE_CARRIER<0.481831282" ]
+    545 -> 703 [label="yes, missing" color="#0000FF"]
+    545 -> 704 [label="no" color="#FF0000"]
+
+    703 [ label="HourlyDryBulbTemperature_Dest<79" ]
+    703 -> 845 [label="yes, missing" color="#0000FF"]
+    703 -> 846 [label="no" color="#FF0000"]
+
+    845 [ label="leaf=0.00166397344" ]
+
+    846 [ label="HourlyAltimeterSetting_Origin<29.9899998" ]
+    846 -> 985 [label="yes, missing" color="#0000FF"]
+    846 -> 986 [label="no" color="#FF0000"]
+
+    985 [ label="leaf=0.00189981016" ]
+
+    986 [ label="leaf=-0.000899910054" ]
+
+    704 [ label="leaf=-0.00031997441" ]
+
+    546 [ label="leaf=-0.000949952519" ]
+
+    42 [ label="HourlyAltimeterSetting_Dest<29.7849998" ]
+    42 -> 79 [label="yes, missing" color="#0000FF"]
+    42 -> 80 [label="no" color="#FF0000"]
+
+    79 [ label="leaf=0.00168566615" ]
+
+    80 [ label="DAY_OF_MONTH<0.472649634" ]
+    80 -> 143 [label="yes, missing" color="#0000FF"]
+    80 -> 144 [label="no" color="#FF0000"]
+
+    143 [ label="OP_UNIQUE_CARRIER<0.47937572" ]
+    143 -> 241 [label="yes, missing" color="#0000FF"]
+    143 -> 242 [label="no" color="#FF0000"]
+
+    241 [ label="HourlyAltimeterSetting_Dest<30.1100006" ]
+    241 -> 381 [label="yes, missing" color="#0000FF"]
+    241 -> 382 [label="no" color="#FF0000"]
+
+    381 [ label="HourlySkyConditions_Dest<0.5015167" ]
+    381 -> 547 [label="yes, missing" color="#0000FF"]
+    381 -> 548 [label="no" color="#FF0000"]
+
+    547 [ label="leaf=-0.00148330862" ]
+
+    548 [ label="leaf=-0" ]
+
+    382 [ label="HourlyRelativeHumidity_Origin<83" ]
+    382 -> 549 [label="yes, missing" color="#0000FF"]
+    382 -> 550 [label="no" color="#FF0000"]
+
+    549 [ label="leaf=0.00191984652" ]
+
+    550 [ label="leaf=-0.00031997441" ]
+
+    242 [ label="DAY_OF_MONTH<0.457030982" ]
+    242 -> 383 [label="yes, missing" color="#0000FF"]
+    242 -> 384 [label="no" color="#FF0000"]
+
+    383 [ label="leaf=0.00191984652" ]
+
+    384 [ label="leaf=-0" ]
+
+    144 [ label="HourlyDryBulbTemperature_Dest<85.5" ]
+    144 -> 243 [label="yes, missing" color="#0000FF"]
+    144 -> 244 [label="no" color="#FF0000"]
+
+    243 [ label="HourlyAltimeterSetting_Origin<29.9150009" ]
+    243 -> 385 [label="yes, missing" color="#0000FF"]
+    243 -> 386 [label="no" color="#FF0000"]
+
+    385 [ label="HourlyDryBulbTemperature_Dest<53.5" ]
+    385 -> 551 [label="yes, missing" color="#0000FF"]
+    385 -> 552 [label="no" color="#FF0000"]
+
+    551 [ label="leaf=0.00193320448" ]
+
+    552 [ label="HourlyAltimeterSetting_Dest<29.9349995" ]
+    552 -> 711 [label="yes, missing" color="#0000FF"]
+    552 -> 712 [label="no" color="#FF0000"]
+
+    711 [ label="leaf=0.000899910054" ]
+
+    712 [ label="leaf=-0.00159994187" ]
+
+    386 [ label="ORIGIN<0.474075139" ]
+    386 -> 553 [label="yes, missing" color="#0000FF"]
+    386 -> 554 [label="no" color="#FF0000"]
+
+    553 [ label="HourlyDryBulbTemperature_Dest<73.5" ]
+    553 -> 713 [label="yes, missing" color="#0000FF"]
+    553 -> 714 [label="no" color="#FF0000"]
+
+    713 [ label="leaf=-0.00193320448" ]
+
+    714 [ label="leaf=0.00189981016" ]
+
+    554 [ label="HourlyAltimeterSetting_Origin<30.0849991" ]
+    554 -> 715 [label="yes, missing" color="#0000FF"]
+    554 -> 716 [label="no" color="#FF0000"]
+
+    715 [ label="leaf=0.00183074118" ]
+
+    716 [ label="HourlyAltimeterSetting_Dest<30.0300007" ]
+    716 -> 853 [label="yes, missing" color="#0000FF"]
+    716 -> 854 [label="no" color="#FF0000"]
+
+    853 [ label="ARR_TIME_hour<0.485918641" ]
+    853 -> 987 [label="yes, missing" color="#0000FF"]
+    853 -> 988 [label="no" color="#FF0000"]
+
+    987 [ label="leaf=0.000899910054" ]
+
+    988 [ label="leaf=-0.00189981016" ]
+
+    854 [ label="leaf=0.00155993772" ]
+
+    244 [ label="leaf=-0.00193320448" ]
+
+    10 [ label="ORIGIN<0.683333337" ]
+    10 -> 21 [label="yes, missing" color="#0000FF"]
+    10 -> 22 [label="no" color="#FF0000"]
+
+    21 [ label="HourlyDryBulbTemperature_Dest<89.5" ]
+    21 -> 43 [label="yes, missing" color="#0000FF"]
+    21 -> 44 [label="no" color="#FF0000"]
+
+    43 [ label="ARR_TIME_hour<0.457073629" ]
+    43 -> 81 [label="yes, missing" color="#0000FF"]
+    43 -> 82 [label="no" color="#FF0000"]
+
+    81 [ label="DAY_OF_MONTH<0.520715952" ]
+    81 -> 145 [label="yes, missing" color="#0000FF"]
+    81 -> 146 [label="no" color="#FF0000"]
+
+    145 [ label="HourlyDryBulbTemperature_Dest<22.5" ]
+    145 -> 245 [label="yes, missing" color="#0000FF"]
+    145 -> 246 [label="no" color="#FF0000"]
+
+    245 [ label="leaf=0.00195546867" ]
+
+    246 [ label="HourlyAltimeterSetting_Dest<30.0275002" ]
+    246 -> 387 [label="yes, missing" color="#0000FF"]
+    246 -> 388 [label="no" color="#FF0000"]
+
+    387 [ label="ARR_TIME_hour<0.350460202" ]
+    387 -> 555 [label="yes, missing" color="#0000FF"]
+    387 -> 556 [label="no" color="#FF0000"]
+
+    555 [ label="TAXI_IN_median<9.5" ]
+    555 -> 717 [label="yes, missing" color="#0000FF"]
+    555 -> 718 [label="no" color="#FF0000"]
+
+    717 [ label="HourlyDryBulbTemperature_Dest<61.5" ]
+    717 -> 855 [label="yes, missing" color="#0000FF"]
+    717 -> 856 [label="no" color="#FF0000"]
+
+    855 [ label="HourlySkyConditions_Origin<0.474498868" ]
+    855 -> 991 [label="yes, missing" color="#0000FF"]
+    855 -> 992 [label="no" color="#FF0000"]
+
+    991 [ label="leaf=0.00191984652" ]
+
+    992 [ label="leaf=-0.000449977495" ]
+
+    856 [ label="HourlyRelativeHumidity_Origin<59.5" ]
+    856 -> 993 [label="yes, missing" color="#0000FF"]
+    856 -> 994 [label="no" color="#FF0000"]
+
+    993 [ label="leaf=0.000228558376" ]
+
+    994 [ label="OP_UNIQUE_CARRIER<0.514173388" ]
+    994 -> 1141 [label="yes, missing" color="#0000FF"]
+    994 -> 1142 [label="no" color="#FF0000"]
+
+    1141 [ label="leaf=-0" ]
+
+    1142 [ label="HourlyDryBulbTemperature_Dest<83.5" ]
+    1142 -> 1277 [label="yes, missing" color="#0000FF"]
+    1142 -> 1278 [label="no" color="#FF0000"]
+
+    1277 [ label="leaf=-0.00196917029" ]
+
+    1278 [ label="leaf=-0.00031997441" ]
+
+    718 [ label="leaf=-0.00194990262" ]
+
+    556 [ label="TAXI_OUT_median<16.5" ]
+    556 -> 719 [label="yes, missing" color="#0000FF"]
+    556 -> 720 [label="no" color="#FF0000"]
+
+    719 [ label="TAXI_OUT_median<14.5" ]
+    719 -> 857 [label="yes, missing" color="#0000FF"]
+    719 -> 858 [label="no" color="#FF0000"]
+
+    857 [ label="DAY_OF_MONTH<0.462140709" ]
+    857 -> 995 [label="yes, missing" color="#0000FF"]
+    857 -> 996 [label="no" color="#FF0000"]
+
+    995 [ label="DEP_TIME_hour<0.426101208" ]
+    995 -> 1143 [label="yes, missing" color="#0000FF"]
+    995 -> 1144 [label="no" color="#FF0000"]
+
+    1143 [ label="DAY_OF_MONTH<0.436376572" ]
+    1143 -> 1279 [label="yes, missing" color="#0000FF"]
+    1143 -> 1280 [label="no" color="#FF0000"]
+
+    1279 [ label="leaf=-0.000899910054" ]
+
+    1280 [ label="leaf=0.00111991039" ]
+
+    1144 [ label="leaf=-0.00195992179" ]
+
+    996 [ label="HourlyAltimeterSetting_Dest<29.9400005" ]
+    996 -> 1145 [label="yes, missing" color="#0000FF"]
+    996 -> 1146 [label="no" color="#FF0000"]
+
+    1145 [ label="leaf=0.00195546867" ]
+
+    1146 [ label="leaf=-0.00059996004" ]
+
+    858 [ label="HourlyAltimeterSetting_Origin<30.0125008" ]
+    858 -> 997 [label="yes, missing" color="#0000FF"]
+    858 -> 998 [label="no" color="#FF0000"]
+
+    997 [ label="HourlyRelativeHumidity_Origin<83.5" ]
+    997 -> 1147 [label="yes, missing" color="#0000FF"]
+    997 -> 1148 [label="no" color="#FF0000"]
+
+    1147 [ label="leaf=0.00198091473" ]
+
+    1148 [ label="leaf=0.00031997441" ]
+
+    998 [ label="HourlyDryBulbTemperature_Dest<69" ]
+    998 -> 1149 [label="yes, missing" color="#0000FF"]
+    998 -> 1150 [label="no" color="#FF0000"]
+
+    1149 [ label="DAY_OF_MONTH<0.475178599" ]
+    1149 -> 1281 [label="yes, missing" color="#0000FF"]
+    1149 -> 1282 [label="no" color="#FF0000"]
+
+    1281 [ label="leaf=0.00194274622" ]
+
+    1282 [ label="leaf=-0" ]
+
+    1150 [ label="HourlySkyConditions_Dest<0.487769246" ]
+    1150 -> 1283 [label="yes, missing" color="#0000FF"]
+    1150 -> 1284 [label="no" color="#FF0000"]
+
+    1283 [ label="leaf=-0" ]
+
+    1284 [ label="leaf=-0.00191984652" ]
+
+    720 [ label="HourlyRelativeHumidity_Origin<87.5" ]
+    720 -> 859 [label="yes, missing" color="#0000FF"]
+    720 -> 860 [label="no" color="#FF0000"]
+
+    859 [ label="DEP_TIME_hour<0.342146158" ]
+    859 -> 999 [label="yes, missing" color="#0000FF"]
+    859 -> 1000 [label="no" color="#FF0000"]
+
+    999 [ label="ORIGIN<0.470861495" ]
+    999 -> 1151 [label="yes, missing" color="#0000FF"]
+    999 -> 1152 [label="no" color="#FF0000"]
+
+    1151 [ label="leaf=-0" ]
+
+    1152 [ label="leaf=-0.00195992179" ]
+
+    1000 [ label="HourlyAltimeterSetting_Dest<29.9925003" ]
+    1000 -> 1153 [label="yes, missing" color="#0000FF"]
+    1000 -> 1154 [label="no" color="#FF0000"]
+
+    1153 [ label="DAY_OF_MONTH<0.466024518" ]
+    1153 -> 1285 [label="yes, missing" color="#0000FF"]
+    1153 -> 1286 [label="no" color="#FF0000"]
+
+    1285 [ label="ORIGIN<0.551868379" ]
+    1285 -> 1391 [label="yes, missing" color="#0000FF"]
+    1285 -> 1392 [label="no" color="#FF0000"]
+
+    1391 [ label="leaf=-0.00195546867" ]
+
+    1392 [ label="HourlyAltimeterSetting_Origin<29.8675003" ]
+    1392 -> 1475 [label="yes, missing" color="#0000FF"]
+    1392 -> 1476 [label="no" color="#FF0000"]
+
+    1475 [ label="leaf=-0.00189981016" ]
+
+    1476 [ label="HourlyAltimeterSetting_Origin<29.9650002" ]
+    1476 -> 1537 [label="yes, missing" color="#0000FF"]
+    1476 -> 1538 [label="no" color="#FF0000"]
+
+    1537 [ label="leaf=0.000899910054" ]
+
+    1538 [ label="leaf=-0.00111991039" ]
+
+    1286 [ label="TAXI_IN_median<5.5" ]
+    1286 -> 1393 [label="yes, missing" color="#0000FF"]
+    1286 -> 1394 [label="no" color="#FF0000"]
+
+    1393 [ label="HourlyAltimeterSetting_Dest<29.9449997" ]
+    1393 -> 1477 [label="yes, missing" color="#0000FF"]
+    1393 -> 1478 [label="no" color="#FF0000"]
+
+    1477 [ label="leaf=-0.00137135026" ]
+
+    1478 [ label="leaf=0.00031997441" ]
+
+    1394 [ label="leaf=0.000474988163" ]
+
+    1154 [ label="HourlyRelativeHumidity_Origin<71.5" ]
+    1154 -> 1287 [label="yes, missing" color="#0000FF"]
+    1154 -> 1288 [label="no" color="#FF0000"]
+
+    1287 [ label="leaf=0.00144992757" ]
+
+    1288 [ label="leaf=-0.00031997441" ]
+
+    860 [ label="TAXI_IN_median<7" ]
+    860 -> 1001 [label="yes, missing" color="#0000FF"]
+    860 -> 1002 [label="no" color="#FF0000"]
+
+    1001 [ label="leaf=0.00195546867" ]
+
+    1002 [ label="ORIGIN<0.551868379" ]
+    1002 -> 1155 [label="yes, missing" color="#0000FF"]
+    1002 -> 1156 [label="no" color="#FF0000"]
+
+    1155 [ label="leaf=0.000899910054" ]
+
+    1156 [ label="leaf=-0.00189981016" ]
+
+    388 [ label="OP_UNIQUE_CARRIER<0.527073979" ]
+    388 -> 557 [label="yes, missing" color="#0000FF"]
+    388 -> 558 [label="no" color="#FF0000"]
+
+    557 [ label="ORIGIN<0.494680852" ]
+    557 -> 721 [label="yes, missing" color="#0000FF"]
+    557 -> 722 [label="no" color="#FF0000"]
+
+    721 [ label="HourlySkyConditions_Origin<0.484833062" ]
+    721 -> 861 [label="yes, missing" color="#0000FF"]
+    721 -> 862 [label="no" color="#FF0000"]
+
+    861 [ label="leaf=-0.00031997441" ]
+
+    862 [ label="leaf=0.00194274622" ]
+
+    722 [ label="HourlyDryBulbTemperature_Dest<64" ]
+    722 -> 863 [label="yes, missing" color="#0000FF"]
+    722 -> 864 [label="no" color="#FF0000"]
+
+    863 [ label="HourlyDryBulbTemperature_Dest<50.5" ]
+    863 -> 1003 [label="yes, missing" color="#0000FF"]
+    863 -> 1004 [label="no" color="#FF0000"]
+
+    1003 [ label="TAXI_OUT_median<14.5" ]
+    1003 -> 1157 [label="yes, missing" color="#0000FF"]
+    1003 -> 1158 [label="no" color="#FF0000"]
+
+    1157 [ label="leaf=-0.00189981016" ]
+
+    1158 [ label="HourlyRelativeHumidity_Origin<60.5" ]
+    1158 -> 1289 [label="yes, missing" color="#0000FF"]
+    1158 -> 1290 [label="no" color="#FF0000"]
+
+    1289 [ label="leaf=-0.00137135026" ]
+
+    1290 [ label="HourlySkyConditions_Origin<0.510548353" ]
+    1290 -> 1397 [label="yes, missing" color="#0000FF"]
+    1290 -> 1398 [label="no" color="#FF0000"]
+
+    1397 [ label="leaf=-0" ]
+
+    1398 [ label="leaf=0.00189981016" ]
+
+    1004 [ label="leaf=0.00151104399" ]
+
+    864 [ label="HourlyRelativeHumidity_Origin<40" ]
+    864 -> 1005 [label="yes, missing" color="#0000FF"]
+    864 -> 1006 [label="no" color="#FF0000"]
+
+    1005 [ label="leaf=0.000899910054" ]
+
+    1006 [ label="leaf=-0.00159996958" ]
+
+    558 [ label="HourlyDryBulbTemperature_Dest<36.5" ]
+    558 -> 723 [label="yes, missing" color="#0000FF"]
+    558 -> 724 [label="no" color="#FF0000"]
+
+    723 [ label="ORIGIN<0.543670893" ]
+    723 -> 865 [label="yes, missing" color="#0000FF"]
+    723 -> 866 [label="no" color="#FF0000"]
+
+    865 [ label="leaf=-0.00111991039" ]
+
+    866 [ label="leaf=0.00126658229" ]
+
+    724 [ label="HourlyRelativeHumidity_Origin<80.5" ]
+    724 -> 867 [label="yes, missing" color="#0000FF"]
+    724 -> 868 [label="no" color="#FF0000"]
+
+    867 [ label="HourlyDryBulbTemperature_Dest<70.5" ]
+    867 -> 1007 [label="yes, missing" color="#0000FF"]
+    867 -> 1008 [label="no" color="#FF0000"]
+
+    1007 [ label="HourlySkyConditions_Dest<0.5015167" ]
+    1007 -> 1163 [label="yes, missing" color="#0000FF"]
+    1007 -> 1164 [label="no" color="#FF0000"]
+
+    1163 [ label="HourlyRelativeHumidity_Origin<75.5" ]
+    1163 -> 1291 [label="yes, missing" color="#0000FF"]
+    1163 -> 1292 [label="no" color="#FF0000"]
+
+    1291 [ label="HourlyAltimeterSetting_Origin<30.0550003" ]
+    1291 -> 1399 [label="yes, missing" color="#0000FF"]
+    1291 -> 1400 [label="no" color="#FF0000"]
+
+    1399 [ label="DAY_OF_MONTH<0.466024518" ]
+    1399 -> 1481 [label="yes, missing" color="#0000FF"]
+    1399 -> 1482 [label="no" color="#FF0000"]
+
+    1481 [ label="HourlyRelativeHumidity_Origin<50" ]
+    1481 -> 1543 [label="yes, missing" color="#0000FF"]
+    1481 -> 1544 [label="no" color="#FF0000"]
+
+    1543 [ label="leaf=0.00189981016" ]
+
+    1544 [ label="leaf=-0.000899910054" ]
+
+    1482 [ label="leaf=-0.00189981016" ]
+
+    1400 [ label="leaf=-0.0019713724" ]
+
+    1292 [ label="TAXI_OUT_median<14.5" ]
+    1292 -> 1401 [label="yes, missing" color="#0000FF"]
+    1292 -> 1402 [label="no" color="#FF0000"]
+
+    1401 [ label="leaf=0.00189981016" ]
+
+    1402 [ label="leaf=-0.000899910054" ]
+
+    1164 [ label="leaf=-0.00163475424" ]
+
+    1008 [ label="HourlyAltimeterSetting_Dest<30.0450001" ]
+    1008 -> 1165 [label="yes, missing" color="#0000FF"]
+    1008 -> 1166 [label="no" color="#FF0000"]
+
+    1165 [ label="leaf=-0.00151104399" ]
+
+    1166 [ label="DAY_OF_MONTH<0.420192361" ]
+    1166 -> 1297 [label="yes, missing" color="#0000FF"]
+    1166 -> 1298 [label="no" color="#FF0000"]
+
+    1297 [ label="leaf=0.00191984652" ]
+
+    1298 [ label="DEP_TIME_hour<0.426101208" ]
+    1298 -> 1403 [label="yes, missing" color="#0000FF"]
+    1298 -> 1404 [label="no" color="#FF0000"]
+
+    1403 [ label="TAXI_IN_median<6.5" ]
+    1403 -> 1483 [label="yes, missing" color="#0000FF"]
+    1403 -> 1484 [label="no" color="#FF0000"]
+
+    1483 [ label="leaf=-0.00194274622" ]
+
+    1484 [ label="HourlyAltimeterSetting_Origin<30.0224991" ]
+    1484 -> 1545 [label="yes, missing" color="#0000FF"]
+    1484 -> 1546 [label="no" color="#FF0000"]
+
+    1545 [ label="leaf=0.00189981016" ]
+
+    1546 [ label="leaf=-0.00111991039" ]
+
+    1404 [ label="leaf=0.00126658229" ]
+
+    868 [ label="HourlyAltimeterSetting_Origin<30.1076927" ]
+    868 -> 1009 [label="yes, missing" color="#0000FF"]
+    868 -> 1010 [label="no" color="#FF0000"]
+
+    1009 [ label="HourlyAltimeterSetting_Origin<30.0599995" ]
+    1009 -> 1167 [label="yes, missing" color="#0000FF"]
+    1009 -> 1168 [label="no" color="#FF0000"]
+
+    1167 [ label="leaf=-0.00172495691" ]
+
+    1168 [ label="leaf=0.00031997441" ]
+
+    1010 [ label="leaf=-0.00197495078" ]
+
+    146 [ label="ORIGIN<0.640350878" ]
+    146 -> 247 [label="yes, missing" color="#0000FF"]
+    146 -> 248 [label="no" color="#FF0000"]
+
+    247 [ label="DAY_OF_MONTH<0.587023258" ]
+    247 -> 389 [label="yes, missing" color="#0000FF"]
+    247 -> 390 [label="no" color="#FF0000"]
+
+    389 [ label="HourlyAltimeterSetting_Dest<29.8549995" ]
+    389 -> 559 [label="yes, missing" color="#0000FF"]
+    389 -> 560 [label="no" color="#FF0000"]
+
+    559 [ label="HourlyDryBulbTemperature_Dest<79.5" ]
+    559 -> 725 [label="yes, missing" color="#0000FF"]
+    559 -> 726 [label="no" color="#FF0000"]
+
+    725 [ label="OP_UNIQUE_CARRIER<0.561666667" ]
+    725 -> 869 [label="yes, missing" color="#0000FF"]
+    725 -> 870 [label="no" color="#FF0000"]
+
+    869 [ label="leaf=0.00163475424" ]
+
+    870 [ label="leaf=-0.00031997441" ]
+
+    726 [ label="leaf=-0.00111991039" ]
+
+    560 [ label="ORIGIN<0.551868379" ]
+    560 -> 727 [label="yes, missing" color="#0000FF"]
+    560 -> 728 [label="no" color="#FF0000"]
+
+    727 [ label="TAXI_IN_median<10.5" ]
+    727 -> 871 [label="yes, missing" color="#0000FF"]
+    727 -> 872 [label="no" color="#FF0000"]
+
+    871 [ label="DAY_OF_MONTH<0.550730109" ]
+    871 -> 1013 [label="yes, missing" color="#0000FF"]
+    871 -> 1014 [label="no" color="#FF0000"]
+
+    1013 [ label="ORIGIN<0.486158133" ]
+    1013 -> 1169 [label="yes, missing" color="#0000FF"]
+    1013 -> 1170 [label="no" color="#FF0000"]
+
+    1169 [ label="TAXI_IN_median<6.5" ]
+    1169 -> 1301 [label="yes, missing" color="#0000FF"]
+    1169 -> 1302 [label="no" color="#FF0000"]
+
+    1301 [ label="leaf=-0.00193320448" ]
+
+    1302 [ label="leaf=0.00031997441" ]
+
+    1170 [ label="ARR_TIME_hour<0.358762801" ]
+    1170 -> 1303 [label="yes, missing" color="#0000FF"]
+    1170 -> 1304 [label="no" color="#FF0000"]
+
+    1303 [ label="ORIGIN<0.523910582" ]
+    1303 -> 1405 [label="yes, missing" color="#0000FF"]
+    1303 -> 1406 [label="no" color="#FF0000"]
+
+    1405 [ label="leaf=0.00062219461" ]
+
+    1406 [ label="leaf=-0.00111991039" ]
+
+    1304 [ label="leaf=0.00155993772" ]
+
+    1014 [ label="DEP_TIME_hour<0.44821167" ]
+    1014 -> 1171 [label="yes, missing" color="#0000FF"]
+    1014 -> 1172 [label="no" color="#FF0000"]
+
+    1171 [ label="leaf=-0.00155786204" ]
+
+    1172 [ label="leaf=-0" ]
+
+    872 [ label="leaf=-0.00196356513" ]
+
+    728 [ label="TAXI_IN_median<7.5" ]
+    728 -> 873 [label="yes, missing" color="#0000FF"]
+    728 -> 874 [label="no" color="#FF0000"]
+
+    873 [ label="HourlyAltimeterSetting_Origin<30.1300011" ]
+    873 -> 1015 [label="yes, missing" color="#0000FF"]
+    873 -> 1016 [label="no" color="#FF0000"]
+
+    1015 [ label="HourlyDryBulbTemperature_Dest<64" ]
+    1015 -> 1173 [label="yes, missing" color="#0000FF"]
+    1015 -> 1174 [label="no" color="#FF0000"]
+
+    1173 [ label="leaf=-0.00135380449" ]
+
+    1174 [ label="TAXI_OUT_median<20.5" ]
+    1174 -> 1309 [label="yes, missing" color="#0000FF"]
+    1174 -> 1310 [label="no" color="#FF0000"]
+
+    1309 [ label="TAXI_OUT_median<17" ]
+    1309 -> 1409 [label="yes, missing" color="#0000FF"]
+    1309 -> 1410 [label="no" color="#FF0000"]
+
+    1409 [ label="leaf=0.000899910054" ]
+
+    1410 [ label="leaf=-0.00191984652" ]
+
+    1310 [ label="leaf=0.00137135026" ]
+
+    1016 [ label="HourlySkyConditions_Dest<0.472966671" ]
+    1016 -> 1175 [label="yes, missing" color="#0000FF"]
+    1016 -> 1176 [label="no" color="#FF0000"]
+
+    1175 [ label="leaf=-0.000899910054" ]
+
+    1176 [ label="HourlyAltimeterSetting_Dest<30.125" ]
+    1176 -> 1311 [label="yes, missing" color="#0000FF"]
+    1176 -> 1312 [label="no" color="#FF0000"]
+
+    1311 [ label="leaf=0.00194990262" ]
+
+    1312 [ label="leaf=-0" ]
+
+    874 [ label="HourlyAltimeterSetting_Origin<29.9400005" ]
+    874 -> 1017 [label="yes, missing" color="#0000FF"]
+    874 -> 1018 [label="no" color="#FF0000"]
+
+    1017 [ label="leaf=-0.000228558376" ]
+
+    1018 [ label="HourlyAltimeterSetting_Origin<30.1749992" ]
+    1018 -> 1177 [label="yes, missing" color="#0000FF"]
+    1018 -> 1178 [label="no" color="#FF0000"]
+
+    1177 [ label="leaf=0.00197495078" ]
+
+    1178 [ label="leaf=-0.00031997441" ]
+
+    390 [ label="HourlyAltimeterSetting_Dest<29.8300018" ]
+    390 -> 561 [label="yes, missing" color="#0000FF"]
+    390 -> 562 [label="no" color="#FF0000"]
+
+    561 [ label="TAXI_OUT_median<17" ]
+    561 -> 729 [label="yes, missing" color="#0000FF"]
+    561 -> 730 [label="no" color="#FF0000"]
+
+    729 [ label="leaf=-0.00189981016" ]
+
+    730 [ label="leaf=0.000899910054" ]
+
+    562 [ label="HourlyDryBulbTemperature_Dest<76" ]
+    562 -> 731 [label="yes, missing" color="#0000FF"]
+    562 -> 732 [label="no" color="#FF0000"]
+
+    731 [ label="ORIGIN<0.567828417" ]
+    731 -> 875 [label="yes, missing" color="#0000FF"]
+    731 -> 876 [label="no" color="#FF0000"]
+
+    875 [ label="HourlyRelativeHumidity_Origin<72.5" ]
+    875 -> 1019 [label="yes, missing" color="#0000FF"]
+    875 -> 1020 [label="no" color="#FF0000"]
+
+    1019 [ label="HourlyDryBulbTemperature_Dest<44" ]
+    1019 -> 1179 [label="yes, missing" color="#0000FF"]
+    1019 -> 1180 [label="no" color="#FF0000"]
+
+    1179 [ label="leaf=0.00191984652" ]
+
+    1180 [ label="leaf=-0.00062219461" ]
+
+    1020 [ label="leaf=0.00196356513" ]
+
+    876 [ label="leaf=-0.00189981016" ]
+
+    732 [ label="leaf=0.00195546867" ]
+
+    248 [ label="leaf=0.00193320448" ]
+
+    82 [ label="HourlyPrecipitation_Dest<0.00499999989" ]
+    82 -> 147 [label="yes, missing" color="#0000FF"]
+    82 -> 148 [label="no" color="#FF0000"]
+
+    147 [ label="OP_UNIQUE_CARRIER<0.498843193" ]
+    147 -> 249 [label="yes, missing" color="#0000FF"]
+    147 -> 250 [label="no" color="#FF0000"]
+
+    249 [ label="DAY_OF_MONTH<0.550730109" ]
+    249 -> 391 [label="yes, missing" color="#0000FF"]
+    249 -> 392 [label="no" color="#FF0000"]
+
+    391 [ label="HourlyRelativeHumidity_Origin<65.5" ]
+    391 -> 563 [label="yes, missing" color="#0000FF"]
+    391 -> 564 [label="no" color="#FF0000"]
+
+    563 [ label="leaf=-0.00168566615" ]
+
+    564 [ label="leaf=-0.000228558376" ]
+
+    392 [ label="leaf=0.000228558376" ]
+
+    250 [ label="DAY_OF_MONTH<0.513479114" ]
+    250 -> 393 [label="yes, missing" color="#0000FF"]
+    250 -> 394 [label="no" color="#FF0000"]
+
+    393 [ label="ORIGIN<0.551868379" ]
+    393 -> 565 [label="yes, missing" color="#0000FF"]
+    393 -> 566 [label="no" color="#FF0000"]
+
+    565 [ label="DEP_TIME_hour<0.467979729" ]
+    565 -> 735 [label="yes, missing" color="#0000FF"]
+    565 -> 736 [label="no" color="#FF0000"]
+
+    735 [ label="HourlyAltimeterSetting_Origin<29.9575005" ]
+    735 -> 877 [label="yes, missing" color="#0000FF"]
+    735 -> 878 [label="no" color="#FF0000"]
+
+    877 [ label="HourlyAltimeterSetting_Dest<30.1324997" ]
+    877 -> 1021 [label="yes, missing" color="#0000FF"]
+    877 -> 1022 [label="no" color="#FF0000"]
+
+    1021 [ label="HourlyAltimeterSetting_Origin<29.7900009" ]
+    1021 -> 1181 [label="yes, missing" color="#0000FF"]
+    1021 -> 1182 [label="no" color="#FF0000"]
+
+    1181 [ label="leaf=0.000899910054" ]
+
+    1182 [ label="leaf=-0.00172495691" ]
+
+    1022 [ label="leaf=0.00189981016" ]
+
+    878 [ label="HourlyAltimeterSetting_Dest<29.9850006" ]
+    878 -> 1023 [label="yes, missing" color="#0000FF"]
+    878 -> 1024 [label="no" color="#FF0000"]
+
+    1023 [ label="OP_UNIQUE_CARRIER<0.538357139" ]
+    1023 -> 1183 [label="yes, missing" color="#0000FF"]
+    1023 -> 1184 [label="no" color="#FF0000"]
+
+    1183 [ label="leaf=-0" ]
+
+    1184 [ label="leaf=0.00196917029" ]
+
+    1024 [ label="HourlyAltimeterSetting_Dest<30.0375004" ]
+    1024 -> 1185 [label="yes, missing" color="#0000FF"]
+    1024 -> 1186 [label="no" color="#FF0000"]
+
+    1185 [ label="leaf=-0.00194274622" ]
+
+    1186 [ label="TAXI_IN_median<7.5" ]
+    1186 -> 1317 [label="yes, missing" color="#0000FF"]
+    1186 -> 1318 [label="no" color="#FF0000"]
+
+    1317 [ label="HourlySkyConditions_Dest<0.487769246" ]
+    1317 -> 1411 [label="yes, missing" color="#0000FF"]
+    1317 -> 1412 [label="no" color="#FF0000"]
+
+    1411 [ label="leaf=-0.00191984652" ]
+
+    1412 [ label="leaf=0.00059996004" ]
+
+    1318 [ label="leaf=0.00194990262" ]
+
+    736 [ label="TAXI_IN_median<4.5" ]
+    736 -> 879 [label="yes, missing" color="#0000FF"]
+    736 -> 880 [label="no" color="#FF0000"]
+
+    879 [ label="leaf=0.000899910054" ]
+
+    880 [ label="HourlyAltimeterSetting_Dest<30.0149994" ]
+    880 -> 1025 [label="yes, missing" color="#0000FF"]
+    880 -> 1026 [label="no" color="#FF0000"]
+
+    1025 [ label="leaf=-0.00166148739" ]
+
+    1026 [ label="HourlyAltimeterSetting_Origin<30.0525017" ]
+    1026 -> 1189 [label="yes, missing" color="#0000FF"]
+    1026 -> 1190 [label="no" color="#FF0000"]
+
+    1189 [ label="leaf=0.000899910054" ]
+
+    1190 [ label="leaf=-0.00111991039" ]
+
+    566 [ label="HourlyRelativeHumidity_Origin<62.5" ]
+    566 -> 737 [label="yes, missing" color="#0000FF"]
+    566 -> 738 [label="no" color="#FF0000"]
+
+    737 [ label="HourlySkyConditions_Dest<0.5015167" ]
+    737 -> 881 [label="yes, missing" color="#0000FF"]
+    737 -> 882 [label="no" color="#FF0000"]
+
+    881 [ label="TAXI_IN_median<8.5" ]
+    881 -> 1027 [label="yes, missing" color="#0000FF"]
+    881 -> 1028 [label="no" color="#FF0000"]
+
+    1027 [ label="ARR_TIME_hour<0.485918641" ]
+    1027 -> 1191 [label="yes, missing" color="#0000FF"]
+    1027 -> 1192 [label="no" color="#FF0000"]
+
+    1191 [ label="HourlyAltimeterSetting_Dest<30.0799999" ]
+    1191 -> 1319 [label="yes, missing" color="#0000FF"]
+    1191 -> 1320 [label="no" color="#FF0000"]
+
+    1319 [ label="HourlyAltimeterSetting_Dest<29.9500008" ]
+    1319 -> 1413 [label="yes, missing" color="#0000FF"]
+    1319 -> 1414 [label="no" color="#FF0000"]
+
+    1413 [ label="leaf=-0" ]
+
+    1414 [ label="leaf=0.00191984652" ]
+
+    1320 [ label="leaf=-0.00189981016" ]
+
+    1192 [ label="leaf=-0.00195546867" ]
+
+    1028 [ label="leaf=0.00111991039" ]
+
+    882 [ label="leaf=0.00117330207" ]
+
+    738 [ label="OP_UNIQUE_CARRIER<0.548783183" ]
+    738 -> 883 [label="yes, missing" color="#0000FF"]
+    738 -> 884 [label="no" color="#FF0000"]
+
+    883 [ label="ORIGIN<0.564175189" ]
+    883 -> 1031 [label="yes, missing" color="#0000FF"]
+    883 -> 1032 [label="no" color="#FF0000"]
+
+    1031 [ label="leaf=0.00189981016" ]
+
+    1032 [ label="HourlySkyConditions_Dest<0.5015167" ]
+    1032 -> 1195 [label="yes, missing" color="#0000FF"]
+    1032 -> 1196 [label="no" color="#FF0000"]
+
+    1195 [ label="leaf=0.00126658229" ]
+
+    1196 [ label="leaf=-0.00059996004" ]
+
+    884 [ label="leaf=0.00196660124" ]
+
+    394 [ label="HourlyAltimeterSetting_Origin<30.2649994" ]
+    394 -> 567 [label="yes, missing" color="#0000FF"]
+    394 -> 568 [label="no" color="#FF0000"]
+
+    567 [ label="HourlyAltimeterSetting_Origin<29.7625008" ]
+    567 -> 739 [label="yes, missing" color="#0000FF"]
+    567 -> 740 [label="no" color="#FF0000"]
+
+    739 [ label="leaf=-0.000949952519" ]
+
+    740 [ label="ORIGIN<0.471217096" ]
+    740 -> 887 [label="yes, missing" color="#0000FF"]
+    740 -> 888 [label="no" color="#FF0000"]
+
+    887 [ label="TAXI_OUT_median<16.5" ]
+    887 -> 1033 [label="yes, missing" color="#0000FF"]
+    887 -> 1034 [label="no" color="#FF0000"]
+
+    1033 [ label="leaf=-0.00111991039" ]
+
+    1034 [ label="leaf=0.000799954345" ]
+
+    888 [ label="HourlyAltimeterSetting_Origin<30.1300011" ]
+    888 -> 1035 [label="yes, missing" color="#0000FF"]
+    888 -> 1036 [label="no" color="#FF0000"]
+
+    1035 [ label="HourlyRelativeHumidity_Origin<31" ]
+    1035 -> 1197 [label="yes, missing" color="#0000FF"]
+    1035 -> 1198 [label="no" color="#FF0000"]
+
+    1197 [ label="leaf=-0" ]
+
+    1198 [ label="HourlyAltimeterSetting_Dest<29.75" ]
+    1198 -> 1321 [label="yes, missing" color="#0000FF"]
+    1198 -> 1322 [label="no" color="#FF0000"]
+
+    1321 [ label="leaf=0.000228558376" ]
+
+    1322 [ label="HourlyRelativeHumidity_Origin<88.5" ]
+    1322 -> 1415 [label="yes, missing" color="#0000FF"]
+    1322 -> 1416 [label="no" color="#FF0000"]
+
+    1415 [ label="HourlySkyConditions_Origin<0.510548353" ]
+    1415 -> 1487 [label="yes, missing" color="#0000FF"]
+    1415 -> 1488 [label="no" color="#FF0000"]
+
+    1487 [ label="leaf=0.00198664027" ]
+
+    1488 [ label="ORIGIN<0.536672652" ]
+    1488 -> 1547 [label="yes, missing" color="#0000FF"]
+    1488 -> 1548 [label="no" color="#FF0000"]
+
+    1547 [ label="leaf=0.00194990262" ]
+
+    1548 [ label="OP_UNIQUE_CARRIER<0.536283135" ]
+    1548 -> 1573 [label="yes, missing" color="#0000FF"]
+    1548 -> 1574 [label="no" color="#FF0000"]
+
+    1573 [ label="leaf=0.00189981016" ]
+
+    1574 [ label="leaf=-0.000228558376" ]
+
+    1416 [ label="leaf=0.00062219461" ]
+
+    1036 [ label="HourlyAltimeterSetting_Origin<30.2024994" ]
+    1036 -> 1199 [label="yes, missing" color="#0000FF"]
+    1036 -> 1200 [label="no" color="#FF0000"]
+
+    1199 [ label="OP_UNIQUE_CARRIER<0.548783183" ]
+    1199 -> 1323 [label="yes, missing" color="#0000FF"]
+    1199 -> 1324 [label="no" color="#FF0000"]
+
+    1323 [ label="leaf=0.00059996004" ]
+
+    1324 [ label="leaf=-0.00189981016" ]
+
+    1200 [ label="HourlyAltimeterSetting_Dest<30.0949993" ]
+    1200 -> 1325 [label="yes, missing" color="#0000FF"]
+    1200 -> 1326 [label="no" color="#FF0000"]
+
+    1325 [ label="leaf=0.00194274622" ]
+
+    1326 [ label="leaf=0.000228558376" ]
+
+    568 [ label="ORIGIN<0.526388884" ]
+    568 -> 741 [label="yes, missing" color="#0000FF"]
+    568 -> 742 [label="no" color="#FF0000"]
+
+    741 [ label="leaf=-0.00191984652" ]
+
+    742 [ label="leaf=-0" ]
+
+    148 [ label="DAY_OF_MONTH<0.587023258" ]
+    148 -> 251 [label="yes, missing" color="#0000FF"]
+    148 -> 252 [label="no" color="#FF0000"]
+
+    251 [ label="leaf=0.00179044215" ]
+
+    252 [ label="leaf=-0" ]
+
+    44 [ label="HourlyAltimeterSetting_Origin<30.0750008" ]
+    44 -> 83 [label="yes, missing" color="#0000FF"]
+    44 -> 84 [label="no" color="#FF0000"]
+
+    83 [ label="HourlySkyConditions_Origin<0.510548353" ]
+    83 -> 149 [label="yes, missing" color="#0000FF"]
+    83 -> 150 [label="no" color="#FF0000"]
+
+    149 [ label="ARR_TIME_hour<0.485918641" ]
+    149 -> 253 [label="yes, missing" color="#0000FF"]
+    149 -> 254 [label="no" color="#FF0000"]
+
+    253 [ label="HourlyDryBulbTemperature_Dest<91.5" ]
+    253 -> 397 [label="yes, missing" color="#0000FF"]
+    253 -> 398 [label="no" color="#FF0000"]
+
+    397 [ label="leaf=-0" ]
+
+    398 [ label="leaf=-0.00151104399" ]
+
+    254 [ label="HourlyAltimeterSetting_Dest<29.9850006" ]
+    254 -> 399 [label="yes, missing" color="#0000FF"]
+    254 -> 400 [label="no" color="#FF0000"]
+
+    399 [ label="TAXI_IN_median<9" ]
+    399 -> 571 [label="yes, missing" color="#0000FF"]
+    399 -> 572 [label="no" color="#FF0000"]
+
+    571 [ label="leaf=0.00194274622" ]
+
+    572 [ label="leaf=-0" ]
+
+    400 [ label="leaf=-0.00111991039" ]
+
+    150 [ label="HourlySkyConditions_Dest<0.487769246" ]
+    150 -> 255 [label="yes, missing" color="#0000FF"]
+    150 -> 256 [label="no" color="#FF0000"]
+
+    255 [ label="DAY_OF_MONTH<0.528124988" ]
+    255 -> 401 [label="yes, missing" color="#0000FF"]
+    255 -> 402 [label="no" color="#FF0000"]
+
+    401 [ label="leaf=-0.00137135026" ]
+
+    402 [ label="leaf=0.000899910054" ]
+
+    256 [ label="leaf=-0.00195992179" ]
+
+    84 [ label="leaf=-0.00197328068" ]
+
+    22 [ label="DEP_TIME_hour<0.426101208" ]
+    22 -> 45 [label="yes, missing" color="#0000FF"]
+    22 -> 46 [label="no" color="#FF0000"]
+
+    45 [ label="ORIGIN<0.928571463" ]
+    45 -> 85 [label="yes, missing" color="#0000FF"]
+    45 -> 86 [label="no" color="#FF0000"]
+
+    85 [ label="HourlyAltimeterSetting_Dest<30.125" ]
+    85 -> 151 [label="yes, missing" color="#0000FF"]
+    85 -> 152 [label="no" color="#FF0000"]
+
+    151 [ label="DAY_OF_MONTH<0.528124988" ]
+    151 -> 257 [label="yes, missing" color="#0000FF"]
+    151 -> 258 [label="no" color="#FF0000"]
+
+    257 [ label="leaf=0.0014399616" ]
+
+    258 [ label="ARR_TIME_hour<0.358762801" ]
+    258 -> 405 [label="yes, missing" color="#0000FF"]
+    258 -> 406 [label="no" color="#FF0000"]
+
+    405 [ label="leaf=-0.00111991039" ]
+
+    406 [ label="leaf=0.000899910054" ]
+
+    152 [ label="HourlyDryBulbTemperature_Dest<46" ]
+    152 -> 259 [label="yes, missing" color="#0000FF"]
+    152 -> 260 [label="no" color="#FF0000"]
+
+    259 [ label="HourlyAltimeterSetting_Dest<30.2924995" ]
+    259 -> 407 [label="yes, missing" color="#0000FF"]
+    259 -> 408 [label="no" color="#FF0000"]
+
+    407 [ label="leaf=0.00189981016" ]
+
+    408 [ label="leaf=-0.000899910054" ]
+
+    260 [ label="leaf=-0.00144992757" ]
+
+    86 [ label="leaf=0.00196356513" ]
+
+    46 [ label="leaf=0.00198664027" ]
+
+    2 [ label="HourlyRelativeHumidity_Origin<75.5" ]
+    2 -> 5 [label="yes, missing" color="#0000FF"]
+    2 -> 6 [label="no" color="#FF0000"]
+
+    5 [ label="ORIGIN<0.425824165" ]
+    5 -> 11 [label="yes, missing" color="#0000FF"]
+    5 -> 12 [label="no" color="#FF0000"]
+
+    11 [ label="DAY_OF_MONTH<0.573010862" ]
+    11 -> 23 [label="yes, missing" color="#0000FF"]
+    11 -> 24 [label="no" color="#FF0000"]
+
+    23 [ label="HourlyAltimeterSetting_Dest<30.0649986" ]
+    23 -> 47 [label="yes, missing" color="#0000FF"]
+    23 -> 48 [label="no" color="#FF0000"]
+
+    47 [ label="ORIGIN<0.215909094" ]
+    47 -> 87 [label="yes, missing" color="#0000FF"]
+    47 -> 88 [label="no" color="#FF0000"]
+
+    87 [ label="TAXI_OUT_median<14" ]
+    87 -> 153 [label="yes, missing" color="#0000FF"]
+    87 -> 154 [label="no" color="#FF0000"]
+
+    153 [ label="leaf=-0.00197642413" ]
+
+    154 [ label="leaf=-0" ]
+
+    88 [ label="TAXI_IN_median<7.5" ]
+    88 -> 155 [label="yes, missing" color="#0000FF"]
+    88 -> 156 [label="no" color="#FF0000"]
+
+    155 [ label="OP_UNIQUE_CARRIER<0.472408295" ]
+    155 -> 261 [label="yes, missing" color="#0000FF"]
+    155 -> 262 [label="no" color="#FF0000"]
+
+    261 [ label="HourlyAltimeterSetting_Origin<29.9350014" ]
+    261 -> 411 [label="yes, missing" color="#0000FF"]
+    261 -> 412 [label="no" color="#FF0000"]
+
+    411 [ label="HourlySkyConditions_Origin<0.510548353" ]
+    411 -> 573 [label="yes, missing" color="#0000FF"]
+    411 -> 574 [label="no" color="#FF0000"]
+
+    573 [ label="leaf=-0.00111991039" ]
+
+    574 [ label="leaf=0.00111991039" ]
+
+    412 [ label="HourlyAltimeterSetting_Dest<30.0349998" ]
+    412 -> 575 [label="yes, missing" color="#0000FF"]
+    412 -> 576 [label="no" color="#FF0000"]
+
+    575 [ label="leaf=-0.00197890587" ]
+
+    576 [ label="leaf=-0" ]
+
+    262 [ label="HourlyAltimeterSetting_Origin<30.0750008" ]
+    262 -> 413 [label="yes, missing" color="#0000FF"]
+    262 -> 414 [label="no" color="#FF0000"]
+
+    413 [ label="HourlyAltimeterSetting_Origin<30.0450001" ]
+    413 -> 577 [label="yes, missing" color="#0000FF"]
+    413 -> 578 [label="no" color="#FF0000"]
+
+    577 [ label="HourlyAltimeterSetting_Origin<29.9150009" ]
+    577 -> 743 [label="yes, missing" color="#0000FF"]
+    577 -> 744 [label="no" color="#FF0000"]
+
+    743 [ label="HourlySkyConditions_Dest<0.468405634" ]
+    743 -> 889 [label="yes, missing" color="#0000FF"]
+    743 -> 890 [label="no" color="#FF0000"]
+
+    889 [ label="HourlyAltimeterSetting_Origin<29.8549995" ]
+    889 -> 1037 [label="yes, missing" color="#0000FF"]
+    889 -> 1038 [label="no" color="#FF0000"]
+
+    1037 [ label="leaf=0.00189981016" ]
+
+    1038 [ label="leaf=-0.00059996004" ]
+
+    890 [ label="TAXI_OUT_median<8.5" ]
+    890 -> 1039 [label="yes, missing" color="#0000FF"]
+    890 -> 1040 [label="no" color="#FF0000"]
+
+    1039 [ label="leaf=0.00031997441" ]
+
+    1040 [ label="HourlyAltimeterSetting_Origin<29.7849998" ]
+    1040 -> 1201 [label="yes, missing" color="#0000FF"]
+    1040 -> 1202 [label="no" color="#FF0000"]
+
+    1201 [ label="leaf=-0.000228558376" ]
+
+    1202 [ label="leaf=-0.00152305362" ]
+
+    744 [ label="DEP_TIME_hour<0.601973772" ]
+    744 -> 891 [label="yes, missing" color="#0000FF"]
+    744 -> 892 [label="no" color="#FF0000"]
+
+    891 [ label="TAXI_IN_median<5.5" ]
+    891 -> 1041 [label="yes, missing" color="#0000FF"]
+    891 -> 1042 [label="no" color="#FF0000"]
+
+    1041 [ label="HourlyAltimeterSetting_Origin<29.9350014" ]
+    1041 -> 1203 [label="yes, missing" color="#0000FF"]
+    1041 -> 1204 [label="no" color="#FF0000"]
+
+    1203 [ label="leaf=-0" ]
+
+    1204 [ label="leaf=-0.00194274622" ]
+
+    1042 [ label="leaf=0.00111991039" ]
+
+    892 [ label="leaf=0.00155993772" ]
+
+    578 [ label="leaf=-0.00194274622" ]
+
+    414 [ label="DAY_OF_MONTH<0.494607449" ]
+    414 -> 579 [label="yes, missing" color="#0000FF"]
+    414 -> 580 [label="no" color="#FF0000"]
+
+    579 [ label="leaf=0.0012999567" ]
+
+    580 [ label="leaf=-0.000899910054" ]
+
+    156 [ label="DAY_OF_MONTH<0.550730109" ]
+    156 -> 263 [label="yes, missing" color="#0000FF"]
+    156 -> 264 [label="no" color="#FF0000"]
+
+    263 [ label="OP_UNIQUE_CARRIER<0.488298148" ]
+    263 -> 415 [label="yes, missing" color="#0000FF"]
+    263 -> 416 [label="no" color="#FF0000"]
+
+    415 [ label="leaf=0.000828547811" ]
+
+    416 [ label="HourlyAltimeterSetting_Dest<29.8974991" ]
+    416 -> 583 [label="yes, missing" color="#0000FF"]
+    416 -> 584 [label="no" color="#FF0000"]
+
+    583 [ label="ARR_TIME_hour<0.573960304" ]
+    583 -> 749 [label="yes, missing" color="#0000FF"]
+    583 -> 750 [label="no" color="#FF0000"]
+
+    749 [ label="HourlyAltimeterSetting_Origin<30.0200005" ]
+    749 -> 893 [label="yes, missing" color="#0000FF"]
+    749 -> 894 [label="no" color="#FF0000"]
+
+    893 [ label="leaf=-0.000949952519" ]
+
+    894 [ label="leaf=0.00111991039" ]
+
+    750 [ label="leaf=0.00189981016" ]
+
+    584 [ label="HourlyRelativeHumidity_Origin<55" ]
+    584 -> 751 [label="yes, missing" color="#0000FF"]
+    584 -> 752 [label="no" color="#FF0000"]
+
+    751 [ label="TAXI_OUT_median<14.5" ]
+    751 -> 895 [label="yes, missing" color="#0000FF"]
+    751 -> 896 [label="no" color="#FF0000"]
+
+    895 [ label="leaf=-0.00195992179" ]
+
+    896 [ label="leaf=-0" ]
+
+    752 [ label="ORIGIN<0.36434108" ]
+    752 -> 897 [label="yes, missing" color="#0000FF"]
+    752 -> 898 [label="no" color="#FF0000"]
+
+    897 [ label="leaf=0.00189981016" ]
+
+    898 [ label="leaf=-0.00126658229" ]
+
+    264 [ label="leaf=0.00163327891" ]
+
+    48 [ label="ARR_TIME_hour<0.627074838" ]
+    48 -> 89 [label="yes, missing" color="#0000FF"]
+    48 -> 90 [label="no" color="#FF0000"]
+
+    89 [ label="TAXI_OUT_median<12.5" ]
+    89 -> 157 [label="yes, missing" color="#0000FF"]
+    89 -> 158 [label="no" color="#FF0000"]
+
+    157 [ label="TAXI_IN_median<8.5" ]
+    157 -> 265 [label="yes, missing" color="#0000FF"]
+    157 -> 266 [label="no" color="#FF0000"]
+
+    265 [ label="DAY_OF_MONTH<0.515561223" ]
+    265 -> 419 [label="yes, missing" color="#0000FF"]
+    265 -> 420 [label="no" color="#FF0000"]
+
+    419 [ label="leaf=-0.00168566615" ]
+
+    420 [ label="TAXI_IN_median<4.5" ]
+    420 -> 587 [label="yes, missing" color="#0000FF"]
+    420 -> 588 [label="no" color="#FF0000"]
+
+    587 [ label="leaf=0.00111991039" ]
+
+    588 [ label="leaf=-0.00189981016" ]
+
+    266 [ label="leaf=0.000899910054" ]
+
+    158 [ label="ORIGIN<0.377155185" ]
+    158 -> 267 [label="yes, missing" color="#0000FF"]
+    158 -> 268 [label="no" color="#FF0000"]
+
+    267 [ label="leaf=-0.00198707124" ]
+
+    268 [ label="OP_UNIQUE_CARRIER<0.486784846" ]
+    268 -> 421 [label="yes, missing" color="#0000FF"]
+    268 -> 422 [label="no" color="#FF0000"]
+
+    421 [ label="leaf=-0.00175551663" ]
+
+    422 [ label="HourlySkyConditions_Dest<0.5015167" ]
+    422 -> 591 [label="yes, missing" color="#0000FF"]
+    422 -> 592 [label="no" color="#FF0000"]
+
+    591 [ label="leaf=0.00189981016" ]
+
+    592 [ label="leaf=-0.00189981016" ]
+
+    90 [ label="HourlySkyConditions_Origin<0.442980528" ]
+    90 -> 159 [label="yes, missing" color="#0000FF"]
+    90 -> 160 [label="no" color="#FF0000"]
+
+    159 [ label="leaf=-0.00126658229" ]
+
+    160 [ label="leaf=0.00126658229" ]
+
+    24 [ label="HourlyDryBulbTemperature_Dest<73.5" ]
+    24 -> 49 [label="yes, missing" color="#0000FF"]
+    24 -> 50 [label="no" color="#FF0000"]
+
+    49 [ label="HourlySkyConditions_Origin<0.442980528" ]
+    49 -> 91 [label="yes, missing" color="#0000FF"]
+    49 -> 92 [label="no" color="#FF0000"]
+
+    91 [ label="leaf=-0.00031997441" ]
+
+    92 [ label="TAXI_IN_median<5.5" ]
+    92 -> 161 [label="yes, missing" color="#0000FF"]
+    92 -> 162 [label="no" color="#FF0000"]
+
+    161 [ label="leaf=0.00062219461" ]
+
+    162 [ label="leaf=0.00196917029" ]
+
+    50 [ label="HourlyAltimeterSetting_Origin<30.0299988" ]
+    50 -> 93 [label="yes, missing" color="#0000FF"]
+    50 -> 94 [label="no" color="#FF0000"]
+
+    93 [ label="leaf=0.00031997441" ]
+
+    94 [ label="leaf=-0.00189981016" ]
+
+    12 [ label="ORIGIN<0.610939145" ]
+    12 -> 25 [label="yes, missing" color="#0000FF"]
+    12 -> 26 [label="no" color="#FF0000"]
+
+    25 [ label="HourlyAltimeterSetting_Dest<29.9975014" ]
+    25 -> 51 [label="yes, missing" color="#0000FF"]
+    25 -> 52 [label="no" color="#FF0000"]
+
+    51 [ label="HourlyRelativeHumidity_Origin<71.5" ]
+    51 -> 95 [label="yes, missing" color="#0000FF"]
+    51 -> 96 [label="no" color="#FF0000"]
+
+    95 [ label="HourlyDryBulbTemperature_Dest<37.5" ]
+    95 -> 163 [label="yes, missing" color="#0000FF"]
+    95 -> 164 [label="no" color="#FF0000"]
+
+    163 [ label="TAXI_IN_median<5.5" ]
+    163 -> 271 [label="yes, missing" color="#0000FF"]
+    163 -> 272 [label="no" color="#FF0000"]
+
+    271 [ label="HourlySkyConditions_Origin<0.484833062" ]
+    271 -> 423 [label="yes, missing" color="#0000FF"]
+    271 -> 424 [label="no" color="#FF0000"]
+
+    423 [ label="leaf=-0.00126658229" ]
+
+    424 [ label="HourlyRelativeHumidity_Origin<48" ]
+    424 -> 593 [label="yes, missing" color="#0000FF"]
+    424 -> 594 [label="no" color="#FF0000"]
+
+    593 [ label="leaf=0.00191984652" ]
+
+    594 [ label="leaf=-0.000228558376" ]
+
+    272 [ label="leaf=0.00165553717" ]
+
+    164 [ label="HourlyPrecipitation_Dest<0.00499999989" ]
+    164 -> 273 [label="yes, missing" color="#0000FF"]
+    164 -> 274 [label="no" color="#FF0000"]
+
+    273 [ label="TAXI_OUT_median<9.5" ]
+    273 -> 427 [label="yes, missing" color="#0000FF"]
+    273 -> 428 [label="no" color="#FF0000"]
+
+    427 [ label="HourlySkyConditions_Dest<0.468405634" ]
+    427 -> 597 [label="yes, missing" color="#0000FF"]
+    427 -> 598 [label="no" color="#FF0000"]
+
+    597 [ label="leaf=-0" ]
+
+    598 [ label="leaf=0.00197328068" ]
+
+    428 [ label="DAY_OF_MONTH<0.491415828" ]
+    428 -> 599 [label="yes, missing" color="#0000FF"]
+    428 -> 600 [label="no" color="#FF0000"]
+
+    599 [ label="HourlyRelativeHumidity_Origin<42.5" ]
+    599 -> 753 [label="yes, missing" color="#0000FF"]
+    599 -> 754 [label="no" color="#FF0000"]
+
+    753 [ label="TAXI_IN_median<8.5" ]
+    753 -> 899 [label="yes, missing" color="#0000FF"]
+    753 -> 900 [label="no" color="#FF0000"]
+
+    899 [ label="DEP_TIME_hour<0.610691309" ]
+    899 -> 1047 [label="yes, missing" color="#0000FF"]
+    899 -> 1048 [label="no" color="#FF0000"]
+
+    1047 [ label="HourlyAltimeterSetting_Origin<29.9925003" ]
+    1047 -> 1205 [label="yes, missing" color="#0000FF"]
+    1047 -> 1206 [label="no" color="#FF0000"]
+
+    1205 [ label="HourlySkyConditions_Origin<0.461512655" ]
+    1205 -> 1329 [label="yes, missing" color="#0000FF"]
+    1205 -> 1330 [label="no" color="#FF0000"]
+
+    1329 [ label="leaf=-0.000123073143" ]
+
+    1330 [ label="HourlyAltimeterSetting_Dest<29.7649994" ]
+    1330 -> 1421 [label="yes, missing" color="#0000FF"]
+    1330 -> 1422 [label="no" color="#FF0000"]
+
+    1421 [ label="leaf=-0.00031997441" ]
+
+    1422 [ label="leaf=-0.00198515598" ]
+
+    1206 [ label="HourlySkyConditions_Origin<0.474498868" ]
+    1206 -> 1331 [label="yes, missing" color="#0000FF"]
+    1206 -> 1332 [label="no" color="#FF0000"]
+
+    1331 [ label="leaf=-0.00144992757" ]
+
+    1332 [ label="leaf=0.000949952519" ]
+
+    1048 [ label="HourlyAltimeterSetting_Origin<29.8349991" ]
+    1048 -> 1207 [label="yes, missing" color="#0000FF"]
+    1048 -> 1208 [label="no" color="#FF0000"]
+
+    1207 [ label="DAY_OF_MONTH<0.467664778" ]
+    1207 -> 1333 [label="yes, missing" color="#0000FF"]
+    1207 -> 1334 [label="no" color="#FF0000"]
+
+    1333 [ label="leaf=-0.00137135026" ]
+
+    1334 [ label="leaf=0.000899910054" ]
+
+    1208 [ label="DEP_TIME_hour<0.629994631" ]
+    1208 -> 1335 [label="yes, missing" color="#0000FF"]
+    1208 -> 1336 [label="no" color="#FF0000"]
+
+    1335 [ label="leaf=0.00193320448" ]
+
+    1336 [ label="leaf=-0.00031997441" ]
+
+    900 [ label="ARR_TIME_hour<0.608698189" ]
+    900 -> 1049 [label="yes, missing" color="#0000FF"]
+    900 -> 1050 [label="no" color="#FF0000"]
+
+    1049 [ label="HourlyDryBulbTemperature_Dest<80.5" ]
+    1049 -> 1209 [label="yes, missing" color="#0000FF"]
+    1049 -> 1210 [label="no" color="#FF0000"]
+
+    1209 [ label="leaf=0.00195546867" ]
+
+    1210 [ label="leaf=-0" ]
+
+    1050 [ label="leaf=-0.00189981016" ]
+
+    754 [ label="ORIGIN<0.520595193" ]
+    754 -> 901 [label="yes, missing" color="#0000FF"]
+    754 -> 902 [label="no" color="#FF0000"]
+
+    901 [ label="OP_UNIQUE_CARRIER<0.472408295" ]
+    901 -> 1051 [label="yes, missing" color="#0000FF"]
+    901 -> 1052 [label="no" color="#FF0000"]
+
+    1051 [ label="ORIGIN<0.487588644" ]
+    1051 -> 1211 [label="yes, missing" color="#0000FF"]
+    1051 -> 1212 [label="no" color="#FF0000"]
+
+    1211 [ label="leaf=-0.00174113561" ]
+
+    1212 [ label="leaf=-0" ]
+
+    1052 [ label="HourlyAltimeterSetting_Dest<29.7150002" ]
+    1052 -> 1213 [label="yes, missing" color="#0000FF"]
+    1052 -> 1214 [label="no" color="#FF0000"]
+
+    1213 [ label="leaf=0.00151104399" ]
+
+    1214 [ label="HourlyAltimeterSetting_Origin<29.9200001" ]
+    1214 -> 1341 [label="yes, missing" color="#0000FF"]
+    1214 -> 1342 [label="no" color="#FF0000"]
+
+    1341 [ label="DAY_OF_MONTH<0.450928867" ]
+    1341 -> 1427 [label="yes, missing" color="#0000FF"]
+    1341 -> 1428 [label="no" color="#FF0000"]
+
+    1427 [ label="leaf=-0" ]
+
+    1428 [ label="leaf=-0.00159994187" ]
+
+    1342 [ label="HourlyAltimeterSetting_Origin<29.9850006" ]
+    1342 -> 1429 [label="yes, missing" color="#0000FF"]
+    1342 -> 1430 [label="no" color="#FF0000"]
+
+    1429 [ label="HourlyDryBulbTemperature_Dest<58" ]
+    1429 -> 1495 [label="yes, missing" color="#0000FF"]
+    1429 -> 1496 [label="no" color="#FF0000"]
+
+    1495 [ label="leaf=-0" ]
+
+    1496 [ label="leaf=0.00196356513" ]
+
+    1430 [ label="ORIGIN<0.48032409" ]
+    1430 -> 1497 [label="yes, missing" color="#0000FF"]
+    1430 -> 1498 [label="no" color="#FF0000"]
+
+    1497 [ label="leaf=0.000799954345" ]
+
+    1498 [ label="DAY_OF_MONTH<0.445086658" ]
+    1498 -> 1549 [label="yes, missing" color="#0000FF"]
+    1498 -> 1550 [label="no" color="#FF0000"]
+
+    1549 [ label="leaf=-0" ]
+
+    1550 [ label="leaf=-0.00194990262" ]
+
+    902 [ label="HourlyDryBulbTemperature_Dest<52.5" ]
+    902 -> 1053 [label="yes, missing" color="#0000FF"]
+    902 -> 1054 [label="no" color="#FF0000"]
+
+    1053 [ label="HourlyRelativeHumidity_Origin<54" ]
+    1053 -> 1215 [label="yes, missing" color="#0000FF"]
+    1053 -> 1216 [label="no" color="#FF0000"]
+
+    1215 [ label="leaf=-0" ]
+
+    1216 [ label="leaf=-0.00194990262" ]
+
+    1054 [ label="HourlyAltimeterSetting_Origin<30.0550003" ]
+    1054 -> 1217 [label="yes, missing" color="#0000FF"]
+    1054 -> 1218 [label="no" color="#FF0000"]
+
+    1217 [ label="DAY_OF_MONTH<0.462140709" ]
+    1217 -> 1343 [label="yes, missing" color="#0000FF"]
+    1217 -> 1344 [label="no" color="#FF0000"]
+
+    1343 [ label="DEP_TIME_hour<0.602521896" ]
+    1343 -> 1431 [label="yes, missing" color="#0000FF"]
+    1343 -> 1432 [label="no" color="#FF0000"]
+
+    1431 [ label="HourlyAltimeterSetting_Origin<29.7800007" ]
+    1431 -> 1499 [label="yes, missing" color="#0000FF"]
+    1431 -> 1500 [label="no" color="#FF0000"]
+
+    1499 [ label="leaf=-0.000899910054" ]
+
+    1500 [ label="OP_UNIQUE_CARRIER<0.514173388" ]
+    1500 -> 1551 [label="yes, missing" color="#0000FF"]
+    1500 -> 1552 [label="no" color="#FF0000"]
+
+    1551 [ label="leaf=0.0019713724" ]
+
+    1552 [ label="HourlyDryBulbTemperature_Dest<72.5" ]
+    1552 -> 1575 [label="yes, missing" color="#0000FF"]
+    1552 -> 1576 [label="no" color="#FF0000"]
+
+    1575 [ label="leaf=0.00191984652" ]
+
+    1576 [ label="DEP_TIME_hour<0.58141917" ]
+    1576 -> 1591 [label="yes, missing" color="#0000FF"]
+    1576 -> 1592 [label="no" color="#FF0000"]
+
+    1591 [ label="leaf=0.00111991039" ]
+
+    1592 [ label="leaf=-0.00111991039" ]
+
+    1432 [ label="ARR_TIME_hour<0.608698189" ]
+    1432 -> 1501 [label="yes, missing" color="#0000FF"]
+    1432 -> 1502 [label="no" color="#FF0000"]
+
+    1501 [ label="leaf=-0.00193320448" ]
+
+    1502 [ label="leaf=-0" ]
+
+    1344 [ label="DEP_TIME_hour<0.540373564" ]
+    1344 -> 1433 [label="yes, missing" color="#0000FF"]
+    1344 -> 1434 [label="no" color="#FF0000"]
+
+    1433 [ label="leaf=-0" ]
+
+    1434 [ label="leaf=0.00185330876" ]
+
+    1218 [ label="HourlyDryBulbTemperature_Dest<70.5" ]
+    1218 -> 1345 [label="yes, missing" color="#0000FF"]
+    1218 -> 1346 [label="no" color="#FF0000"]
+
+    1345 [ label="OP_UNIQUE_CARRIER<0.538357139" ]
+    1345 -> 1435 [label="yes, missing" color="#0000FF"]
+    1345 -> 1436 [label="no" color="#FF0000"]
+
+    1435 [ label="leaf=-0" ]
+
+    1436 [ label="leaf=0.00191984652" ]
+
+    1346 [ label="HourlyAltimeterSetting_Dest<29.9350014" ]
+    1346 -> 1437 [label="yes, missing" color="#0000FF"]
+    1346 -> 1438 [label="no" color="#FF0000"]
+
+    1437 [ label="leaf=-0.00193320448" ]
+
+    1438 [ label="leaf=-0" ]
+
+    600 [ label="ORIGIN<0.592373133" ]
+    600 -> 755 [label="yes, missing" color="#0000FF"]
+    600 -> 756 [label="no" color="#FF0000"]
+
+    755 [ label="HourlyAltimeterSetting_Origin<30.0874996" ]
+    755 -> 903 [label="yes, missing" color="#0000FF"]
+    755 -> 904 [label="no" color="#FF0000"]
+
+    903 [ label="HourlyDryBulbTemperature_Dest<77.5" ]
+    903 -> 1055 [label="yes, missing" color="#0000FF"]
+    903 -> 1056 [label="no" color="#FF0000"]
+
+    1055 [ label="HourlyDryBulbTemperature_Dest<71.5" ]
+    1055 -> 1219 [label="yes, missing" color="#0000FF"]
+    1055 -> 1220 [label="no" color="#FF0000"]
+
+    1219 [ label="TAXI_IN_median<3.5" ]
+    1219 -> 1347 [label="yes, missing" color="#0000FF"]
+    1219 -> 1348 [label="no" color="#FF0000"]
+
+    1347 [ label="HourlyAltimeterSetting_Dest<29.9500008" ]
+    1347 -> 1439 [label="yes, missing" color="#0000FF"]
+    1347 -> 1440 [label="no" color="#FF0000"]
+
+    1439 [ label="leaf=-0.00194990262" ]
+
+    1440 [ label="leaf=0.00191984652" ]
+
+    1348 [ label="TAXI_IN_median<9.5" ]
+    1348 -> 1441 [label="yes, missing" color="#0000FF"]
+    1348 -> 1442 [label="no" color="#FF0000"]
+
+    1441 [ label="HourlyDryBulbTemperature_Dest<53.5" ]
+    1441 -> 1505 [label="yes, missing" color="#0000FF"]
+    1441 -> 1506 [label="no" color="#FF0000"]
+
+    1505 [ label="leaf=0.00164997263" ]
+
+    1506 [ label="HourlyDryBulbTemperature_Dest<63.5" ]
+    1506 -> 1555 [label="yes, missing" color="#0000FF"]
+    1506 -> 1556 [label="no" color="#FF0000"]
+
+    1555 [ label="OP_UNIQUE_CARRIER<0.485918909" ]
+    1555 -> 1577 [label="yes, missing" color="#0000FF"]
+    1555 -> 1578 [label="no" color="#FF0000"]
+
+    1577 [ label="leaf=-0.00155993772" ]
+
+    1578 [ label="HourlyAltimeterSetting_Dest<29.8724995" ]
+    1578 -> 1595 [label="yes, missing" color="#0000FF"]
+    1578 -> 1596 [label="no" color="#FF0000"]
+
+    1595 [ label="TAXI_OUT_median<16.5" ]
+    1595 -> 1605 [label="yes, missing" color="#0000FF"]
+    1595 -> 1606 [label="no" color="#FF0000"]
+
+    1605 [ label="leaf=0.00031997441" ]
+
+    1606 [ label="leaf=-0.00189981016" ]
+
+    1596 [ label="leaf=0.00195546867" ]
+
+    1556 [ label="OP_UNIQUE_CARRIER<0.493362695" ]
+    1556 -> 1579 [label="yes, missing" color="#0000FF"]
+    1556 -> 1580 [label="no" color="#FF0000"]
+
+    1579 [ label="leaf=0.00159996958" ]
+
+    1580 [ label="OP_UNIQUE_CARRIER<0.527073979" ]
+    1580 -> 1599 [label="yes, missing" color="#0000FF"]
+    1580 -> 1600 [label="no" color="#FF0000"]
+
+    1599 [ label="leaf=-0.00191984652" ]
+
+    1600 [ label="ARR_TIME_hour<0.559135675" ]
+    1600 -> 1607 [label="yes, missing" color="#0000FF"]
+    1600 -> 1608 [label="no" color="#FF0000"]
+
+    1607 [ label="leaf=-0.000899910054" ]
+
+    1608 [ label="leaf=0.00135380449" ]
+
+    1442 [ label="leaf=-0.000449977495" ]
+
+    1220 [ label="TAXI_OUT_median<18.5" ]
+    1220 -> 1349 [label="yes, missing" color="#0000FF"]
+    1220 -> 1350 [label="no" color="#FF0000"]
+
+    1349 [ label="leaf=0.00178459717" ]
+
+    1350 [ label="HourlyDryBulbTemperature_Dest<75.5" ]
+    1350 -> 1445 [label="yes, missing" color="#0000FF"]
+    1350 -> 1446 [label="no" color="#FF0000"]
+
+    1445 [ label="leaf=0.00191984652" ]
+
+    1446 [ label="leaf=-0.00189981016" ]
+
+    1056 [ label="OP_UNIQUE_CARRIER<0.514173388" ]
+    1056 -> 1221 [label="yes, missing" color="#0000FF"]
+    1056 -> 1222 [label="no" color="#FF0000"]
+
+    1221 [ label="TAXI_OUT_median<14.5" ]
+    1221 -> 1351 [label="yes, missing" color="#0000FF"]
+    1221 -> 1352 [label="no" color="#FF0000"]
+
+    1351 [ label="DAY_OF_MONTH<0.528124988" ]
+    1351 -> 1447 [label="yes, missing" color="#0000FF"]
+    1351 -> 1448 [label="no" color="#FF0000"]
+
+    1447 [ label="leaf=-0.00059996004" ]
+
+    1448 [ label="leaf=0.00151104399" ]
+
+    1352 [ label="HourlyAltimeterSetting_Origin<29.9850006" ]
+    1352 -> 1449 [label="yes, missing" color="#0000FF"]
+    1352 -> 1450 [label="no" color="#FF0000"]
+
+    1449 [ label="leaf=-0.00157996849" ]
+
+    1450 [ label="OP_UNIQUE_CARRIER<0.441549838" ]
+    1450 -> 1515 [label="yes, missing" color="#0000FF"]
+    1450 -> 1516 [label="no" color="#FF0000"]
+
+    1515 [ label="leaf=-0.00059996004" ]
+
+    1516 [ label="leaf=0.00189981016" ]
+
+    1222 [ label="HourlySkyConditions_Dest<0.5015167" ]
+    1222 -> 1353 [label="yes, missing" color="#0000FF"]
+    1222 -> 1354 [label="no" color="#FF0000"]
+
+    1353 [ label="HourlyDryBulbTemperature_Dest<81.5" ]
+    1353 -> 1451 [label="yes, missing" color="#0000FF"]
+    1353 -> 1452 [label="no" color="#FF0000"]
+
+    1451 [ label="HourlySkyConditions_Dest<0.472966671" ]
+    1451 -> 1517 [label="yes, missing" color="#0000FF"]
+    1451 -> 1518 [label="no" color="#FF0000"]
+
+    1517 [ label="leaf=-0.000899910054" ]
+
+    1518 [ label="leaf=0.00111991039" ]
+
+    1452 [ label="leaf=0.00155712059" ]
+
+    1354 [ label="HourlyAltimeterSetting_Dest<29.9125004" ]
+    1354 -> 1453 [label="yes, missing" color="#0000FF"]
+    1354 -> 1454 [label="no" color="#FF0000"]
+
+    1453 [ label="leaf=-0" ]
+
+    1454 [ label="leaf=-0.00193320448" ]
+
+    904 [ label="DAY_OF_MONTH<0.513479114" ]
+    904 -> 1057 [label="yes, missing" color="#0000FF"]
+    904 -> 1058 [label="no" color="#FF0000"]
+
+    1057 [ label="leaf=0.00144992757" ]
+
+    1058 [ label="TAXI_IN_median<6.5" ]
+    1058 -> 1225 [label="yes, missing" color="#0000FF"]
+    1058 -> 1226 [label="no" color="#FF0000"]
+
+    1225 [ label="HourlyDryBulbTemperature_Dest<75" ]
+    1225 -> 1355 [label="yes, missing" color="#0000FF"]
+    1225 -> 1356 [label="no" color="#FF0000"]
+
+    1355 [ label="ORIGIN<0.524404764" ]
+    1355 -> 1455 [label="yes, missing" color="#0000FF"]
+    1355 -> 1456 [label="no" color="#FF0000"]
+
+    1455 [ label="leaf=-0.000949952519" ]
+
+    1456 [ label="leaf=0.000899910054" ]
+
+    1356 [ label="leaf=0.00189981016" ]
+
+    1226 [ label="HourlySkyConditions_Origin<0.510548353" ]
+    1226 -> 1357 [label="yes, missing" color="#0000FF"]
+    1226 -> 1358 [label="no" color="#FF0000"]
+
+    1357 [ label="leaf=-0.00196356513" ]
+
+    1358 [ label="leaf=-0.00031997441" ]
+
+    756 [ label="DEP_TIME_hour<0.593583703" ]
+    756 -> 905 [label="yes, missing" color="#0000FF"]
+    756 -> 906 [label="no" color="#FF0000"]
+
+    905 [ label="HourlyDryBulbTemperature_Dest<69.3934479" ]
+    905 -> 1059 [label="yes, missing" color="#0000FF"]
+    905 -> 1060 [label="no" color="#FF0000"]
+
+    1059 [ label="leaf=-0" ]
+
+    1060 [ label="leaf=-0.00195992179" ]
+
+    906 [ label="TAXI_OUT_median<14" ]
+    906 -> 1061 [label="yes, missing" color="#0000FF"]
+    906 -> 1062 [label="no" color="#FF0000"]
+
+    1061 [ label="leaf=0.00189981016" ]
+
+    1062 [ label="leaf=-0.00031997441" ]
+
+    274 [ label="HourlyRelativeHumidity_Origin<56.5" ]
+    274 -> 429 [label="yes, missing" color="#0000FF"]
+    274 -> 430 [label="no" color="#FF0000"]
+
+    429 [ label="leaf=0.00174113561" ]
+
+    430 [ label="HourlyRelativeHumidity_Origin<63.5" ]
+    430 -> 603 [label="yes, missing" color="#0000FF"]
+    430 -> 604 [label="no" color="#FF0000"]
+
+    603 [ label="leaf=-0.000899910054" ]
+
+    604 [ label="leaf=0.00123631873" ]
+
+    96 [ label="DAY_OF_MONTH<0.550730109" ]
+    96 -> 165 [label="yes, missing" color="#0000FF"]
+    96 -> 166 [label="no" color="#FF0000"]
+
+    165 [ label="HourlyAltimeterSetting_Dest<29.9549999" ]
+    165 -> 275 [label="yes, missing" color="#0000FF"]
+    165 -> 276 [label="no" color="#FF0000"]
+
+    275 [ label="HourlyAltimeterSetting_Dest<29.8999996" ]
+    275 -> 431 [label="yes, missing" color="#0000FF"]
+    275 -> 432 [label="no" color="#FF0000"]
+
+    431 [ label="OP_UNIQUE_CARRIER<0.47937572" ]
+    431 -> 605 [label="yes, missing" color="#0000FF"]
+    431 -> 606 [label="no" color="#FF0000"]
+
+    605 [ label="leaf=0.000228558376" ]
+
+    606 [ label="leaf=0.00194274622" ]
+
+    432 [ label="ORIGIN<0.548371911" ]
+    432 -> 607 [label="yes, missing" color="#0000FF"]
+    432 -> 608 [label="no" color="#FF0000"]
+
+    607 [ label="TAXI_OUT_median<15.5" ]
+    607 -> 759 [label="yes, missing" color="#0000FF"]
+    607 -> 760 [label="no" color="#FF0000"]
+
+    759 [ label="leaf=-0.000899910054" ]
+
+    760 [ label="leaf=0.00111991039" ]
+
+    608 [ label="leaf=-0.00189981016" ]
+
+    276 [ label="leaf=0.00168566615" ]
+
+    166 [ label="leaf=0.00197642413" ]
+
+    52 [ label="ARR_TIME_hour<0.592949629" ]
+    52 -> 97 [label="yes, missing" color="#0000FF"]
+    52 -> 98 [label="no" color="#FF0000"]
+
+    97 [ label="DAY_OF_MONTH<0.557087064" ]
+    97 -> 167 [label="yes, missing" color="#0000FF"]
+    97 -> 168 [label="no" color="#FF0000"]
+
+    167 [ label="TAXI_IN_median<7.5" ]
+    167 -> 277 [label="yes, missing" color="#0000FF"]
+    167 -> 278 [label="no" color="#FF0000"]
+
+    277 [ label="HourlyAltimeterSetting_Origin<30.1749992" ]
+    277 -> 435 [label="yes, missing" color="#0000FF"]
+    277 -> 436 [label="no" color="#FF0000"]
+
+    435 [ label="DAY_OF_MONTH<0.407676011" ]
+    435 -> 609 [label="yes, missing" color="#0000FF"]
+    435 -> 610 [label="no" color="#FF0000"]
+
+    609 [ label="leaf=0.00155993772" ]
+
+    610 [ label="TAXI_IN_median<3.5" ]
+    610 -> 763 [label="yes, missing" color="#0000FF"]
+    610 -> 764 [label="no" color="#FF0000"]
+
+    763 [ label="HourlyAltimeterSetting_Dest<30.0275002" ]
+    763 -> 907 [label="yes, missing" color="#0000FF"]
+    763 -> 908 [label="no" color="#FF0000"]
+
+    907 [ label="leaf=-0.00194274622" ]
+
+    908 [ label="ARR_TIME_hour<0.559135675" ]
+    908 -> 1063 [label="yes, missing" color="#0000FF"]
+    908 -> 1064 [label="no" color="#FF0000"]
+
+    1063 [ label="leaf=0.000949952519" ]
+
+    1064 [ label="DAY_OF_MONTH<0.487377167" ]
+    1064 -> 1229 [label="yes, missing" color="#0000FF"]
+    1064 -> 1230 [label="no" color="#FF0000"]
+
+    1229 [ label="leaf=-0.00155993772" ]
+
+    1230 [ label="leaf=0.00031997441" ]
+
+    764 [ label="DAY_OF_MONTH<0.432737827" ]
+    764 -> 909 [label="yes, missing" color="#0000FF"]
+    764 -> 910 [label="no" color="#FF0000"]
+
+    909 [ label="OP_UNIQUE_CARRIER<0.538357139" ]
+    909 -> 1065 [label="yes, missing" color="#0000FF"]
+    909 -> 1066 [label="no" color="#FF0000"]
+
+    1065 [ label="leaf=-0.00194990262" ]
+
+    1066 [ label="leaf=-0" ]
+
+    910 [ label="OP_UNIQUE_CARRIER<0.548783183" ]
+    910 -> 1067 [label="yes, missing" color="#0000FF"]
+    910 -> 1068 [label="no" color="#FF0000"]
+
+    1067 [ label="HourlyRelativeHumidity_Origin<33" ]
+    1067 -> 1231 [label="yes, missing" color="#0000FF"]
+    1067 -> 1232 [label="no" color="#FF0000"]
+
+    1231 [ label="HourlyAltimeterSetting_Dest<30.0849991" ]
+    1231 -> 1361 [label="yes, missing" color="#0000FF"]
+    1231 -> 1362 [label="no" color="#FF0000"]
+
+    1361 [ label="leaf=-0.00194274622" ]
+
+    1362 [ label="leaf=0.000228558376" ]
+
+    1232 [ label="HourlyRelativeHumidity_Origin<56.5" ]
+    1232 -> 1363 [label="yes, missing" color="#0000FF"]
+    1232 -> 1364 [label="no" color="#FF0000"]
+
+    1363 [ label="HourlyRelativeHumidity_Origin<49.5" ]
+    1363 -> 1457 [label="yes, missing" color="#0000FF"]
+    1363 -> 1458 [label="no" color="#FF0000"]
+
+    1457 [ label="TAXI_OUT_median<14.5" ]
+    1457 -> 1525 [label="yes, missing" color="#0000FF"]
+    1457 -> 1526 [label="no" color="#FF0000"]
+
+    1525 [ label="TAXI_OUT_median<10.5" ]
+    1525 -> 1561 [label="yes, missing" color="#0000FF"]
+    1525 -> 1562 [label="no" color="#FF0000"]
+
+    1561 [ label="leaf=-0.00059996004" ]
+
+    1562 [ label="leaf=0.00194990262" ]
+
+    1526 [ label="TAXI_OUT_median<19.5" ]
+    1526 -> 1563 [label="yes, missing" color="#0000FF"]
+    1526 -> 1564 [label="no" color="#FF0000"]
+
+    1563 [ label="HourlySkyConditions_Dest<0.5015167" ]
+    1563 -> 1581 [label="yes, missing" color="#0000FF"]
+    1563 -> 1582 [label="no" color="#FF0000"]
+
+    1581 [ label="leaf=-0.00194274622" ]
+
+    1582 [ label="leaf=-0" ]
+
+    1564 [ label="leaf=0.000899910054" ]
+
+    1458 [ label="DEP_TIME_hour<0.569672227" ]
+    1458 -> 1527 [label="yes, missing" color="#0000FF"]
+    1458 -> 1528 [label="no" color="#FF0000"]
+
+    1527 [ label="HourlyAltimeterSetting_Dest<30.0849991" ]
+    1527 -> 1565 [label="yes, missing" color="#0000FF"]
+    1527 -> 1566 [label="no" color="#FF0000"]
+
+    1565 [ label="leaf=-0" ]
+
+    1566 [ label="leaf=0.00189981016" ]
+
+    1528 [ label="leaf=0.00196917029" ]
+
+    1364 [ label="HourlyRelativeHumidity_Origin<68" ]
+    1364 -> 1459 [label="yes, missing" color="#0000FF"]
+    1364 -> 1460 [label="no" color="#FF0000"]
+
+    1459 [ label="HourlySkyConditions_Origin<0.461512655" ]
+    1459 -> 1529 [label="yes, missing" color="#0000FF"]
+    1459 -> 1530 [label="no" color="#FF0000"]
+
+    1529 [ label="leaf=0.00111991039" ]
+
+    1530 [ label="HourlyAltimeterSetting_Dest<30.0550003" ]
+    1530 -> 1567 [label="yes, missing" color="#0000FF"]
+    1530 -> 1568 [label="no" color="#FF0000"]
+
+    1567 [ label="HourlyAltimeterSetting_Dest<30.0450001" ]
+    1567 -> 1583 [label="yes, missing" color="#0000FF"]
+    1567 -> 1584 [label="no" color="#FF0000"]
+
+    1583 [ label="ORIGIN<0.546176791" ]
+    1583 -> 1601 [label="yes, missing" color="#0000FF"]
+    1583 -> 1602 [label="no" color="#FF0000"]
+
+    1601 [ label="leaf=0.000228558376" ]
+
+    1602 [ label="leaf=-0.00193320448" ]
+
+    1584 [ label="leaf=0.00189981016" ]
+
+    1568 [ label="leaf=-0.00153329934" ]
+
+    1460 [ label="DAY_OF_MONTH<0.500942588" ]
+    1460 -> 1531 [label="yes, missing" color="#0000FF"]
+    1460 -> 1532 [label="no" color="#FF0000"]
+
+    1531 [ label="leaf=0.00163327891" ]
+
+    1532 [ label="leaf=-0.000899910054" ]
+
+    1068 [ label="HourlyDryBulbTemperature_Dest<79" ]
+    1068 -> 1233 [label="yes, missing" color="#0000FF"]
+    1068 -> 1234 [label="no" color="#FF0000"]
+
+    1233 [ label="leaf=0.00170662126" ]
+
+    1234 [ label="leaf=0.000228558376" ]
+
+    436 [ label="HourlyRelativeHumidity_Origin<34.5" ]
+    436 -> 611 [label="yes, missing" color="#0000FF"]
+    436 -> 612 [label="no" color="#FF0000"]
+
+    611 [ label="leaf=-0.00177996454" ]
+
+    612 [ label="DAY_OF_MONTH<0.467664778" ]
+    612 -> 767 [label="yes, missing" color="#0000FF"]
+    612 -> 768 [label="no" color="#FF0000"]
+
+    767 [ label="DAY_OF_MONTH<0.420192361" ]
+    767 -> 911 [label="yes, missing" color="#0000FF"]
+    767 -> 912 [label="no" color="#FF0000"]
+
+    911 [ label="leaf=-0" ]
+
+    912 [ label="leaf=-0.00196356513" ]
+
+    768 [ label="HourlyAltimeterSetting_Dest<30.2099991" ]
+    768 -> 913 [label="yes, missing" color="#0000FF"]
+    768 -> 914 [label="no" color="#FF0000"]
+
+    913 [ label="HourlyDryBulbTemperature_Dest<69.5" ]
+    913 -> 1069 [label="yes, missing" color="#0000FF"]
+    913 -> 1070 [label="no" color="#FF0000"]
+
+    1069 [ label="HourlyAltimeterSetting_Origin<30.2124996" ]
+    1069 -> 1235 [label="yes, missing" color="#0000FF"]
+    1069 -> 1236 [label="no" color="#FF0000"]
+
+    1235 [ label="leaf=0.000899910054" ]
+
+    1236 [ label="leaf=-0.00075996964" ]
+
+    1070 [ label="leaf=-0.00193320448" ]
+
+    914 [ label="HourlyAltimeterSetting_Origin<30.3450012" ]
+    914 -> 1071 [label="yes, missing" color="#0000FF"]
+    914 -> 1072 [label="no" color="#FF0000"]
+
+    1071 [ label="leaf=0.00194990262" ]
+
+    1072 [ label="leaf=-0.00031997441" ]
+
+    278 [ label="ORIGIN<0.583591342" ]
+    278 -> 437 [label="yes, missing" color="#0000FF"]
+    278 -> 438 [label="no" color="#FF0000"]
+
+    437 [ label="HourlySkyConditions_Origin<0.461512655" ]
+    437 -> 613 [label="yes, missing" color="#0000FF"]
+    437 -> 614 [label="no" color="#FF0000"]
+
+    613 [ label="HourlyAltimeterSetting_Origin<30.1450005" ]
+    613 -> 769 [label="yes, missing" color="#0000FF"]
+    613 -> 770 [label="no" color="#FF0000"]
+
+    769 [ label="leaf=-0.00197773403" ]
+
+    770 [ label="DAY_OF_MONTH<0.490568757" ]
+    770 -> 915 [label="yes, missing" color="#0000FF"]
+    770 -> 916 [label="no" color="#FF0000"]
+
+    915 [ label="leaf=-0.000228558376" ]
+
+    916 [ label="leaf=-0.00194274622" ]
+
+    614 [ label="HourlySkyConditions_Origin<0.484833062" ]
+    614 -> 771 [label="yes, missing" color="#0000FF"]
+    614 -> 772 [label="no" color="#FF0000"]
+
+    771 [ label="leaf=0.000799954345" ]
+
+    772 [ label="TAXI_OUT_median<16.5" ]
+    772 -> 917 [label="yes, missing" color="#0000FF"]
+    772 -> 918 [label="no" color="#FF0000"]
+
+    917 [ label="HourlyDryBulbTemperature_Dest<33" ]
+    917 -> 1073 [label="yes, missing" color="#0000FF"]
+    917 -> 1074 [label="no" color="#FF0000"]
+
+    1073 [ label="leaf=0.00059996004" ]
+
+    1074 [ label="HourlyRelativeHumidity_Origin<66" ]
+    1074 -> 1237 [label="yes, missing" color="#0000FF"]
+    1074 -> 1238 [label="no" color="#FF0000"]
+
+    1237 [ label="DEP_TIME_hour<0.602521896" ]
+    1237 -> 1369 [label="yes, missing" color="#0000FF"]
+    1237 -> 1370 [label="no" color="#FF0000"]
+
+    1369 [ label="leaf=-0.00179996737" ]
+
+    1370 [ label="leaf=-0" ]
+
+    1238 [ label="DAY_OF_MONTH<0.478126109" ]
+    1238 -> 1371 [label="yes, missing" color="#0000FF"]
+    1238 -> 1372 [label="no" color="#FF0000"]
+
+    1371 [ label="leaf=0.00126658229" ]
+
+    1372 [ label="leaf=-0.00111991039" ]
+
+    918 [ label="leaf=-0.00175551663" ]
+
+    438 [ label="leaf=0.00195546867" ]
+
+    168 [ label="HourlyAltimeterSetting_Origin<30.4799995" ]
+    168 -> 279 [label="yes, missing" color="#0000FF"]
+    168 -> 280 [label="no" color="#FF0000"]
+
+    279 [ label="HourlyAltimeterSetting_Origin<30.2124996" ]
+    279 -> 439 [label="yes, missing" color="#0000FF"]
+    279 -> 440 [label="no" color="#FF0000"]
+
+    439 [ label="HourlyAltimeterSetting_Origin<30.1949997" ]
+    439 -> 615 [label="yes, missing" color="#0000FF"]
+    439 -> 616 [label="no" color="#FF0000"]
+
+    615 [ label="TAXI_OUT_median<16.5" ]
+    615 -> 773 [label="yes, missing" color="#0000FF"]
+    615 -> 774 [label="no" color="#FF0000"]
+
+    773 [ label="HourlySkyConditions_Origin<0.484833062" ]
+    773 -> 919 [label="yes, missing" color="#0000FF"]
+    773 -> 920 [label="no" color="#FF0000"]
+
+    919 [ label="HourlyAltimeterSetting_Origin<30.0049992" ]
+    919 -> 1077 [label="yes, missing" color="#0000FF"]
+    919 -> 1078 [label="no" color="#FF0000"]
+
+    1077 [ label="leaf=0.00137135026" ]
+
+    1078 [ label="DEP_TIME_hour<0.569672227" ]
+    1078 -> 1239 [label="yes, missing" color="#0000FF"]
+    1078 -> 1240 [label="no" color="#FF0000"]
+
+    1239 [ label="leaf=-0.00189981016" ]
+
+    1240 [ label="leaf=0.00031997441" ]
+
+    920 [ label="leaf=0.0019713724" ]
+
+    774 [ label="TAXI_IN_median<5.5" ]
+    774 -> 921 [label="yes, missing" color="#0000FF"]
+    774 -> 922 [label="no" color="#FF0000"]
+
+    921 [ label="DAY_OF_MONTH<0.587023258" ]
+    921 -> 1079 [label="yes, missing" color="#0000FF"]
+    921 -> 1080 [label="no" color="#FF0000"]
+
+    1079 [ label="leaf=0.00191984652" ]
+
+    1080 [ label="leaf=-0.00059996004" ]
+
+    922 [ label="leaf=-0.00144992757" ]
+
+    616 [ label="leaf=-0.00191984652" ]
+
+    440 [ label="leaf=0.00196356513" ]
+
+    280 [ label="leaf=-0.00189981016" ]
+
+    98 [ label="HourlyDryBulbTemperature_Dest<48.5" ]
+    98 -> 169 [label="yes, missing" color="#0000FF"]
+    98 -> 170 [label="no" color="#FF0000"]
+
+    169 [ label="DAY_OF_MONTH<0.438421339" ]
+    169 -> 281 [label="yes, missing" color="#0000FF"]
+    169 -> 282 [label="no" color="#FF0000"]
+
+    281 [ label="leaf=-0.00150584709" ]
+
+    282 [ label="ORIGIN<0.509224653" ]
+    282 -> 443 [label="yes, missing" color="#0000FF"]
+    282 -> 444 [label="no" color="#FF0000"]
+
+    443 [ label="HourlyRelativeHumidity_Origin<44.5" ]
+    443 -> 617 [label="yes, missing" color="#0000FF"]
+    443 -> 618 [label="no" color="#FF0000"]
+
+    617 [ label="HourlyAltimeterSetting_Dest<30.2000008" ]
+    617 -> 775 [label="yes, missing" color="#0000FF"]
+    617 -> 776 [label="no" color="#FF0000"]
+
+    775 [ label="leaf=-0.00191984652" ]
+
+    776 [ label="HourlyAltimeterSetting_Dest<30.2474995" ]
+    776 -> 923 [label="yes, missing" color="#0000FF"]
+    776 -> 924 [label="no" color="#FF0000"]
+
+    923 [ label="leaf=-0" ]
+
+    924 [ label="leaf=0.00163327891" ]
+
+    618 [ label="DAY_OF_MONTH<0.457211852" ]
+    618 -> 777 [label="yes, missing" color="#0000FF"]
+    618 -> 778 [label="no" color="#FF0000"]
+
+    777 [ label="leaf=0.00111991039" ]
+
+    778 [ label="HourlySkyConditions_Dest<0.5015167" ]
+    778 -> 925 [label="yes, missing" color="#0000FF"]
+    778 -> 926 [label="no" color="#FF0000"]
+
+    925 [ label="leaf=-0.00161815248" ]
+
+    926 [ label="HourlyRelativeHumidity_Origin<60.5" ]
+    926 -> 1087 [label="yes, missing" color="#0000FF"]
+    926 -> 1088 [label="no" color="#FF0000"]
+
+    1087 [ label="TAXI_IN_median<6.5" ]
+    1087 -> 1241 [label="yes, missing" color="#0000FF"]
+    1087 -> 1242 [label="no" color="#FF0000"]
+
+    1241 [ label="leaf=-0.00193320448" ]
+
+    1242 [ label="leaf=-0" ]
+
+    1088 [ label="leaf=0.00189981016" ]
+
+    444 [ label="HourlyRelativeHumidity_Origin<55.5" ]
+    444 -> 619 [label="yes, missing" color="#0000FF"]
+    444 -> 620 [label="no" color="#FF0000"]
+
+    619 [ label="HourlyAltimeterSetting_Origin<29.9549999" ]
+    619 -> 779 [label="yes, missing" color="#0000FF"]
+    619 -> 780 [label="no" color="#FF0000"]
+
+    779 [ label="leaf=0.00189981016" ]
+
+    780 [ label="HourlyAltimeterSetting_Origin<30.0999985" ]
+    780 -> 927 [label="yes, missing" color="#0000FF"]
+    780 -> 928 [label="no" color="#FF0000"]
+
+    927 [ label="leaf=-0.00137135026" ]
+
+    928 [ label="HourlySkyConditions_Dest<0.530890524" ]
+    928 -> 1089 [label="yes, missing" color="#0000FF"]
+    928 -> 1090 [label="no" color="#FF0000"]
+
+    1089 [ label="TAXI_IN_median<5.5" ]
+    1089 -> 1243 [label="yes, missing" color="#0000FF"]
+    1089 -> 1244 [label="no" color="#FF0000"]
+
+    1243 [ label="leaf=0.00137135026" ]
+
+    1244 [ label="HourlySkyConditions_Dest<0.5015167" ]
+    1244 -> 1373 [label="yes, missing" color="#0000FF"]
+    1244 -> 1374 [label="no" color="#FF0000"]
+
+    1373 [ label="leaf=-0.00189981016" ]
+
+    1374 [ label="leaf=0.000899910054" ]
+
+    1090 [ label="leaf=-0.00189981016" ]
+
+    620 [ label="OP_UNIQUE_CARRIER<0.498843193" ]
+    620 -> 781 [label="yes, missing" color="#0000FF"]
+    620 -> 782 [label="no" color="#FF0000"]
+
+    781 [ label="leaf=0.0019713724" ]
+
+    782 [ label="HourlyDryBulbTemperature_Dest<36.5" ]
+    782 -> 929 [label="yes, missing" color="#0000FF"]
+    782 -> 930 [label="no" color="#FF0000"]
+
+    929 [ label="leaf=-0.00059996004" ]
+
+    930 [ label="leaf=0.00189981016" ]
+
+    170 [ label="DEP_TIME_hour<0.540373564" ]
+    170 -> 283 [label="yes, missing" color="#0000FF"]
+    170 -> 284 [label="no" color="#FF0000"]
+
+    283 [ label="leaf=-0.00126658229" ]
+
+    284 [ label="TAXI_OUT_median<17.5" ]
+    284 -> 445 [label="yes, missing" color="#0000FF"]
+    284 -> 446 [label="no" color="#FF0000"]
+
+    445 [ label="HourlyDryBulbTemperature_Dest<69.5" ]
+    445 -> 621 [label="yes, missing" color="#0000FF"]
+    445 -> 622 [label="no" color="#FF0000"]
+
+    621 [ label="ORIGIN<0.509224653" ]
+    621 -> 783 [label="yes, missing" color="#0000FF"]
+    621 -> 784 [label="no" color="#FF0000"]
+
+    783 [ label="DAY_OF_MONTH<0.498954326" ]
+    783 -> 931 [label="yes, missing" color="#0000FF"]
+    783 -> 932 [label="no" color="#FF0000"]
+
+    931 [ label="HourlyAltimeterSetting_Origin<30.2249985" ]
+    931 -> 1091 [label="yes, missing" color="#0000FF"]
+    931 -> 1092 [label="no" color="#FF0000"]
+
+    1091 [ label="HourlyRelativeHumidity_Origin<66.5" ]
+    1091 -> 1245 [label="yes, missing" color="#0000FF"]
+    1091 -> 1246 [label="no" color="#FF0000"]
+
+    1245 [ label="HourlyDryBulbTemperature_Dest<61.5" ]
+    1245 -> 1375 [label="yes, missing" color="#0000FF"]
+    1245 -> 1376 [label="no" color="#FF0000"]
+
+    1375 [ label="HourlyDryBulbTemperature_Dest<55.5" ]
+    1375 -> 1463 [label="yes, missing" color="#0000FF"]
+    1375 -> 1464 [label="no" color="#FF0000"]
+
+    1463 [ label="leaf=0.000899910054" ]
+
+    1464 [ label="leaf=-0.00126658229" ]
+
+    1376 [ label="leaf=0.00193320448" ]
+
+    1246 [ label="leaf=-0.00126658229" ]
+
+    1092 [ label="leaf=0.00189981016" ]
+
+    932 [ label="HourlyDryBulbTemperature_Dest<67" ]
+    932 -> 1093 [label="yes, missing" color="#0000FF"]
+    932 -> 1094 [label="no" color="#FF0000"]
+
+    1093 [ label="TAXI_IN_median<5.5" ]
+    1093 -> 1247 [label="yes, missing" color="#0000FF"]
+    1093 -> 1248 [label="no" color="#FF0000"]
+
+    1247 [ label="leaf=0.0019713724" ]
+
+    1248 [ label="HourlyRelativeHumidity_Origin<58.5" ]
+    1248 -> 1377 [label="yes, missing" color="#0000FF"]
+    1248 -> 1378 [label="no" color="#FF0000"]
+
+    1377 [ label="leaf=0.00189981016" ]
+
+    1378 [ label="leaf=-0" ]
+
+    1094 [ label="leaf=-0" ]
+
+    784 [ label="HourlyRelativeHumidity_Origin<46.5" ]
+    784 -> 933 [label="yes, missing" color="#0000FF"]
+    784 -> 934 [label="no" color="#FF0000"]
+
+    933 [ label="DAY_OF_MONTH<0.459035099" ]
+    933 -> 1095 [label="yes, missing" color="#0000FF"]
+    933 -> 1096 [label="no" color="#FF0000"]
+
+    1095 [ label="leaf=-0" ]
+
+    1096 [ label="leaf=0.00194274622" ]
+
+    934 [ label="HourlyAltimeterSetting_Dest<30.1650009" ]
+    934 -> 1097 [label="yes, missing" color="#0000FF"]
+    934 -> 1098 [label="no" color="#FF0000"]
+
+    1097 [ label="HourlyAltimeterSetting_Origin<29.9400005" ]
+    1097 -> 1249 [label="yes, missing" color="#0000FF"]
+    1097 -> 1250 [label="no" color="#FF0000"]
+
+    1249 [ label="leaf=0.00059996004" ]
+
+    1250 [ label="leaf=-0.00170662126" ]
+
+    1098 [ label="HourlySkyConditions_Origin<0.510548353" ]
+    1098 -> 1251 [label="yes, missing" color="#0000FF"]
+    1098 -> 1252 [label="no" color="#FF0000"]
+
+    1251 [ label="leaf=-0.000228558376" ]
+
+    1252 [ label="leaf=0.00191984652" ]
+
+    622 [ label="HourlyAltimeterSetting_Dest<30.1424999" ]
+    622 -> 785 [label="yes, missing" color="#0000FF"]
+    622 -> 786 [label="no" color="#FF0000"]
+
+    785 [ label="DEP_TIME_hour<0.597625375" ]
+    785 -> 935 [label="yes, missing" color="#0000FF"]
+    785 -> 936 [label="no" color="#FF0000"]
+
+    935 [ label="TAXI_IN_median<7.5" ]
+    935 -> 1099 [label="yes, missing" color="#0000FF"]
+    935 -> 1100 [label="no" color="#FF0000"]
+
+    1099 [ label="HourlyAltimeterSetting_Origin<29.9724998" ]
+    1099 -> 1253 [label="yes, missing" color="#0000FF"]
+    1099 -> 1254 [label="no" color="#FF0000"]
+
+    1253 [ label="leaf=-0.00126658229" ]
+
+    1254 [ label="OP_UNIQUE_CARRIER<0.485842586" ]
+    1254 -> 1381 [label="yes, missing" color="#0000FF"]
+    1254 -> 1382 [label="no" color="#FF0000"]
+
+    1381 [ label="HourlySkyConditions_Origin<0.484833062" ]
+    1381 -> 1465 [label="yes, missing" color="#0000FF"]
+    1381 -> 1466 [label="no" color="#FF0000"]
+
+    1465 [ label="leaf=-0.00189981016" ]
+
+    1466 [ label="leaf=0.000899910054" ]
+
+    1382 [ label="leaf=0.00159994187" ]
+
+    1100 [ label="leaf=0.00196356513" ]
+
+    936 [ label="DAY_OF_MONTH<0.504134178" ]
+    936 -> 1101 [label="yes, missing" color="#0000FF"]
+    936 -> 1102 [label="no" color="#FF0000"]
+
+    1101 [ label="DAY_OF_MONTH<0.487377167" ]
+    1101 -> 1255 [label="yes, missing" color="#0000FF"]
+    1101 -> 1256 [label="no" color="#FF0000"]
+
+    1255 [ label="leaf=0.00195992179" ]
+
+    1256 [ label="leaf=-0" ]
+
+    1102 [ label="leaf=0.00197773403" ]
+
+    786 [ label="HourlyRelativeHumidity_Origin<40" ]
+    786 -> 937 [label="yes, missing" color="#0000FF"]
+    786 -> 938 [label="no" color="#FF0000"]
+
+    937 [ label="leaf=0.00191984652" ]
+
+    938 [ label="DAY_OF_MONTH<0.464201272" ]
+    938 -> 1103 [label="yes, missing" color="#0000FF"]
+    938 -> 1104 [label="no" color="#FF0000"]
+
+    1103 [ label="leaf=-0" ]
+
+    1104 [ label="leaf=-0.00193320448" ]
+
+    446 [ label="HourlyAltimeterSetting_Dest<30.0125008" ]
+    446 -> 623 [label="yes, missing" color="#0000FF"]
+    446 -> 624 [label="no" color="#FF0000"]
+
+    623 [ label="leaf=-0.00194990262" ]
+
+    624 [ label="HourlyAltimeterSetting_Origin<30.0349998" ]
+    624 -> 787 [label="yes, missing" color="#0000FF"]
+    624 -> 788 [label="no" color="#FF0000"]
+
+    787 [ label="HourlyRelativeHumidity_Origin<39.5" ]
+    787 -> 939 [label="yes, missing" color="#0000FF"]
+    787 -> 940 [label="no" color="#FF0000"]
+
+    939 [ label="leaf=-0.00059996004" ]
+
+    940 [ label="leaf=0.00150397606" ]
+
+    788 [ label="HourlyAltimeterSetting_Origin<30.1549988" ]
+    788 -> 941 [label="yes, missing" color="#0000FF"]
+    788 -> 942 [label="no" color="#FF0000"]
+
+    941 [ label="OP_UNIQUE_CARRIER<0.514173388" ]
+    941 -> 1107 [label="yes, missing" color="#0000FF"]
+    941 -> 1108 [label="no" color="#FF0000"]
+
+    1107 [ label="HourlyAltimeterSetting_Origin<30.0924988" ]
+    1107 -> 1259 [label="yes, missing" color="#0000FF"]
+    1107 -> 1260 [label="no" color="#FF0000"]
+
+    1259 [ label="leaf=0.000899910054" ]
+
+    1260 [ label="leaf=-0.00189981016" ]
+
+    1108 [ label="leaf=-0.00194990262" ]
+
+    942 [ label="DAY_OF_MONTH<0.539792538" ]
+    942 -> 1109 [label="yes, missing" color="#0000FF"]
+    942 -> 1110 [label="no" color="#FF0000"]
+
+    1109 [ label="DAY_OF_MONTH<0.46972537" ]
+    1109 -> 1261 [label="yes, missing" color="#0000FF"]
+    1109 -> 1262 [label="no" color="#FF0000"]
+
+    1261 [ label="leaf=0.000228558376" ]
+
+    1262 [ label="leaf=0.00194990262" ]
+
+    1110 [ label="leaf=-0.00126658229" ]
+
+    26 [ label="OP_UNIQUE_CARRIER<0.488298148" ]
+    26 -> 53 [label="yes, missing" color="#0000FF"]
+    26 -> 54 [label="no" color="#FF0000"]
+
+    53 [ label="DAY_OF_MONTH<0.420192361" ]
+    53 -> 99 [label="yes, missing" color="#0000FF"]
+    53 -> 100 [label="no" color="#FF0000"]
+
+    99 [ label="leaf=-0.00189981016" ]
+
+    100 [ label="HourlyDryBulbTemperature_Dest<53" ]
+    100 -> 171 [label="yes, missing" color="#0000FF"]
+    100 -> 172 [label="no" color="#FF0000"]
+
+    171 [ label="leaf=0.00196356513" ]
+
+    172 [ label="DAY_OF_MONTH<0.528124988" ]
+    172 -> 285 [label="yes, missing" color="#0000FF"]
+    172 -> 286 [label="no" color="#FF0000"]
+
+    285 [ label="DAY_OF_MONTH<0.498954326" ]
+    285 -> 447 [label="yes, missing" color="#0000FF"]
+    285 -> 448 [label="no" color="#FF0000"]
+
+    447 [ label="TAXI_OUT_median<20.5" ]
+    447 -> 625 [label="yes, missing" color="#0000FF"]
+    447 -> 626 [label="no" color="#FF0000"]
+
+    625 [ label="leaf=0.00137135026" ]
+
+    626 [ label="leaf=-0.00111991039" ]
+
+    448 [ label="leaf=-0.00191984652" ]
+
+    286 [ label="leaf=0.00134734018" ]
+
+    54 [ label="DAY_OF_MONTH<0.466024518" ]
+    54 -> 101 [label="yes, missing" color="#0000FF"]
+    54 -> 102 [label="no" color="#FF0000"]
+
+    101 [ label="ORIGIN<0.763888896" ]
+    101 -> 173 [label="yes, missing" color="#0000FF"]
+    101 -> 174 [label="no" color="#FF0000"]
+
+    173 [ label="TAXI_IN_median<8.5" ]
+    173 -> 287 [label="yes, missing" color="#0000FF"]
+    173 -> 288 [label="no" color="#FF0000"]
+
+    287 [ label="TAXI_OUT_median<17.5" ]
+    287 -> 451 [label="yes, missing" color="#0000FF"]
+    287 -> 452 [label="no" color="#FF0000"]
+
+    451 [ label="leaf=0.00194990262" ]
+
+    452 [ label="leaf=-0" ]
+
+    288 [ label="leaf=-0.000799954345" ]
+
+    174 [ label="leaf=0.00194990262" ]
+
+    102 [ label="HourlyAltimeterSetting_Origin<30.3149986" ]
+    102 -> 175 [label="yes, missing" color="#0000FF"]
+    102 -> 176 [label="no" color="#FF0000"]
+
+    175 [ label="DEP_TIME_hour<0.610691309" ]
+    175 -> 289 [label="yes, missing" color="#0000FF"]
+    175 -> 290 [label="no" color="#FF0000"]
+
+    289 [ label="leaf=0.00199147244" ]
+
+    290 [ label="DAY_OF_MONTH<0.550730109" ]
+    290 -> 453 [label="yes, missing" color="#0000FF"]
+    290 -> 454 [label="no" color="#FF0000"]
+
+    453 [ label="leaf=0.00193320448" ]
+
+    454 [ label="leaf=-0" ]
+
+    176 [ label="leaf=0.00075996964" ]
+
+    6 [ label="ORIGIN<0.541958094" ]
+    6 -> 13 [label="yes, missing" color="#0000FF"]
+    6 -> 14 [label="no" color="#FF0000"]
+
+    13 [ label="HourlyAltimeterSetting_Dest<30.0974998" ]
+    13 -> 27 [label="yes, missing" color="#0000FF"]
+    13 -> 28 [label="no" color="#FF0000"]
+
+    27 [ label="DAY_OF_MONTH<0.558831692" ]
+    27 -> 55 [label="yes, missing" color="#0000FF"]
+    27 -> 56 [label="no" color="#FF0000"]
+
+    55 [ label="ORIGIN<0.46805644" ]
+    55 -> 103 [label="yes, missing" color="#0000FF"]
+    55 -> 104 [label="no" color="#FF0000"]
+
+    103 [ label="HourlyDryBulbTemperature_Dest<76.5" ]
+    103 -> 177 [label="yes, missing" color="#0000FF"]
+    103 -> 178 [label="no" color="#FF0000"]
+
+    177 [ label="TAXI_IN_median<5.5" ]
+    177 -> 293 [label="yes, missing" color="#0000FF"]
+    177 -> 294 [label="no" color="#FF0000"]
+
+    293 [ label="ARR_TIME_hour<0.617368817" ]
+    293 -> 455 [label="yes, missing" color="#0000FF"]
+    293 -> 456 [label="no" color="#FF0000"]
+
+    455 [ label="ORIGIN<0.383152187" ]
+    455 -> 629 [label="yes, missing" color="#0000FF"]
+    455 -> 630 [label="no" color="#FF0000"]
+
+    629 [ label="leaf=0.00196660124" ]
+
+    630 [ label="HourlyAltimeterSetting_Origin<29.9500008" ]
+    630 -> 789 [label="yes, missing" color="#0000FF"]
+    630 -> 790 [label="no" color="#FF0000"]
+
+    789 [ label="HourlyAltimeterSetting_Origin<29.7625008" ]
+    789 -> 943 [label="yes, missing" color="#0000FF"]
+    789 -> 944 [label="no" color="#FF0000"]
+
+    943 [ label="leaf=-0" ]
+
+    944 [ label="leaf=0.00193320448" ]
+
+    790 [ label="HourlySkyConditions_Dest<0.530890524" ]
+    790 -> 945 [label="yes, missing" color="#0000FF"]
+    790 -> 946 [label="no" color="#FF0000"]
+
+    945 [ label="leaf=-0.00189981016" ]
+
+    946 [ label="leaf=0.00031997441" ]
+
+    456 [ label="DAY_OF_MONTH<0.501750469" ]
+    456 -> 631 [label="yes, missing" color="#0000FF"]
+    456 -> 632 [label="no" color="#FF0000"]
+
+    631 [ label="leaf=0.000799954345" ]
+
+    632 [ label="leaf=-0.00193320448" ]
+
+    294 [ label="HourlyAltimeterSetting_Dest<29.8349991" ]
+    294 -> 457 [label="yes, missing" color="#0000FF"]
+    294 -> 458 [label="no" color="#FF0000"]
+
+    457 [ label="HourlyDryBulbTemperature_Dest<52" ]
+    457 -> 633 [label="yes, missing" color="#0000FF"]
+    457 -> 634 [label="no" color="#FF0000"]
+
+    633 [ label="leaf=-0.00059996004" ]
+
+    634 [ label="OP_UNIQUE_CARRIER<0.485842586" ]
+    634 -> 791 [label="yes, missing" color="#0000FF"]
+    634 -> 792 [label="no" color="#FF0000"]
+
+    791 [ label="leaf=-0" ]
+
+    792 [ label="leaf=0.00194274622" ]
+
+    458 [ label="HourlyRelativeHumidity_Origin<89.5" ]
+    458 -> 635 [label="yes, missing" color="#0000FF"]
+    458 -> 636 [label="no" color="#FF0000"]
+
+    635 [ label="OP_UNIQUE_CARRIER<0.481754959" ]
+    635 -> 793 [label="yes, missing" color="#0000FF"]
+    635 -> 794 [label="no" color="#FF0000"]
+
+    793 [ label="HourlySkyConditions_Dest<0.5015167" ]
+    793 -> 947 [label="yes, missing" color="#0000FF"]
+    793 -> 948 [label="no" color="#FF0000"]
+
+    947 [ label="leaf=0.00059996004" ]
+
+    948 [ label="leaf=-0.00194274622" ]
+
+    794 [ label="leaf=-0.00197328068" ]
+
+    636 [ label="leaf=0.00031997441" ]
+
+    178 [ label="leaf=0.00170662126" ]
+
+    104 [ label="HourlySkyConditions_Origin<0.461512655" ]
+    104 -> 179 [label="yes, missing" color="#0000FF"]
+    104 -> 180 [label="no" color="#FF0000"]
+
+    179 [ label="OP_UNIQUE_CARRIER<0.485918909" ]
+    179 -> 297 [label="yes, missing" color="#0000FF"]
+    179 -> 298 [label="no" color="#FF0000"]
+
+    297 [ label="DEP_TIME_hour<0.602521896" ]
+    297 -> 459 [label="yes, missing" color="#0000FF"]
+    297 -> 460 [label="no" color="#FF0000"]
+
+    459 [ label="leaf=0.000228558376" ]
+
+    460 [ label="leaf=0.00193320448" ]
+
+    298 [ label="HourlyDryBulbTemperature_Dest<66" ]
+    298 -> 461 [label="yes, missing" color="#0000FF"]
+    298 -> 462 [label="no" color="#FF0000"]
+
+    461 [ label="leaf=-0.00193320448" ]
+
+    462 [ label="leaf=0.00031997441" ]
+
+    180 [ label="DAY_OF_MONTH<0.445086658" ]
+    180 -> 299 [label="yes, missing" color="#0000FF"]
+    180 -> 300 [label="no" color="#FF0000"]
+
+    299 [ label="OP_UNIQUE_CARRIER<0.548783183" ]
+    299 -> 463 [label="yes, missing" color="#0000FF"]
+    299 -> 464 [label="no" color="#FF0000"]
+
+    463 [ label="HourlyRelativeHumidity_Origin<89.5" ]
+    463 -> 637 [label="yes, missing" color="#0000FF"]
+    463 -> 638 [label="no" color="#FF0000"]
+
+    637 [ label="HourlyAltimeterSetting_Origin<29.8149986" ]
+    637 -> 795 [label="yes, missing" color="#0000FF"]
+    637 -> 796 [label="no" color="#FF0000"]
+
+    795 [ label="leaf=0.00189981016" ]
+
+    796 [ label="DAY_OF_MONTH<0.422237098" ]
+    796 -> 949 [label="yes, missing" color="#0000FF"]
+    796 -> 950 [label="no" color="#FF0000"]
+
+    949 [ label="leaf=-0.00126658229" ]
+
+    950 [ label="leaf=0.00059996004" ]
+
+    638 [ label="leaf=0.00193320448" ]
+
+    464 [ label="leaf=-0.00189981016" ]
+
+    300 [ label="TAXI_OUT_median<9.5" ]
+    300 -> 465 [label="yes, missing" color="#0000FF"]
+    300 -> 466 [label="no" color="#FF0000"]
+
+    465 [ label="HourlyDryBulbTemperature_Dest<68.5" ]
+    465 -> 639 [label="yes, missing" color="#0000FF"]
+    465 -> 640 [label="no" color="#FF0000"]
+
+    639 [ label="leaf=0.00191984652" ]
+
+    640 [ label="leaf=-0.00193320448" ]
+
+    466 [ label="HourlyRelativeHumidity_Origin<77.5" ]
+    466 -> 641 [label="yes, missing" color="#0000FF"]
+    466 -> 642 [label="no" color="#FF0000"]
+
+    641 [ label="OP_UNIQUE_CARRIER<0.481831282" ]
+    641 -> 797 [label="yes, missing" color="#0000FF"]
+    641 -> 798 [label="no" color="#FF0000"]
+
+    797 [ label="leaf=0.00191984652" ]
+
+    798 [ label="leaf=-0.000949952519" ]
+
+    642 [ label="OP_UNIQUE_CARRIER<0.561666667" ]
+    642 -> 799 [label="yes, missing" color="#0000FF"]
+    642 -> 800 [label="no" color="#FF0000"]
+
+    799 [ label="HourlySkyConditions_Origin<0.484833062" ]
+    799 -> 953 [label="yes, missing" color="#0000FF"]
+    799 -> 954 [label="no" color="#FF0000"]
+
+    953 [ label="leaf=0.0019713724" ]
+
+    954 [ label="HourlyDryBulbTemperature_Dest<77.5" ]
+    954 -> 1111 [label="yes, missing" color="#0000FF"]
+    954 -> 1112 [label="no" color="#FF0000"]
+
+    1111 [ label="ORIGIN<0.525869727" ]
+    1111 -> 1263 [label="yes, missing" color="#0000FF"]
+    1111 -> 1264 [label="no" color="#FF0000"]
+
+    1263 [ label="HourlyDryBulbTemperature_Dest<72.5" ]
+    1263 -> 1383 [label="yes, missing" color="#0000FF"]
+    1263 -> 1384 [label="no" color="#FF0000"]
+
+    1383 [ label="DAY_OF_MONTH<0.550730109" ]
+    1383 -> 1469 [label="yes, missing" color="#0000FF"]
+    1383 -> 1470 [label="no" color="#FF0000"]
+
+    1469 [ label="HourlyAltimeterSetting_Dest<29.5950012" ]
+    1469 -> 1533 [label="yes, missing" color="#0000FF"]
+    1469 -> 1534 [label="no" color="#FF0000"]
+
+    1533 [ label="leaf=-0.000228558376" ]
+
+    1534 [ label="HourlyAltimeterSetting_Dest<29.8950005" ]
+    1534 -> 1571 [label="yes, missing" color="#0000FF"]
+    1534 -> 1572 [label="no" color="#FF0000"]
+
+    1571 [ label="TAXI_OUT_median<18.5" ]
+    1571 -> 1587 [label="yes, missing" color="#0000FF"]
+    1571 -> 1588 [label="no" color="#FF0000"]
+
+    1587 [ label="leaf=0.00155786204" ]
+
+    1588 [ label="leaf=-0.00031997441" ]
+
+    1572 [ label="leaf=0.00186247681" ]
+
+    1470 [ label="HourlyAltimeterSetting_Origin<29.9949989" ]
+    1470 -> 1535 [label="yes, missing" color="#0000FF"]
+    1470 -> 1536 [label="no" color="#FF0000"]
+
+    1535 [ label="leaf=0.00126658229" ]
+
+    1536 [ label="leaf=-0.00111991039" ]
+
+    1384 [ label="HourlySkyConditions_Origin<0.544897318" ]
+    1384 -> 1471 [label="yes, missing" color="#0000FF"]
+    1384 -> 1472 [label="no" color="#FF0000"]
+
+    1471 [ label="leaf=-0.000799954345" ]
+
+    1472 [ label="leaf=0.00189981016" ]
+
+    1264 [ label="leaf=-0.00059996004" ]
+
+    1112 [ label="leaf=0.00163475424" ]
+
+    800 [ label="leaf=0.00197996059" ]
+
+    56 [ label="TAXI_IN_median<10.5" ]
+    56 -> 105 [label="yes, missing" color="#0000FF"]
+    56 -> 106 [label="no" color="#FF0000"]
+
+    105 [ label="leaf=0.00180907466" ]
+
+    106 [ label="HourlyRelativeHumidity_Origin<89" ]
+    106 -> 183 [label="yes, missing" color="#0000FF"]
+    106 -> 184 [label="no" color="#FF0000"]
+
+    183 [ label="leaf=-0.000899910054" ]
+
+    184 [ label="leaf=0.00191984652" ]
+
+    28 [ label="HourlyDryBulbTemperature_Dest<37.5" ]
+    28 -> 57 [label="yes, missing" color="#0000FF"]
+    28 -> 58 [label="no" color="#FF0000"]
+
+    57 [ label="DAY_OF_MONTH<0.498954326" ]
+    57 -> 107 [label="yes, missing" color="#0000FF"]
+    57 -> 108 [label="no" color="#FF0000"]
+
+    107 [ label="leaf=-0.000449977495" ]
+
+    108 [ label="DEP_TIME_hour<0.629994631" ]
+    108 -> 187 [label="yes, missing" color="#0000FF"]
+    108 -> 188 [label="no" color="#FF0000"]
+
+    187 [ label="leaf=0.00155786204" ]
+
+    188 [ label="leaf=-0.00031997441" ]
+
+    58 [ label="HourlyDryBulbTemperature_Dest<53.5" ]
+    58 -> 109 [label="yes, missing" color="#0000FF"]
+    58 -> 110 [label="no" color="#FF0000"]
+
+    109 [ label="HourlyAltimeterSetting_Origin<30.0349998" ]
+    109 -> 189 [label="yes, missing" color="#0000FF"]
+    109 -> 190 [label="no" color="#FF0000"]
+
+    189 [ label="leaf=-0.00196917029" ]
+
+    190 [ label="HourlySkyConditions_Dest<0.472966671" ]
+    190 -> 305 [label="yes, missing" color="#0000FF"]
+    190 -> 306 [label="no" color="#FF0000"]
+
+    305 [ label="leaf=-0.00191984652" ]
+
+    306 [ label="HourlySkyConditions_Origin<0.544897318" ]
+    306 -> 467 [label="yes, missing" color="#0000FF"]
+    306 -> 468 [label="no" color="#FF0000"]
+
+    467 [ label="leaf=-0.000799954345" ]
+
+    468 [ label="HourlyAltimeterSetting_Dest<30.2950001" ]
+    468 -> 643 [label="yes, missing" color="#0000FF"]
+    468 -> 644 [label="no" color="#FF0000"]
+
+    643 [ label="leaf=0.00191984652" ]
+
+    644 [ label="leaf=-0" ]
+
+    110 [ label="HourlySkyConditions_Origin<0.484833062" ]
+    110 -> 191 [label="yes, missing" color="#0000FF"]
+    110 -> 192 [label="no" color="#FF0000"]
+
+    191 [ label="OP_UNIQUE_CARRIER<0.47937572" ]
+    191 -> 307 [label="yes, missing" color="#0000FF"]
+    191 -> 308 [label="no" color="#FF0000"]
+
+    307 [ label="leaf=0.000899910054" ]
+
+    308 [ label="leaf=-0.00194274622" ]
+
+    192 [ label="HourlyRelativeHumidity_Origin<83.5" ]
+    192 -> 309 [label="yes, missing" color="#0000FF"]
+    192 -> 310 [label="no" color="#FF0000"]
+
+    309 [ label="leaf=0.00168566615" ]
+
+    310 [ label="HourlyDryBulbTemperature_Dest<63.5" ]
+    310 -> 471 [label="yes, missing" color="#0000FF"]
+    310 -> 472 [label="no" color="#FF0000"]
+
+    471 [ label="leaf=0.00151104399" ]
+
+    472 [ label="ARR_TIME_hour<0.589183688" ]
+    472 -> 647 [label="yes, missing" color="#0000FF"]
+    472 -> 648 [label="no" color="#FF0000"]
+
+    647 [ label="leaf=0.00031997441" ]
+
+    648 [ label="leaf=-0.00194990262" ]
+
+    14 [ label="DEP_TIME_hour<0.597625375" ]
+    14 -> 29 [label="yes, missing" color="#0000FF"]
+    14 -> 30 [label="no" color="#FF0000"]
+
+    29 [ label="HourlyAltimeterSetting_Dest<30.4225006" ]
+    29 -> 59 [label="yes, missing" color="#0000FF"]
+    29 -> 60 [label="no" color="#FF0000"]
+
+    59 [ label="DAY_OF_MONTH<0.466024518" ]
+    59 -> 111 [label="yes, missing" color="#0000FF"]
+    59 -> 112 [label="no" color="#FF0000"]
+
+    111 [ label="ARR_TIME_hour<0.573960304" ]
+    111 -> 193 [label="yes, missing" color="#0000FF"]
+    111 -> 194 [label="no" color="#FF0000"]
+
+    193 [ label="OP_UNIQUE_CARRIER<0.493778646" ]
+    193 -> 311 [label="yes, missing" color="#0000FF"]
+    193 -> 312 [label="no" color="#FF0000"]
+
+    311 [ label="leaf=-0.00189981016" ]
+
+    312 [ label="TAXI_OUT_median<15" ]
+    312 -> 473 [label="yes, missing" color="#0000FF"]
+    312 -> 474 [label="no" color="#FF0000"]
+
+    473 [ label="leaf=0.00189981016" ]
+
+    474 [ label="leaf=-0.00059996004" ]
+
+    194 [ label="OP_UNIQUE_CARRIER<0.586351216" ]
+    194 -> 313 [label="yes, missing" color="#0000FF"]
+    194 -> 314 [label="no" color="#FF0000"]
+
+    313 [ label="leaf=0.00170662126" ]
+
+    314 [ label="leaf=-0.00031997441" ]
+
+    112 [ label="HourlyRelativeHumidity_Origin<79.5" ]
+    112 -> 195 [label="yes, missing" color="#0000FF"]
+    112 -> 196 [label="no" color="#FF0000"]
+
+    195 [ label="HourlyAltimeterSetting_Origin<30.0224991" ]
+    195 -> 315 [label="yes, missing" color="#0000FF"]
+    195 -> 316 [label="no" color="#FF0000"]
+
+    315 [ label="HourlyAltimeterSetting_Dest<29.8525009" ]
+    315 -> 477 [label="yes, missing" color="#0000FF"]
+    315 -> 478 [label="no" color="#FF0000"]
+
+    477 [ label="leaf=0.00189981016" ]
+
+    478 [ label="DEP_TIME_hour<0.569672227" ]
+    478 -> 649 [label="yes, missing" color="#0000FF"]
+    478 -> 650 [label="no" color="#FF0000"]
+
+    649 [ label="leaf=0.000899910054" ]
+
+    650 [ label="leaf=-0.00193320448" ]
+
+    316 [ label="leaf=0.00155993772" ]
+
+    196 [ label="HourlyAltimeterSetting_Origin<29.9575005" ]
+    196 -> 317 [label="yes, missing" color="#0000FF"]
+    196 -> 318 [label="no" color="#FF0000"]
+
+    317 [ label="leaf=0.0018133173" ]
+
+    318 [ label="HourlyAltimeterSetting_Origin<30.0524998" ]
+    318 -> 483 [label="yes, missing" color="#0000FF"]
+    318 -> 484 [label="no" color="#FF0000"]
+
+    483 [ label="TAXI_OUT_median<19.5" ]
+    483 -> 653 [label="yes, missing" color="#0000FF"]
+    483 -> 654 [label="no" color="#FF0000"]
+
+    653 [ label="HourlyRelativeHumidity_Origin<90.5" ]
+    653 -> 801 [label="yes, missing" color="#0000FF"]
+    653 -> 802 [label="no" color="#FF0000"]
+
+    801 [ label="leaf=0.00194274622" ]
+
+    802 [ label="leaf=-0" ]
+
+    654 [ label="leaf=-0.000899910054" ]
+
+    484 [ label="leaf=0.00170662126" ]
+
+    60 [ label="leaf=-0.000899910054" ]
+
+    30 [ label="HourlySkyConditions_Origin<0.484833062" ]
+    30 -> 61 [label="yes, missing" color="#0000FF"]
+    30 -> 62 [label="no" color="#FF0000"]
+
+    61 [ label="HourlyAltimeterSetting_Origin<30.1199989" ]
+    61 -> 113 [label="yes, missing" color="#0000FF"]
+    61 -> 114 [label="no" color="#FF0000"]
+
+    113 [ label="TAXI_IN_median<4.5" ]
+    113 -> 197 [label="yes, missing" color="#0000FF"]
+    113 -> 198 [label="no" color="#FF0000"]
+
+    197 [ label="leaf=-0" ]
+
+    198 [ label="leaf=0.00174113561" ]
+
+    114 [ label="leaf=-0.00111991039" ]
+
+    62 [ label="DAY_OF_MONTH<0.420192361" ]
+    62 -> 115 [label="yes, missing" color="#0000FF"]
+    62 -> 116 [label="no" color="#FF0000"]
+
+    115 [ label="leaf=-0" ]
+
+    116 [ label="OP_UNIQUE_CARRIER<0.619537473" ]
+    116 -> 199 [label="yes, missing" color="#0000FF"]
+    116 -> 200 [label="no" color="#FF0000"]
+
+    199 [ label="HourlyAltimeterSetting_Origin<29.9125004" ]
+    199 -> 321 [label="yes, missing" color="#0000FF"]
+    199 -> 322 [label="no" color="#FF0000"]
+
+    321 [ label="HourlySkyConditions_Dest<0.468405634" ]
+    321 -> 485 [label="yes, missing" color="#0000FF"]
+    321 -> 486 [label="no" color="#FF0000"]
+
+    485 [ label="leaf=-0" ]
+
+    486 [ label="HourlyAltimeterSetting_Origin<29.8349991" ]
+    486 -> 657 [label="yes, missing" color="#0000FF"]
+    486 -> 658 [label="no" color="#FF0000"]
+
+    657 [ label="leaf=0.00185330876" ]
+
+    658 [ label="DAY_OF_MONTH<0.476462603" ]
+    658 -> 805 [label="yes, missing" color="#0000FF"]
+    658 -> 806 [label="no" color="#FF0000"]
+
+    805 [ label="leaf=-0.000899910054" ]
+
+    806 [ label="leaf=0.00194990262" ]
+
+    322 [ label="leaf=0.00194132305" ]
+
+    200 [ label="leaf=-0" ]
+}
