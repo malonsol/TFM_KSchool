@@ -1006,12 +1006,306 @@ Directly running the XGBClassifier
 	
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------		
 		
-6) XGBoost_6: [Pending to run]
-	Changes:
-	- Without ORIGIN/DEST columns
-	- RandomizedGridSearchCV - XXmin XXs
-    Results:
+25) XGBoost_25: [DONE] [Time elapsed:  9h 34min 49s]
+	Test description:
+	- OTP_LCD_allColumns_v2.csv → all interesting columns
+	- Correlation heatmap: some features seem correlated → What to do?
+	- Sample size: 1e5
+	- Imbalanced dataset ("as is")
+	- All categorical columns → One Hot Encoding
+		- Number of columns: 220
+	- Model definition:
+		xgb_model = XGBClassifier(use_label_encoder=False, verbosity=1, random_state=0, objective= 'binary:logistic',
+								  booster='gbtree', tree_method='auto', num_boost_round = 999, early_stopping_round=10,
+								  scale_pos_weight=scale_pos_weight)
 
-		+ TEST / VALIDATION:
+		params = {
+					'min_child_weight': [0.1, 1, 5, 10, 50],
+					'gamma': [0.5, 1, 1.5, 2, 5],
+					'subsample': [0.6, 0.8, 1.0],
+					'colsample_bytree': [0.6, 0.8, 1.0],
+					'max_depth': [5, 10, 25, 50],
+					'learning_rate': [0.0001, 0.001, 0.1, 1],
+					'n_estimators': [50, 100, 250, 500],
+					'reg_alpha': [0.0001, 0.001, 0.1, 1],
+					'reg_lambda': [0.0001, 0.001, 0.1, 1]
+				}
+	- Dask ML / RandomizedGridSearchCV [executed in 7h 50m 28s]:
+		dask_rscv = RandomizedSearchCV(xgb_model, 
+									   cv=5,
+									   param_distributions=params, 
+									   n_iter=50, # Number of parameter settings that are sampled → trades off runtime vs quality
+									   scoring='average_precision', # AP summarizes a precision-recall curve
+									   n_jobs=-2, # all CPUs but one are used
+									   random_state=0)		
+    Results:
+				+ TEST / VALIDATION:
+		-+-+-+ TRAINING dataset +-+-+-
+
+		Confusion matrix:
+		 [[41567 15293]
+		 [ 3400  9740]]
+		Normalized confusion matrix:
+		 [[0.73104115 0.26895885]
+		 [0.2587519  0.7412481 ]] 
+
+					  precision    recall  f1-score   support
+
+			 on-time       0.92      0.73      0.82     56860
+			 delayed       0.39      0.74      0.51     13140
+
+			accuracy                           0.73     70000
+		   macro avg       0.66      0.74      0.66     70000
+		weighted avg       0.82      0.73      0.76     70000
+
+		F-beta (ß=2) =  0.628
+		F1 =            0.510
+		Recall =        0.741
+		Precision =     0.389
+		Accuracy =      0.733
+		-------------------------------------------------------
+
+		-+-+-+ TEST dataset: +-+-+-
+
+		Confusion matrix:
+		 [[8403 3735]
+		 [1158 1704]]
+		Normalized confusion matrix:
+		 [[0.69228868 0.30771132]
+		 [0.40461216 0.59538784]] 
+
+					  precision    recall  f1-score   support
+
+			 on-time       0.88      0.69      0.77     12138
+			 delayed       0.31      0.60      0.41      2862
+
+			accuracy                           0.67     15000
+		   macro avg       0.60      0.64      0.59     15000
+		weighted avg       0.77      0.67      0.71     15000
+
+		F-beta (ß=2) =  0.505
+		F1 =            0.411
+		Recall =        0.595
+		Precision =     0.313
+		Accuracy =      0.674
+		-------------------------------------------------------
+
+		-+-+-+ VALIDATION dataset: +-+-+-
+
+		Confusion matrix:
+		 [[8358 3734]
+		 [1163 1745]]
+		Normalized confusion matrix:
+		 [[0.69120079 0.30879921]
+		 [0.39993122 0.60006878]] 
+
+					  precision    recall  f1-score   support
+
+			 on-time       0.88      0.69      0.77     12092
+			 delayed       0.32      0.60      0.42      2908
+
+			accuracy                           0.67     15000
+		   macro avg       0.60      0.65      0.59     15000
+		weighted avg       0.77      0.67      0.70     15000
+
+		F-beta (ß=2) =  0.510
+		F1 =            0.416
+		Recall =        0.600
+		Precision =     0.318
+		Accuracy =      0.674
 	
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------		
+		
+26) XGBoost_26: [DONE] [Time elapsed: ~2h]
+	Test description:
+	- OTP_LCD_allColumns_v2.csv → all interesting columns
+	- Correlation heatmap: some features seem correlated → What to do?
+	- Sample size: 1e5
+	- Imbalanced dataset ("as is")
+	- All categorical columns → Additive-Smoothing Target Encoding
+		- Number of columns: 27
+	- Model definition:
+		xgb_model = XGBClassifier(use_label_encoder=False, verbosity=1, random_state=0, objective= 'binary:logistic',
+								  booster='gbtree', tree_method='auto', num_boost_round = 999, early_stopping_round=10,
+								  scale_pos_weight=scale_pos_weight)
+
+		params = {
+					'min_child_weight': [0.1, 1, 5, 10, 50],
+					'gamma': [0.5, 1, 1.5, 2, 5],
+					'subsample': [0.6, 0.8, 1.0],
+					'colsample_bytree': [0.6, 0.8, 1.0],
+					'max_depth': [5, 10, 25, 50],
+					'learning_rate': [0.0001, 0.001, 0.1, 1],
+					'n_estimators': [50, 100, 250, 500],
+					'reg_alpha': [0.0001, 0.001, 0.1, 1],
+					'reg_lambda': [0.0001, 0.001, 0.1, 1]
+				}
+	- Dask ML / RandomizedGridSearchCV [executed in 1h 53m 17s]:
+		dask_rscv = RandomizedSearchCV(xgb_model, 
+									   cv=5,
+									   param_distributions=params, 
+									   n_iter=50, # Number of parameter settings that are sampled → trades off runtime vs quality
+									   scoring='average_precision', # AP summarizes a precision-recall curve
+									   n_jobs=-2, # all CPUs but one are used
+									   random_state=0)		
+    Results:
+		-+-+-+ TRAINING dataset +-+-+-
+
+		Confusion matrix:
+		 [[54229  2442]
+		 [  318 13011]]
+		Normalized confusion matrix:
+		 [[0.95690918 0.04309082]
+		 [0.02385775 0.97614225]] 
+
+					  precision    recall  f1-score   support
+
+			 on-time       0.99      0.96      0.98     56671
+			 delayed       0.84      0.98      0.90     13329
+
+			accuracy                           0.96     70000
+		   macro avg       0.92      0.97      0.94     70000
+		weighted avg       0.97      0.96      0.96     70000
+
+		F-beta (ß=2) =  0.946
+		F1 =            0.904
+		Recall =        0.976
+		Precision =     0.842
+		Accuracy =      0.961
+		-------------------------------------------------------
+
+		-+-+-+ TEST dataset: +-+-+-
+
+		Confusion matrix:
+		 [[10721  1378]
+		 [ 1899  1002]]
+		Normalized confusion matrix:
+		 [[0.88610629 0.11389371]
+		 [0.65460186 0.34539814]] 
+
+					  precision    recall  f1-score   support
+
+			 on-time       0.85      0.89      0.87     12099
+			 delayed       0.42      0.35      0.38      2901
+
+			accuracy                           0.78     15000
+		   macro avg       0.64      0.62      0.62     15000
+		weighted avg       0.77      0.78      0.77     15000
+
+		F-beta (ß=2) =  0.358
+		F1 =            0.379
+		Recall =        0.345
+		Precision =     0.421
+		Accuracy =      0.782
+		-------------------------------------------------------
+
+		-+-+-+ VALIDATION dataset: +-+-+-
+
+		Confusion matrix:
+		 [[10612  1442]
+		 [ 1892  1054]]
+		Normalized confusion matrix:
+		 [[0.88037166 0.11962834]
+		 [0.64222675 0.35777325]] 
+
+					  precision    recall  f1-score   support
+
+			 on-time       0.85      0.88      0.86     12054
+			 delayed       0.42      0.36      0.39      2946
+
+			accuracy                           0.78     15000
+		   macro avg       0.64      0.62      0.63     15000
+		weighted avg       0.76      0.78      0.77     15000
+
+		F-beta (ß=2) =  0.369
+		F1 =            0.387
+		Recall =        0.358
+		Precision =     0.422
+		Accuracy =      0.778
+		
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------		
+		
+26) XGBoost_26: [DONE] [Time elapsed: ?]
+	Test description:
+	- OTP_LCD_allColumns_v2.csv → all interesting columns
+	- Correlation heatmap: some features seem correlated → What to do?
+	- Sample size: 1e5
+	- Imbalanced dataset ("as is")
+	- All categorical columns → Additive-Smoothing Target Encoding for ORIGIN & DEST / One-hot encoding for the rest
+		- Number of columns: 27
+	- Model definition:
+		xgb_model = XGBClassifier(use_label_encoder=False, verbosity=1, random_state=0, objective= 'binary:logistic',
+								  booster='gbtree', tree_method='auto', num_boost_round = 10000, early_stopping_round=10,
+								  scale_pos_weight=scale_pos_weight)
+
+		params = {
+					 'subsample': [0.9],
+					 'reg_lambda': [1],
+					 'reg_alpha': [0.0001],
+					 'n_estimators': [350],
+					 'min_child_weight': [100],
+					 'max_depth': [8],
+					 'learning_rate': [0.05],
+					 'gamma': [0.5],
+					 'colsample_bytree': [0.7]
+				}
+	- Dask ML / RandomizedGridSearchCV [executed in 6m 12s]:
+		dask_rscv = RandomizedSearchCV(xgb_model, 
+									   cv=5,
+									   param_distributions=params, 
+									   n_iter=50, # Number of parameter settings that are sampled → trades off runtime vs quality
+									   scoring='average_precision', # AP summarizes a precision-recall curve
+									   n_jobs=-2, # all CPUs but one are used
+									   random_state=0)		
+    Results:
+		-+-+-+ TRAINING dataset +-+-+-
+
+		Confusion matrix:
+		 [[47197 17611]
+		 [ 4141 11051]]
+		Normalized confusion matrix:
+		 [[0.72825886 0.27174114]
+		 [0.27257767 0.72742233]] 
+
+					  precision    recall  f1-score   support
+
+			 on-time       0.92      0.73      0.81     64808
+			 delayed       0.39      0.73      0.50     15192
+
+			accuracy                           0.73     80000
+		   macro avg       0.65      0.73      0.66     80000
+		weighted avg       0.82      0.73      0.75     80000
+
+		F-beta (ß=2) =  0.618
+		F1 =            0.504
+		Recall =        0.727
+		Precision =     0.386
+		Accuracy =      0.728
+		-------------------------------------------------------
+
+		-+-+-+ TEST dataset: +-+-+-
+
+		Confusion matrix:
+		 [[11441  4841]
+		 [ 1483  2235]]
+		Normalized confusion matrix:
+		 [[0.7026778  0.2973222 ]
+		 [0.39887036 0.60112964]] 
+
+					  precision    recall  f1-score   support
+
+			 on-time       0.89      0.70      0.78     16282
+			 delayed       0.32      0.60      0.41      3718
+
+			accuracy                           0.68     20000
+		   macro avg       0.60      0.65      0.60     20000
+		weighted avg       0.78      0.68      0.71     20000
+
+		F-beta (ß=2) =  0.509
+		F1 =            0.414
+		Recall =        0.601
+		Precision =     0.316
+		Accuracy =      0.684
+		
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------		
+		
