@@ -1225,14 +1225,14 @@ Directly running the XGBClassifier
 		
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------		
 		
-26) XGBoost_26: [DONE] [Time elapsed: ?]
+29) XGBoost_29: [DONE] [Time elapsed: ?]
 	Test description:
 	- OTP_LCD_allColumns_v2.csv → all interesting columns
 	- Correlation heatmap: some features seem correlated → What to do?
 	- Sample size: 1e5
 	- Imbalanced dataset ("as is")
 	- All categorical columns → Additive-Smoothing Target Encoding for ORIGIN & DEST / One-hot encoding for the rest
-		- Number of columns: 27
+		- Number of columns: 117
 	- Model definition:
 		xgb_model = XGBClassifier(use_label_encoder=False, verbosity=1, random_state=0, objective= 'binary:logistic',
 								  booster='gbtree', tree_method='auto', num_boost_round = 10000, early_stopping_round=10,
@@ -1306,6 +1306,128 @@ Directly running the XGBClassifier
 		Recall =        0.601
 		Precision =     0.316
 		Accuracy =      0.684
+		
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------		
+		
+30) XGBoost_30: [DONE] [Time elapsed: ?]
+	Test description:
+	- OTP_LCD_allColumns_v2.csv → all interesting columns
+	- Correlation heatmap: some features seem correlated → What to do?
+	- Sample size: 1e5
+	- Imbalanced dataset ("as is")
+	- All categorical columns → Additive-Smoothing Target Encoding (well done: Train on Test)
+		- Number of columns: 26
+	- Model definition:
+		xgb_model = XGBClassifier(use_label_encoder=False, verbosity=1, random_state=0, objective= 'binary:logistic',
+								  booster='gbtree', tree_method='auto', num_boost_round = 10000, early_stopping_round=10,
+								  scale_pos_weight=scale_pos_weight)
+
+		params = {
+					 'subsample': [0.9],
+					 'reg_lambda': [1],
+					 'reg_alpha': [0.0001],
+					 'n_estimators': [350],
+					 'min_child_weight': [100],
+					 'max_depth': [8],
+					 'learning_rate': [0.05],
+					 'gamma': [0.5],
+					 'colsample_bytree': [0.7]
+				}
+	- Dask ML / RandomizedGridSearchCV [executed in 2m 12s]:
+		dask_rscv = RandomizedSearchCV(xgb_model, 
+									   cv=5,
+									   param_distributions=params, 
+									   n_iter=50, # Number of parameter settings that are sampled → trades off runtime vs quality
+									   scoring='average_precision', # AP summarizes a precision-recall curve
+									   n_jobs=-2, # all CPUs but one are used
+									   random_state=0)		
+    Results:
+		-+-+-+ TRAINING dataset +-+-+-
+
+		Confusion matrix:
+		 [[48509 16299]
+		 [ 3915 11277]]
+		Normalized confusion matrix:
+		 [[0.74850327 0.25149673]
+		 [0.25770142 0.74229858]] 
+
+					  precision    recall  f1-score   support
+
+			 on-time       0.93      0.75      0.83     64808
+			 delayed       0.41      0.74      0.53     15192
+
+			accuracy                           0.75     80000
+		   macro avg       0.67      0.75      0.68     80000
+		weighted avg       0.83      0.75      0.77     80000
+
+		F-beta (ß=2) =  0.638
+		F1 =            0.527
+		Recall =        0.742
+		Precision =     0.409
+		Accuracy =      0.747
+		-------------------------------------------------------
+
+		-+-+-+ TEST dataset: +-+-+-
+
+		Confusion matrix:
+		 [[11639  4643]
+		 [ 1533  2185]]
+		Normalized confusion matrix:
+		 [[0.71483847 0.28516153]
+		 [0.41231845 0.58768155]] 
+
+					  precision    recall  f1-score   support
+
+			 on-time       0.88      0.71      0.79     16282
+			 delayed       0.32      0.59      0.41      3718
+
+			accuracy                           0.69     20000
+		   macro avg       0.60      0.65      0.60     20000
+		weighted avg       0.78      0.69      0.72     20000
+
+		F-beta (ß=2) =  0.503
+		F1 =            0.414
+		Recall =        0.588
+		Precision =     0.320
+		Accuracy =      0.691
+		
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------		
+		
+31) XGBoost_31: [DONE] [Time elapsed: ?]
+	Test description:
+	- OTP_LCD_allColumns_v2.csv → all interesting columns
+	- Correlation heatmap: some features seem correlated → What to do?
+	- Sample size: ALL
+	- Imbalanced dataset ("as is")
+	- All categorical columns → Additive-Smoothing Target Encoding (well done: Train on Test)
+		- Number of columns: 26
+	- Optimization metric: 'recall' (previously 'average_precision')
+	- Model definition:
+		xgb_model = XGBClassifier(use_label_encoder=False, verbosity=1, random_state=0, objective= 'binary:logistic',
+								  booster='gbtree', tree_method='auto', num_boost_round = 10000, early_stopping_round=10,
+								  scale_pos_weight=scale_pos_weight)
+
+		params = {
+					'min_child_weight': [100, 150, 200],
+					'gamma': [0.5],
+					'subsample': [0.9],
+					'colsample_bytree': [0.7],
+					'max_depth': [6, 7, 8, 9],
+					'learning_rate': [0.05, 0.1, 0.15],
+					'n_estimators': [200, 350, 500],
+					'reg_alpha': [1e-4],
+					'reg_lambda': [1]
+				}
+	- Dask ML / RandomizedGridSearchCV [executed in ]:
+		dask_rscv = RandomizedSearchCV(xgb_model, 
+									   cv=5,
+									   param_distributions=params, 
+									   n_iter=50, # Number of parameter settings that are sampled → trades off runtime vs quality
+									   scoring='recall', # AP summarizes a precision-recall curve
+									   n_jobs=-2, # all CPUs but one are used
+									   random_state=0)		
+    Results:
+
 		
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------		
 		
