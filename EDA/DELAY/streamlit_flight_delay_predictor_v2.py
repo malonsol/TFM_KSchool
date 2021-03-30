@@ -15,6 +15,7 @@ sns.set_theme(context='notebook',
 palette = sns.color_palette("flare", as_cmap=True);
 import altair as alt
 import shap
+import datetime
 
 if os.name == 'nt': # Windows
     root = r"C:\Users\turge\CompartidoVM\0.TFM"
@@ -37,7 +38,7 @@ cols = [
     'DEP_TIME_hour',
     'TAXI_OUT_median',
     'TAXI_IN_median',
-    'ARR_DEL15',
+    'ARR_DEL15', # Not in model
     'ARR_TIME_hour',
     'DISTANCE_GROUP',
     'HourlyAltimeterSetting_Origin',
@@ -133,12 +134,12 @@ def frontend_appearance():
     </div> 
     """   
     # display the frontend aspect
-    st.markdown(html_temp, unsafe_allow_html = True) 
+    st.markdown(html_temp, unsafe_allow_html = True)
 
 # ------------------------------------------------------------------------------------------------
 # ------------------------------------------------------------------------------------------------  
-    
-def user_inputs():
+
+def user_inputs(df):
     """
     Define user input fields
     """
@@ -146,13 +147,44 @@ def user_inputs():
     # Load the target-encoding mapper dictionary:
     te_map_file = open("te_map_file.pkl", "rb")
     te_map_dict = pickle.load(te_map_file)
-   
+    
+#     add_selectbox = st.sidebar.selectbox("How would you like to be contacted?", ("Email", "Home phone", "Mobile phone"))
+    
     # Create user input fields:
     # Categorical:
-    month = st.selectbox('Month', sorted(list(te_map_dict['MONTH'])))
-    weekday = st.selectbox('Weekday', sorted(list(te_map_dict['DAY_OF_WEEK'])))
-    carrier = st.selectbox('A/L', sorted(list(te_map_dict['OP_UNIQUE_CARRIER'])))
+    # Date:
+    fdate = st.date_input("Flight date", value=datetime.date(2019, 7, 6),
+                          min_value=datetime.date(2019, 1, 1), max_value=datetime.date(2019, 12, 31))
+    fmonth = str(fdate.month)
+    fweekday = str(fdate.isoweekday())
+    # Carrier:
+    carriers_dict = {
+                        '9E' : '[9E] Endeavor Air Inc.',
+                        'AA' : '[AA] American Airlines Inc.',
+                        'AS' : '[AS] Alaska Airlines Inc.',
+                        'B6' : '[B6] JetBlue Airways',
+                        'DL' : '[DL] Delta Air Lines Inc.',
+                        'EV' : '[EV] ExpressJet Airlines LLC',
+                        'F9' : '[F9] Frontier Airlines Inc.',
+                        'G4' : '[G4] Allegiant Air',
+                        'HA' : '[HA] Hawaiian Airlines Inc.',
+                        'MQ' : '[MQ] Envoy Air',
+                        'NK' : '[NK] Spirit Air Lines',
+                        'OH' : '[OH] PSA Airlines Inc.',
+                        'OO' : '[OO] SkyWest Airlines Inc.',
+                        'UA' : '[UA] United Air Lines Inc.',
+                        'WN' : '[WN] Southwest Airlines Co.',
+                        'YV' : '[YV] Mesa Airlines Inc.',
+                        'YX' : '[YX] Republic Airline'
+                   }
+#     carrier = st.selectbox('Airline', sorted(list(te_map_dict['OP_UNIQUE_CARRIER'])), format_func = carriers_dict.get)
+    carrier = st.selectbox('Airline', df['OP_UNIQUE_CARRIER'].value_counts().index, format_func = carriers_dict.get)
+    
+    # Origin:
     origin = st.selectbox('Origin', sorted(list(te_map_dict['ORIGIN'])))
+    
+    
+    
     dest = st.selectbox('Destination', sorted(list(te_map_dict['DEST'])))
     deptime = st.selectbox('Departure time', sorted([int(hour) for hour in list((te_map_dict['DEP_TIME_hour']))]))
     arrtime = st.selectbox('Arrival time', sorted([int(hour) for hour in list((te_map_dict['ARR_TIME_hour']))]))
@@ -163,22 +195,23 @@ def user_inputs():
     # Numerical:
     taxiout = st.number_input('TAXI_OUT_median')
     taxiin = st.number_input('TAXI_IN_median')
-    altsetorigin = st.number_input('HourlyAltimeterSetting_Origin')
-    temporigin = st.number_input('HourlyDryBulbTemperature_Origin')
+    altsetorigin = st.slider('ORIGIN - Altimeter Setting [inHg]', min_value=27., max_value=32., value=30., step=0.25)
+    temporigin = st.slider('ORIGIN - Temperature [ºF]', min_value=-50, max_value=130, value=65, step=5)
     preciporigin = st.number_input('HourlyPrecipitation_Origin')
     relhumorigin = st.number_input('HourlyRelativeHumidity_Origin')
     visiborigin = st.number_input('HourlyVisibility_Origin')
     gustorigin = st.number_input('HourlyWindGustSpeed_Origin')
     windorigin = st.number_input('HourlyWindSpeed_Origin')
-    altsetdest = st.number_input('HourlyAltimeterSetting_Dest')
-    tempdest = st.number_input('HourlyDryBulbTemperature_Dest')
+    altsetdest = st.slider('DESTINATION - Altimeter Setting [inHg]', min_value=27., max_value=32., value=30., step=0.25)
+    tempdest = st.slider('DESTINATION - Temperature [ºF]', min_value=-50, max_value=130, value=65, step=5)
     precipdest = st.number_input('HourlyPrecipitation_Dest')
     relhumdest = st.number_input('HourlyRelativeHumidity_Dest')
     visibdest = st.number_input('HourlyVisibility_Dest')
     gustdest = st.number_input('HourlyWindGustSpeed_Dest')
     winddest = st.number_input('HourlyWindSpeed_Dest')
 
-    user_inputs = [month, weekday, carrier, origin, dest, deptime, int(float(taxiout)), int(float(taxiin)), arrtime, distgroup, 
+    user_inputs = [fmonth, fweekday, carrier, origin, dest, deptime,
+                   int(float(taxiout)), int(float(taxiin)), arrtime, distgroup, 
                    altsetorigin, temporigin, preciporigin, relhumorigin, skyorigin, visiborigin, gustorigin, windorigin,
                    altsetdest, tempdest, precipdest, relhumdest, skydest, visibdest, gustdest, winddest]
     
@@ -260,17 +293,46 @@ def st_shap(plot, height=None):
 # ------------------------------------------------------------------------------------------------
 # ------------------------------------------------------------------------------------------------
 
+def shap_images(path=""):
+    st.image(image=path, output_format='PNG')
+
+# ------------------------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------------------------
+
+def upload_file():
+    uploaded_file = st.file_uploader("Choose a file")
+    if uploaded_file is not None:
+        # Can be used wherever a "file-like" object is accepted:
+        dataframe = pd.read_csv(uploaded_file)
+        st.write(dataframe)    
+
+# ------------------------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------------------------
+
 if __name__=='__main__': 
+    # Let the user know the data is loading:
+    data_load_state = st.text('Loading data...')
+    # Load the data:
     df, X, y = load_data()
+    # Notify the user that the data was successfully loaded:
+    if st.checkbox(label="SHAP Summary Plot", value=False) == False:
+        data_load_state.title('') 
+    else:
+        data_load_state.title('SHAP Summary Plot')
+        st.write(':sunglasses:')
+        shap_images("SHAP_values_global.png")
     model = load_model(path="XGBoost_32_best_dask_rscv.joblib.dat")
     frontend_appearance()
-    inputs = user_inputs()
+    inputs = user_inputs(df)
+#     upload_file()
+    dismissed_cols = ['ARR_DEL15']
     X_test = pd.DataFrame(
             data=np.array(inputs)[np.newaxis], # Kind of transpose the resulting array from the 'inputs' list
-            columns=[col for col in cols if col != 'ARR_DEL15']
+            columns=[col for col in cols if col not in dismissed_cols]
         )
     cols_dtypes_frontend = cols_dtypes.copy()
-    del cols_dtypes_frontend['ARR_DEL15']
+    for col in dismissed_cols:
+        del cols_dtypes_frontend[col]
     X_test = X_test.astype(cols_dtypes_frontend)
     prepared_data = target_encoding(X_test)
     
