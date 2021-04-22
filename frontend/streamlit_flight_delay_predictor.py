@@ -433,7 +433,7 @@ if __name__=='__main__':
 #     df, X, y = load_data()
 
     # Load the model:
-    pipe = load_model(path="../model/XGBoost_pipeline_model.joblib.dat")
+    pipe = load_model(path="XGBoost_pipeline_model.joblib.dat")
     transformer = pipe[:-1]
     model = pipe.named_steps['clf']
     
@@ -489,14 +489,14 @@ if __name__=='__main__':
                 - Red features are *forcing* the prediction to **DELAY**.
                 - On the contrary, blue variables drive the prediction to **ON-TIME**.
             """)
-            explainer, shap_values = load_shap_explainer('../model/shap/shap_treeExplainer.bz2', X_test_transformed)
+            explainer, shap_values = load_shap_explainer('shap_treeExplainer.bz2', X_test_transformed)
             st_shap(shap.force_plot(explainer.expected_value, shap_values[0,:], X_test.iloc[0,:]))
             
         
     # SHAP values general overview:
     shapSummary = st.checkbox(label="SHAP Summary Plot")
     if shapSummary:
-        st.image('../model/shap/shap_summaryPlot.png')
+        st.image('shap_summaryPlot.png')
                     
    # END:
     st.markdown('---')
