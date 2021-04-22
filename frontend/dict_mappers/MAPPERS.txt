@@ -1,0 +1,41 @@
+cols_dtypes = {
+    'MONTH' : 'string',
+    'DAY_OF_WEEK' : 'string',
+    'OP_UNIQUE_CARRIER' : 'string',
+    'ORIGIN' : 'string',
+    'DEST' : 'string',
+    'DEP_TIME_hour' : 'string',
+    'TAXI_OUT_median' : 'int32',
+    'TAXI_IN_median' : 'int32',
+    'ARR_DEL15' : 'int32', # → Target !!
+    'ARR_TIME_hour' : 'string',
+    'DISTANCE' : 'int32',
+    'LATITUDE_Origin' : 'float64',
+    'LONGITUDE_Origin' : 'float64',
+    'HourlyAltimeterSetting_Origin' : 'float64',
+    'HourlyDryBulbTemperature_Origin' : 'int32',
+    'HourlyPrecipitation_Origin' : 'float64',
+    'HourlyRelativeHumidity_Origin' : 'int32',
+    'HourlySkyConditions_Origin' : 'string',
+    'HourlyVisibility_Origin' : 'int32',
+    'HourlyWindGustSpeed_Origin' : 'int32',
+    'HourlyWindSpeed_Origin' : 'int32',
+    'LATITUDE_Dest' : 'float64',
+    'LONGITUDE_Dest' : 'float64',
+    'HourlyAltimeterSetting_Dest' : 'float64',
+    'HourlyDryBulbTemperature_Dest' : 'int32',
+    'HourlyPrecipitation_Dest' : 'float64',
+    'HourlyRelativeHumidity_Dest' : 'int32',
+    'HourlySkyConditions_Dest' : 'string',
+    'HourlyVisibility_Dest' : 'int32',
+    'HourlyWindGustSpeed_Dest' : 'int32',
+    'HourlyWindSpeed_Dest' : 'int32',
+}
+
+Mapear en función de:
+- ORIGIN-OP_UNIQUE_CARRIER: TAXI_OUT_median
+- DEST-OP_UNIQUE_CARRIER: TAXI_IN_median
+- ORIGIN-DEST-OP_UNIQUE_CARRIER-DEP_TIME_hour: ARR_TIME_hour
+- ORIGIN-DEST : DISTANCE
+- ORIGIN: LATITUDE_Origin, LONGITUDE_Origin
+- DEST : LATITUDE_Dest, LONGITUDE_Dest
