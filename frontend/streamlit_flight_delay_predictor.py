@@ -433,7 +433,8 @@ if __name__=='__main__':
 #     df, X, y = load_data()
 
     # Load the model:
-    pipe = load_model(path="XGBoost_pipeline_model.joblib.dat")
+#     pipe = load_model(path="XGBoost_pipeline_model.joblib.dat")
+    pipe = load_model(path="https://github.com/malonsol/TFM_KSchool/blob/ec891057d90c5a3dfd36af321855ee12f2ef3cac/frontend/XGBoost_pipeline_model.joblib.dat")
     transformer = pipe[:-1]
     model = pipe.named_steps['clf']
     
