@@ -449,7 +449,7 @@ def prediction(model, X_test):
 # ------------------------------------------------------------------------------------------------
 # ------------------------------------------------------------------------------------------------
 
-# @st.cache(hash_funcs={shap.explainers._tree.Tree: hash})
+@st.cache(hash_funcs={shap.explainers._tree.Tree: hash})
 def load_shap_explainer(filename='', X_test_transformed=pd.DataFrame()):   
     # Load the explainer file (instead of generating it so as to save time):
     explainer = joblib.load(filename)
