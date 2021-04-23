@@ -7,3 +7,4 @@ matplotlib==3.3.2
 seaborn==0.11.0
 altair==4.1.0
 shap==0.39.0
+category_encoders=2.2.2
