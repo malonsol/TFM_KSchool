@@ -560,4 +560,4 @@ if __name__=='__main__':
                     
    # END:
     st.markdown('---')
-    st.write(!conda list)    
+    st.write(os.system("conda list"))    
