@@ -1,4 +1,63 @@
 
+# Import libraries to be used
+
+# Directories/Files management
+import os.path
+
+# Timing
+import time
+
+# Data analysis and wrangling
+import pandas as pd
+import numpy as np
+pd.set_option('display.max_columns', None) # Show all columns in DataFrames
+## pd.set_option('display.max_rows', None) # It greatly slows down the output display and may freeze the kernel
+import missingno as msno
+from collections import Counter
+
+# Visualization
+import matplotlib.pyplot as plt
+import seaborn as sns
+plt.style.use('ggplot') # choose a style: 'plt.style.available'
+sns.set_theme(context='notebook',
+              style="darkgrid") # {darkgrid, whitegrid, dark, white, ticks}
+palette = sns.color_palette("flare", as_cmap=True);
+import altair as alt
+
+# Machine Learning:
+# - Model selection:
+from sklearn.model_selection import train_test_split, StratifiedShuffleSplit, KFold, cross_val_score, StratifiedKFold, \
+                                    GridSearchCV, RandomizedSearchCV
+from sklearn.inspection import permutation_importance
+
+# - Basic classes for custom-made transformers:
+from sklearn.base import BaseEstimator, TransformerMixin
+
+# - Transformers:
+from sklearn.preprocessing import StandardScaler, OneHotEncoder
+from category_encoders.target_encoder import TargetEncoder
+from sklearn.impute import SimpleImputer
+from sklearn.decomposition import PCA
+
+# - Pipeline:
+from sklearn.compose import ColumnTransformer
+from sklearn.pipeline import Pipeline
+
+# - Models:
+from sklearn.linear_model import LogisticRegression
+from xgboost import XGBClassifier, plot_importance, plot_tree
+
+# - Metrics:
+from sklearn.metrics import fbeta_score, f1_score, recall_score, precision_score, accuracy_score, \
+                            confusion_matrix, classification_report, roc_curve, precision_recall_curve, \
+                            roc_auc_score, average_precision_score, plot_roc_curve, plot_precision_recall_curve
+
+# Objects storage:
+from joblib import dump, load
+import pickle
+
+# -------------------------------
+
 import streamlit as st
 import streamlit.components.v1 as components
 import os
@@ -390,7 +449,7 @@ def prediction(model, X_test):
 # ------------------------------------------------------------------------------------------------
 # ------------------------------------------------------------------------------------------------
 
-@st.cache(hash_funcs={shap.explainers._tree.Tree: hash})
+# @st.cache(hash_funcs={shap.explainers._tree.Tree: hash})
 def load_shap_explainer(filename='', X_test_transformed=pd.DataFrame()):   
     # Load the explainer file (instead of generating it so as to save time):
     explainer = joblib.load(filename)
@@ -432,8 +491,6 @@ if __name__=='__main__':
     # Let the user know the data is loading and load the data:
 #     df, X, y = load_data()
 
-    st.write('HOLA')
-    st.write(os.getcwd())
     # Load the model:
 #     pipe = load_model(path="XGBoost_pipeline_model.joblib.dat")
     pipe = load_model(path="/app/tfm_kschool/frontend/XGBoost_pipeline_model.joblib.dat")
