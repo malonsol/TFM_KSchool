@@ -175,10 +175,11 @@ def frontend_appearance():
 
     # frontend elements of the web page 
     html_temp = """ 
-    <div style ="background-color:powderblue;padding:13px"> 
-    <h1 style ="color:black;text-align:center;">Flight Delay Prediction ML App</h1> 
+    <div style ="background-color:#C8DCFE;padding:13px"> 
+    <h1 style ="color:black;text-align:center;">Flight Delay Forecaster</h1> 
     </div> 
     """   
+
     # display the frontend aspect
     st.markdown(html_temp, unsafe_allow_html = True)
 
@@ -186,7 +187,7 @@ def frontend_appearance():
 # ------------------------------------------------------------------------------------------------  
 
 # def user_inputs(df):
-def user_inputs():
+def user_inputs(root):
     """
     Define user input fields
     """
@@ -197,16 +198,22 @@ def user_inputs():
 # FLIGHT DATA    
     st.markdown('---')
     st.title('Flight data')
+#     st.markdown('<p style="text-align: center;">Flight data</p>')
+#     st.markdown(""" 
+#         <div style ="background-color:#DFE9FB;padding:3px"> 
+#         <h4 style ="color:black;text-align:center;">FLIGHT DATA</h4> 
+#         </div> 
+#         """  , unsafe_allow_html = True)
     
     
 # 1) CARRIER:
     st.subheader('Carrier')
     
     # Carrier:
-    with open("/app/tfm_kschool/frontend/dict_mappers/carriers_dict.pkl", "rb") as f:
+    with open(root + "dict_mappers/carriers_dict.pkl", "rb") as f:
         carriers_dict = pickle.load(f)
 #     carrier = st.selectbox('Carrier', df['OP_UNIQUE_CARRIER'].value_counts().index, format_func = carriers_dict.get)
-    with open("/app/tfm_kschool/frontend/dict_mappers/carriers_sorted_list.pkl", "rb") as f:
+    with open(root + "dict_mappers/carriers_sorted_list.pkl", "rb") as f:
         carriers = pickle.load(f)
     carrier = st.selectbox('Carrier', carriers, format_func = carriers_dict.get)
     
@@ -215,26 +222,26 @@ def user_inputs():
     
     # Origin:
 #     origin = st.selectbox('Origin', sorted(df['ORIGIN'].unique()))
-    with open("/app/tfm_kschool/frontend/dict_mappers/origins_sorted_list.pkl", "rb") as f:
+    with open(root + "dict_mappers/origins_sorted_list.pkl", "rb") as f:
         origins = pickle.load(f)
     origin = st.selectbox('Origin', origins)
 
     # Latitude / Longitude - ORIGIN:
-    with open("/app/tfm_kschool/frontend/dict_mappers/latitude_dict.pkl", "rb") as f:
+    with open(root + "dict_mappers/latitude_dict.pkl", "rb") as f:
         latitude_dict = pickle.load(f)
-    with open("/app/tfm_kschool/frontend/dict_mappers/longitude_dict.pkl", "rb") as f:
+    with open(root + "dict_mappers/longitude_dict.pkl", "rb") as f:
         longitude_dict = pickle.load(f)
     col1, col2, = st.beta_columns(2)
     with col1:
         st.text('ORIGIN - Latitude')
-        latitudeOrigin = st.code(('{:8.5f}').format((latitude_dict[origin])), language='python')
+        latitudeOrigin = st.markdown(('{:8.5f}').format((latitude_dict[origin])))
         latitudeOrigin = latitude_dict[origin] # So that the model can use it in the proper format
     with col2:
         st.text('ORIGIN - Longitude')
-        longitudeOrigin = st.code(('{:8.5f}').format((longitude_dict[origin])), language='python')
+        longitudeOrigin = st.markdown(('{:8.5f}').format((longitude_dict[origin])))
         longitudeOrigin = longitude_dict[origin] # So that the model can use it in the proper format
     # Taxi-out:
-    with open("/app/tfm_kschool/frontend/dict_mappers/taxi_out_dict.pkl", "rb") as f:
+    with open(root + "dict_mappers/taxi_out_dict.pkl", "rb") as f:
         taxi_out_dict = pickle.load(f)          
     try:
         taxiout = st.slider('Taxi-out time [min] (*)',
@@ -250,7 +257,7 @@ def user_inputs():
     
     # Destination:
 #     dest = st.selectbox('Destination', sorted(df['DEST'].unique()))
-    with open("/app/tfm_kschool/frontend/dict_mappers/dests_sorted_list.pkl", "rb") as f:
+    with open(root + "dict_mappers/dests_sorted_list.pkl", "rb") as f:
         dests = pickle.load(f)
     dest = st.selectbox('Destination', dests)
 
@@ -258,14 +265,14 @@ def user_inputs():
     col3, col4, = st.beta_columns(2)
     with col3:
         st.text('DESTINATION - Latitude')
-        latitudeDest = st.code(('{:8.5f}').format((latitude_dict[dest])), language='python')
+        latitudeDest = st.markdown(('{:8.5f}').format((latitude_dict[dest])))
         latitudeDest = latitude_dict[dest] # So that the model can use it in the proper format
     with col4:
         st.text('DESTINATION - Longitude')
-        longitudeDest = st.code(('{:8.5f}').format((longitude_dict[dest])), language='python')
+        longitudeDest = st.markdown(('{:8.5f}').format((longitude_dict[dest])))
         longitudeDest = longitude_dict[dest] # So that the model can use it in the proper format
     # Taxi-in:
-    with open("/app/tfm_kschool/frontend/dict_mappers/taxi_in_dict.pkl", "rb") as f:
+    with open(root + "dict_mappers/taxi_in_dict.pkl", "rb") as f:
         taxi_in_dict = pickle.load(f)          
     try:
         taxiin = st.slider('Taxi-in time [min] (*)',
@@ -289,14 +296,14 @@ def user_inputs():
     with col6:
         # Departure time:
 #         deptime = st.selectbox('Departure time hour', list(map(str, sorted([int(hour) for hour in df['DEP_TIME_hour'].unique()]))))    
-        with open("/app/tfm_kschool/frontend/dict_mappers/depTimeHours_list.pkl", "rb") as f:
+        with open(root + "dict_mappers/depTimeHours_list.pkl", "rb") as f:
             depTimeHours = pickle.load(f)
         deptime = st.selectbox('Departure time hour', list(map(str, sorted([int(hour) for hour in depTimeHours]))))    
     with col7:
         # Arrival time:
-        with open("/app/tfm_kschool/frontend/dict_mappers/arrTimeHour_dict.pkl", "rb") as f:
+        with open(root + "dict_mappers/arrTimeHour_dict.pkl", "rb") as f:
             arrTimeHour_dict = pickle.load(f)
-        with open("/app/tfm_kschool/frontend/dict_mappers/arrTimeHour_dict_2.pkl", "rb") as f:
+        with open(root + "dict_mappers/arrTimeHour_dict_2.pkl", "rb") as f:
             arrTimeHour_dict_2 = pickle.load(f)
         try:
             arrtime = st.number_input('Arrival  time hour (*)', min_value=0,
@@ -318,7 +325,7 @@ def user_inputs():
                 st.markdown("(\*) *The selected combination of Origin and Destination has not been flown before*")        
 
     # Distance:    
-    with open("/app/tfm_kschool/frontend/dict_mappers/distance_dict.pkl", "rb") as f:
+    with open(root + "dict_mappers/distance_dict.pkl", "rb") as f:
         distance_dict = pickle.load(f) 
     try:
         st.text('Distance covered [mi] (fixed value based on Origin-Destination values)')
@@ -359,7 +366,7 @@ def user_inputs():
                                        value=60, max_value=100, step=5, key=1)
 
         # Sky condtions - ORIGIN: 
-        with open("/app/tfm_kschool/frontend/dict_mappers/sky_dict.pkl", "rb") as f:
+        with open(root + "dict_mappers/sky_dict.pkl", "rb") as f:
             sky_dict = pickle.load(f)
         skyOrigin = st.selectbox('Sky conditions', options=list(sky_dict.keys()),
                                  index=0, format_func = sky_dict.get, key=1)
@@ -455,12 +462,15 @@ def st_shap(plot, height=None):
 
 if __name__=='__main__': 
     
+#     root = "/app/tfm_kschool/frontend/"
+    root = ""
+    
     # Let the user know the data is loading and load the data:
 #     df, X, y = load_data()
 
     # Load the model:
 #     pipe = load_model(path="XGBoost_pipeline_model.joblib.dat")
-    pipe = load_model(path="/app/tfm_kschool/frontend/XGBoost_pipeline_model.joblib.dat")
+    pipe = load_model(path=root + "XGBoost_pipeline_model.joblib.dat")
     transformer = pipe[:-1]
     model = pipe.named_steps['clf']
     
@@ -469,7 +479,7 @@ if __name__=='__main__':
     
     # Load the input fields:
 #     inputs = user_inputs(df)
-    inputs = user_inputs()
+    inputs = user_inputs(root)
     
     # Generate an array based on user input values thal will be fed into the model:
     dismissed_cols = [
@@ -516,13 +526,13 @@ if __name__=='__main__':
                 - Red features are *forcing* the prediction to **DELAY**.
                 - On the contrary, blue variables drive the prediction to **ON-TIME**.
             """)
-            explainer, shap_values = load_shap_explainer('/app/tfm_kschool/frontend/shap_treeExplainer.bz2', X_test_transformed)
+            explainer, shap_values = load_shap_explainer(root + 'shap_treeExplainer.bz2', X_test_transformed)
             st_shap(shap.force_plot(explainer.expected_value, shap_values[0,:], X_test.iloc[0,:]))
     
     # SHAP values general overview:
     shapSummary = st.checkbox(label="SHAP Summary Plot")
     if shapSummary:
-        st.image('/app/tfm_kschool/frontend/shap_summaryPlot.png')
+        st.image(root + 'shap_summaryPlot.png')
                     
    # END:
     st.markdown('---')
