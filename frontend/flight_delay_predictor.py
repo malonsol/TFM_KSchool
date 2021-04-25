@@ -175,8 +175,8 @@ def frontend_appearance():
 
     # frontend elements of the web page 
     html_temp = """ 
-    <div style ="background-color:#C8DCFE;padding:13px"> 
-    <h1 style ="color:black;text-align:center;">Flight Delay Forecaster</h1> 
+    <div style ="background-color:SteelBlue;padding:13px"> 
+    <h1 style ="color:white;text-align:center;">Flight Delay Forecaster</h1> 
     </div> 
     """   
 
@@ -464,8 +464,8 @@ def st_shap(plot, height=None):
 
 if __name__=='__main__': 
     
-    root = "/app/tfm_kschool/frontend/"
-#     root = ""
+    root = "/app/tfm_kschool/frontend/" # Used for deployment on Streamlit Sharing platform
+#     root = "" # Used for running local tests
     
     # Let the user know the data is loading and load the data:
 #     df, X, y = load_data()
