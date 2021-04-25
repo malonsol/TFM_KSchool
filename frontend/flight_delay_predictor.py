@@ -464,8 +464,8 @@ def st_shap(plot, height=None):
 
 if __name__=='__main__': 
     
-#     root = "/app/tfm_kschool/frontend/"
-    root = ""
+    root = "/app/tfm_kschool/frontend/"
+#     root = ""
     
     # Let the user know the data is loading and load the data:
 #     df, X, y = load_data()
