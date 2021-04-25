@@ -328,13 +328,15 @@ def user_inputs(root):
     with open(root + "dict_mappers/distance_dict.pkl", "rb") as f:
         distance_dict = pickle.load(f) 
     try:
-        st.text('Distance covered [mi] (fixed value based on Origin-Destination values)')
-        distance = st.code(distance_dict[origin + '_' + dest], language='python')
-        distance = distance_dict[origin + '_' + dest] # So that the model can use it in the proper format
+        if distance_dict[origin + '_' + dest]:
+            pass
     except KeyError:
         distance = st.slider('Distance covered [mi] (*)', min_value=0, max_value=6000, value=600, step=50)
-        st.markdown("(\*) *The selected route (Origin-Destination) has not been flown before. Please select a value*")      
-
+        st.markdown("(\*) *The selected route (Origin-Destination) has not been flown before. Please select a value*")
+    else: 
+        st.markdown('Distance covered [mi]')
+        distance = st.markdown(distance_dict[origin + '_' + dest])
+        distance = distance_dict[origin + '_' + dest] # So that the model can use it in the proper format
 
 # METEOROLOGICAL DATA
     st.markdown('---')
@@ -462,8 +464,8 @@ def st_shap(plot, height=None):
 
 if __name__=='__main__': 
     
-    root = "/app/tfm_kschool/frontend/"
-#     root = ""
+#     root = "/app/tfm_kschool/frontend/"
+    root = ""
     
     # Let the user know the data is loading and load the data:
 #     df, X, y = load_data()
