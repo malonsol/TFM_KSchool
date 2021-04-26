@@ -221,10 +221,16 @@ def user_inputs(root):
     st.subheader('Origin')
     
     # Origin:
-#     origin = st.selectbox('Origin', sorted(df['ORIGIN'].unique()))
-    with open(root + "dict_mappers/origins_sorted_list.pkl", "rb") as f:
-        origins = pickle.load(f)
-    origin = st.selectbox('Origin', origins)
+    originType = st.radio('Departure airport', options=['Currently operated by the A/L', 'All airports'], index=0, key=1)
+    if originType == 'Currently operated by the A/L':
+        with open(root + "dict_mappers/carrierOrigins_dict.pkl", "rb") as f:
+            carrierOrigins_dict = pickle.load(f)
+            origins = carrierOrigins_dict[carrier]
+        origin = st.selectbox('Origin', origins)
+    elif originType == 'All airports':
+        with open(root + "dict_mappers/origins_sorted_list.pkl", "rb") as f:
+            origins = pickle.load(f)
+        origin = st.selectbox('Origin', origins)
 
     # Latitude / Longitude - ORIGIN:
     with open(root + "dict_mappers/latitude_dict.pkl", "rb") as f:
@@ -256,10 +262,16 @@ def user_inputs(root):
     st.subheader('Destination')
     
     # Destination:
-#     dest = st.selectbox('Destination', sorted(df['DEST'].unique()))
-    with open(root + "dict_mappers/dests_sorted_list.pkl", "rb") as f:
-        dests = pickle.load(f)
-    dest = st.selectbox('Destination', dests)
+    destType = st.radio('Departure airport', options=['Currently operated by the A/L', 'All airports'], index=0, key=2)
+    if destType == 'Currently operated by the A/L':
+        with open(root + "dict_mappers/carrierDests_dict.pkl", "rb") as f:
+            carrierDests_dict = pickle.load(f)
+            dests = carrierDests_dict[carrier]
+        dest = st.selectbox('Dest', dests)
+    elif destType == 'All airports':
+        with open(root + "dict_mappers/dests_sorted_list.pkl", "rb") as f:
+            dests = pickle.load(f)
+        dest = st.selectbox('Destination', dests)
 
     # Latitude / Longitude - DESTINATION:
     col3, col4, = st.beta_columns(2)
