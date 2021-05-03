@@ -12,6 +12,9 @@ import datetime
 import joblib
 import pickle
 
+# Online data retrieval:
+import requests
+
 # Data analysis and wrangling
 import pandas as pd
 import numpy as np
@@ -186,6 +189,86 @@ def frontend_appearance():
 # ------------------------------------------------------------------------------------------------
 # ------------------------------------------------------------------------------------------------  
 
+@st.cache
+def weather_forecast(lat, lon):
+    
+    # Get/Build the url:
+    coord_API_endpoint = "http://api.openweathermap.org/data/2.5/onecall?"
+    join_key = "&appid="
+    API_key = "b51fbb9d87131aabef6d7c2cd42b128e"
+    units = "&units=imperial"
+    exclude = "&exclude=current,minutely,daily,alerts"
+
+    lat_lon = "lat=" + str(round(lat, 2))+ "&lon=" + str(round(lon, 2))
+
+    url = coord_API_endpoint + lat_lon + exclude + join_key + API_key + units
+
+    forecast_json_data = requests.get(url).json()
+    df_predictions = pd.DataFrame()
+
+    # Creating empty lists
+    days = []
+    hours = []
+    pressures = []
+    temperatures = []
+    precipitations = []
+    relHumidities = []
+    skyConditions = []
+    visibilities = []
+    windGusts = []
+    winds = []
+
+    # Loop Through the JSON
+    for num_forecasts in forecast_json_data['hourly']: # Hourly forecast for next 48 hours
+        days.append(datetime.datetime.fromtimestamp(num_forecasts['dt']).strftime('%Y-%m-%d'))
+        hours.append(int(datetime.datetime.fromtimestamp(num_forecasts['dt']).strftime('%H')))
+        pressures.append(round(num_forecasts['pressure'] * 0.029529983071445, 2)) # hPa to inHg
+        temperatures.append(int(round(num_forecasts['temp'], 0))) # imperial: Fahrenheit
+        try: # "Where available"
+            precipitations.append(round(num_forecasts['rain']['1h'] * 0.03937007874015748, 2)) # mm to in
+        except KeyError:
+            precipitations.append(0)
+        relHumidities.append(num_forecasts['humidity']) # Humidity, %
+        skyConditions.append(num_forecasts['clouds']) # Cloudiness, %
+        visibilities.append(int(round(num_forecasts['visibility'] * 0.0006213712, 0))) # m to mi
+        try: # "Where available"
+            windGusts.append(int(round(num_forecasts['wind_gust'] * 0.8689762, 0))) # mi/h to kt
+        except KeyError:
+            windGusts.append(0)
+        winds.append(int(round(num_forecasts['wind_speed'] * 0.8689762, 0))) # mi/h to kt
+
+    # Put data into a dataframe
+
+    def skycond(x):
+        if x == 0:
+            return 'CLR'
+        elif x < 2/8 * 100:
+            return 'FEW'
+        elif x < 4/8 * 100:
+            return 'SCT'
+        elif x < 7/8 * 100:
+            return 'BKN'
+        elif x <= 8/8 * 100:
+            return 'OVC'
+
+    skyConditions = list(map(skycond, skyConditions))
+
+    df_predictions['day'] = days
+    df_predictions['hour'] = [str(hour) for hour in hours]
+    df_predictions['pressure_inHg'] = pressures
+    df_predictions['temperature_F'] = temperatures
+    df_predictions['precipitation_in'] = precipitations
+    df_predictions['relHumidity_%'] = relHumidities
+    df_predictions['skyCondition'] = skyConditions
+    df_predictions['visibility_mi'] = visibilities
+    df_predictions['windGust_kt'] = windGusts
+    df_predictions['wind_kt'] = winds
+    
+    return df_predictions, url    
+       
+# ------------------------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------------------------
+
 # def user_inputs(df):
 def user_inputs(root):
     """
@@ -195,7 +278,8 @@ def user_inputs(root):
     # Create user input fields:
 
     
-# FLIGHT DATA    
+# FLIGHT DATA
+
     st.markdown('---')
     st.title('Flight data')
 #     st.markdown('<p style="text-align: center;">Flight data</p>')
@@ -301,8 +385,8 @@ def user_inputs(root):
     col5, col6, col7 = st.beta_columns(3)    
     with col5:
         # Date:
-        fdate = st.date_input("Flight date", value=datetime.date(2019, 7, 6),
-                              min_value=datetime.date(2019, 1, 1), max_value=datetime.date(2019, 12, 31))
+        fdate = st.date_input("Flight date", value=datetime.date.today(),
+                              min_value=datetime.date(2019, 1, 1), max_value=datetime.date(2021, 12, 31))
         fmonth = str(fdate.month)
         fweekday = str(fdate.isoweekday())    
     with col6:
@@ -351,6 +435,7 @@ def user_inputs(root):
         distance = distance_dict[origin + '_' + dest] # So that the model can use it in the proper format
 
 # METEOROLOGICAL DATA
+
     st.markdown('---')
     st.title('Meteorological data')
 
@@ -359,78 +444,183 @@ def user_inputs(root):
     with col8:
     # 1) ORIGIN:
         st.subheader('Origin')     
+        
+       
+        df_predictions, url = weather_forecast(latitudeOrigin, longitudeOrigin)
+        flight_forecast = df_predictions[(df_predictions['day'] == str(fdate)) & (df_predictions['hour'] == deptime)]
 
-        # Altimeter setting - ORIGIN:
-        altsetOrigin = st.slider('Altimeter setting [inHg]', min_value=27., max_value=32., value=30., step=0.25, key=1)
+        if len(flight_forecast) > 0:
+            st.success("""*Weather forecast is available for the
+                           departure. Therefore, meteorological
+                           inputs have been defaulted accordingly.  
+                           Powered by [OpenWeather]({})*""".format(url))
+            altset_def = flight_forecast['pressure_inHg'].iloc[0]
+            temp_def = int(flight_forecast['temperature_F'].iloc[0])
+            precip_def = float(flight_forecast['precipitation_in'].iloc[0])
+            relHumid_def = flight_forecast['relHumidity_%'].iloc[0]
+            skyCond_def_dict = {'CLR': 0, 'FEW': 1, 'SCT': 2, 'BKN': 3, 'OVC': 4}
+            skyCond_def = skyCond_def_dict[flight_forecast['skyCondition'].iloc[0]]
+            visibility_def = int(flight_forecast['visibility_mi'].iloc[0])
+            gust_def = int(flight_forecast['windGust_kt'].iloc[0])
+            wind_def = int(flight_forecast['wind_kt'].iloc[0])
+                
+        else:
+            st.warning("""*Unfortunately, no weather prediction is
+                           available for the selected flight. Predictions
+                           are only available for the next 48h.*""")
+            altset_def = 29.92
+            temp_def = 59
+            precip_def = 0.
+            relHumid_def = 60
+            skyCond_def = 0
+            visibility_def = 10
+            gust_def = 0
+            wind_def = 8
+            
+        # Altimeter setting - ORIGIN: 
+        altsetOrigin = st.number_input('Altimeter setting [inHg]', min_value=27., value=altset_def,
+                                       max_value=32., step=0.01, key=1)
 
         # Temperature - ORIGIN:
         tempTypeOrigin = st.radio('Temperature unit', options=['ºF', 'ºC'], index=0, key=1)
         if tempTypeOrigin == 'ºF':
-            tempOrigin = st.slider('Temperature [ºF]', min_value=-50, max_value=130, value=65, step=5, key=1)
+            tempOrigin = st.slider('Temperature [ºF]', min_value=-50, max_value=130, value=temp_def, step=1, key=1)
         elif tempTypeOrigin == 'ºC':
-            tempOrigin = st.slider('Temperature [ºC]', min_value=-50, max_value=50, value=20, step=5, key=1)
+            tempOrigin = st.slider('Temperature [ºC]', min_value=-50, max_value=50,
+                                   value=int((temp_def - 32) / 1.8), step=1, key=1)
             tempOrigin = int(1.8 * tempOrigin + 32) # Convert Celsius to Fahrenheit to properly feed the model
             
         # Hourly precipitation - ORIGIN:
         precipOrigin = st.number_input('Hourly precipitation [in]', min_value=0.,
-                                       value=0., max_value=30., step=0.5, key=1)
+                                       value=precip_def, max_value=30., step=0.01, key=1)
 
         # Relative humidity - ORIGIN:    
         relhumOrigin = st.number_input('Relative humidity [%]', min_value=0,
-                                       value=60, max_value=100, step=5, key=1)
+                                       value=relHumid_def, max_value=100, step=1, key=1)
 
         # Sky condtions - ORIGIN: 
         with open(root + "dict_mappers/sky_dict.pkl", "rb") as f:
             sky_dict = pickle.load(f)
         skyOrigin = st.selectbox('Sky conditions', options=list(sky_dict.keys()),
-                                 index=0, format_func = sky_dict.get, key=1)
+                                 index=skyCond_def, format_func = sky_dict.get, key=1)
 
         # Visibility - ORIGIN:
         visibOrigin = st.number_input('Visibility [mi]', min_value=0,
-                                       value=10, max_value=100, step=1, key=1)
+                                       value=visibility_def, max_value=100, step=1, key=1)
 
         # Wind gust speed - ORIGIN:
-        gustOrigin = st.slider('Wind gust speed [mph]', min_value=0, max_value=40, value=0, step=1, key=1)
+        gustOrigin = st.slider('Wind gust speed [mph]', min_value=0, max_value=40, value=gust_def, step=1, key=1)
 
         # Wind speed - ORIGIN:
-        windOrigin = st.slider('Wind speed [mph]', min_value=0, max_value=40, value=8, step=1, key=1)
+        windOrigin = st.slider('Wind speed [mph]', min_value=0, max_value=40, value=wind_def, step=1, key=1)
 
     with col10:
     # 2) DESTINATION:
         st.subheader('Destination')     
 
-        #  - DESTINATION:
-        altsetDest = st.slider('Altimeter setting [inHg]', min_value=27., max_value=32., value=30., step=0.25, key=2)
+        df_predictions, url = weather_forecast(latitudeDest, longitudeDest)
+        if int(arrtime) < int(deptime): # Late night flight arriving on the following day
+            flight_forecast = df_predictions[(df_predictions['day'] == str(fdate + datetime.timedelta(days=1))) \
+                                           & (df_predictions['hour'] == arrtime)]
+        else:
+            flight_forecast = df_predictions[(df_predictions['day'] == str(fdate)) & (df_predictions['hour'] == arrtime)]
 
-        # Temperature - DESTINATION:
+        if len(flight_forecast) > 0:
+            st.success("""*Weather forecast is available for the
+                           arrival. Therefore, meteorological
+                           inputs have been defaulted accordingly.  
+                           Powered by [OpenWeather]({})*""".format(url))
+            altset_def = flight_forecast['pressure_inHg'].iloc[0]
+            temp_def = int(flight_forecast['temperature_F'].iloc[0])
+            precip_def = float(flight_forecast['precipitation_in'].iloc[0])
+            relHumid_def = flight_forecast['relHumidity_%'].iloc[0]
+            skyCond_def_dict = {'CLR': 0, 'FEW': 1, 'SCT': 2, 'BKN': 3, 'OVC': 4}
+            skyCond_def = skyCond_def_dict[flight_forecast['skyCondition'].iloc[0]]
+            visibility_def = int(flight_forecast['visibility_mi'].iloc[0])
+            gust_def = int(flight_forecast['windGust_kt'].iloc[0])
+            wind_def = int(flight_forecast['wind_kt'].iloc[0])
+                
+        else:
+            st.warning("""*Unfortunately, no weather prediction is
+                           available for the selected flight. Predictions
+                           are only available for the next 48h.*""")
+            altset_def = 29.92
+            temp_def = 59
+            precip_def = 0.
+            relHumid_def = 60
+            skyCond_def = 0
+            visibility_def = 10
+            gust_def = 0
+            wind_def = 8
+            
+        # Altimeter setting - DEST: 
+        altsetDest = st.number_input('Altimeter setting [inHg]', min_value=27., value=altset_def,
+                                       max_value=32., step=0.01, key=2)
+
+        # Temperature - DEST:
         tempTypeDest = st.radio('Temperature unit', options=['ºF', 'ºC'], index=0, key=2)
         if tempTypeDest == 'ºF':
-            tempDest = st.slider('Temperature [ºF]', min_value=-50, max_value=130, value=65, step=5, key=2)
+            tempDest = st.slider('Temperature [ºF]', min_value=-50, max_value=130, value=temp_def, step=1, key=2)
         elif tempTypeDest == 'ºC':
-            tempDest = st.slider('Temperature [ºC]', min_value=-50, max_value=50, value=20, step=5, key=2)
+            tempDest = st.slider('Temperature [ºC]', min_value=-50, max_value=50,
+                                   value=int((temp_def - 32) / 1.8), step=1, key=2)
             tempDest = int(1.8 * tempDest + 32) # Convert Celsius to Fahrenheit to properly feed the model
-
-        # Hourly precipitation - DESTINATION:
+            
+        # Hourly precipitation - DEST:
         precipDest = st.number_input('Hourly precipitation [in]', min_value=0.,
-                                     value=0., max_value=30., step=0.5, key=2)
+                                       value=precip_def, max_value=30., step=0.01, key=2)
 
-        # Relative humidity - DESTINATION:    
+        # Relative humidity - DEST:    
         relhumDest = st.number_input('Relative humidity [%]', min_value=0,
-                                     value=60, max_value=100, step=5, key=2)
+                                       value=relHumid_def, max_value=100, step=1, key=2)
 
-        # Sky condtions - DESTINATION: 
+        # Sky condtions - DEST: 
+        with open(root + "dict_mappers/sky_dict.pkl", "rb") as f:
+            sky_dict = pickle.load(f)
         skyDest = st.selectbox('Sky conditions', options=list(sky_dict.keys()),
-                               index=0, format_func = sky_dict.get, key=2)
+                                 index=skyCond_def, format_func = sky_dict.get, key=2)
 
-        # Visibility - DESTINATION:
+        # Visibility - DEST:
         visibDest = st.number_input('Visibility [mi]', min_value=0,
-                                       value=10, max_value=100, step=1, key=2)
+                                       value=visibility_def, max_value=100, step=1, key=2)
 
-        # Wind gust speed - DESTINATION:
-        gustDest = st.slider('Wind gust speed [mph]', min_value=0, max_value=40, value=0, step=1, key=2)
+        # Wind gust speed - DEST:
+        gustDest = st.slider('Wind gust speed [mph]', min_value=0, max_value=40, value=gust_def, step=1, key=2)
 
-        # Wind speed - DESTINATION:
-        windDest = st.slider('Wind speed [mph]', min_value=0, max_value=40, value=8, step=1, key=2)
+        # Wind speed - DEST:
+        windDest = st.slider('Wind speed [mph]', min_value=0, max_value=40, value=wind_def, step=1, key=2)
+#         #  - DESTINATION:
+#         altsetDest = st.slider('Altimeter setting [inHg]', min_value=27., max_value=32., value=30., step=0.25, key=2)
+
+#         # Temperature - DESTINATION:
+#         tempTypeDest = st.radio('Temperature unit', options=['ºF', 'ºC'], index=0, key=2)
+#         if tempTypeDest == 'ºF':
+#             tempDest = st.slider('Temperature [ºF]', min_value=-50, max_value=130, value=65, step=5, key=2)
+#         elif tempTypeDest == 'ºC':
+#             tempDest = st.slider('Temperature [ºC]', min_value=-50, max_value=50, value=20, step=5, key=2)
+#             tempDest = int(1.8 * tempDest + 32) # Convert Celsius to Fahrenheit to properly feed the model
+
+#         # Hourly precipitation - DESTINATION:
+#         precipDest = st.number_input('Hourly precipitation [in]', min_value=0.,
+#                                      value=0., max_value=30., step=0.5, key=2)
+
+#         # Relative humidity - DESTINATION:    
+#         relhumDest = st.number_input('Relative humidity [%]', min_value=0,
+#                                      value=60, max_value=100, step=5, key=2)
+
+#         # Sky condtions - DESTINATION: 
+#         skyDest = st.selectbox('Sky conditions', options=list(sky_dict.keys()),
+#                                index=0, format_func = sky_dict.get, key=2)
+
+#         # Visibility - DESTINATION:
+#         visibDest = st.number_input('Visibility [mi]', min_value=0,
+#                                        value=10, max_value=100, step=1, key=2)
+
+#         # Wind gust speed - DESTINATION:
+#         gustDest = st.slider('Wind gust speed [mph]', min_value=0, max_value=40, value=0, step=1, key=2)
+
+#         # Wind speed - DESTINATION:
+#         windDest = st.slider('Wind speed [mph]', min_value=0, max_value=40, value=8, step=1, key=2)
     
 
     user_inputs = [
@@ -474,6 +664,7 @@ def st_shap(plot, height=None):
 # ------------------------------------------------------------------------------------------------
 # ------------------------------------------------------------------------------------------------
 
+
 if __name__=='__main__': 
     
     root = "/app/tfm_kschool/frontend/" # Used for deployment on Streamlit Sharing platform
@@ -488,7 +679,15 @@ if __name__=='__main__':
     transformer = pipe[:-1]
     model = pipe.named_steps['clf']
     
-    # Load the general HMI framework:
+#     # Load the general HMI framework:
+#     col1, col2, col3 = st.beta_columns([1,1.25,1])
+#     with col1:
+#         st.write("")
+#     with col2:
+#         st.image('logo1.jpg')
+#     with col3:
+#         st.write("")
+        
     frontend_appearance()
     
     # Load the input fields:
