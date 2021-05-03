@@ -749,4 +749,5 @@ if __name__=='__main__':
                     
    # END:
     st.markdown('---')
+    st.write(datetime.datetime.now().strftime("%H:%M:%S"))
     
