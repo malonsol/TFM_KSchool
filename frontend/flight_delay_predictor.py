@@ -381,7 +381,8 @@ def user_inputs(root):
         
 # 4) TIME:
     st.subheader('Time')
-
+    st.write("Current time:", datetime.datetime.now().strftime("%Y-%m-%d | %H:%M:%S"))
+    
     col5, col6, col7 = st.beta_columns(3)    
     with col5:
         # Date:
@@ -589,38 +590,6 @@ def user_inputs(root):
 
         # Wind speed - DEST:
         windDest = st.slider('Wind speed [mph]', min_value=0, max_value=40, value=wind_def, step=1, key=2)
-#         #  - DESTINATION:
-#         altsetDest = st.slider('Altimeter setting [inHg]', min_value=27., max_value=32., value=30., step=0.25, key=2)
-
-#         # Temperature - DESTINATION:
-#         tempTypeDest = st.radio('Temperature unit', options=['ºF', 'ºC'], index=0, key=2)
-#         if tempTypeDest == 'ºF':
-#             tempDest = st.slider('Temperature [ºF]', min_value=-50, max_value=130, value=65, step=5, key=2)
-#         elif tempTypeDest == 'ºC':
-#             tempDest = st.slider('Temperature [ºC]', min_value=-50, max_value=50, value=20, step=5, key=2)
-#             tempDest = int(1.8 * tempDest + 32) # Convert Celsius to Fahrenheit to properly feed the model
-
-#         # Hourly precipitation - DESTINATION:
-#         precipDest = st.number_input('Hourly precipitation [in]', min_value=0.,
-#                                      value=0., max_value=30., step=0.5, key=2)
-
-#         # Relative humidity - DESTINATION:    
-#         relhumDest = st.number_input('Relative humidity [%]', min_value=0,
-#                                      value=60, max_value=100, step=5, key=2)
-
-#         # Sky condtions - DESTINATION: 
-#         skyDest = st.selectbox('Sky conditions', options=list(sky_dict.keys()),
-#                                index=0, format_func = sky_dict.get, key=2)
-
-#         # Visibility - DESTINATION:
-#         visibDest = st.number_input('Visibility [mi]', min_value=0,
-#                                        value=10, max_value=100, step=1, key=2)
-
-#         # Wind gust speed - DESTINATION:
-#         gustDest = st.slider('Wind gust speed [mph]', min_value=0, max_value=40, value=0, step=1, key=2)
-
-#         # Wind speed - DESTINATION:
-#         windDest = st.slider('Wind speed [mph]', min_value=0, max_value=40, value=8, step=1, key=2)
     
 
     user_inputs = [
@@ -749,5 +718,5 @@ if __name__=='__main__':
                     
    # END:
     st.markdown('---')
-    st.write(datetime.datetime.now().strftime("%H:%M:%S"))
+    
     
