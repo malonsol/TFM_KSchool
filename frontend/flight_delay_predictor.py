@@ -381,7 +381,8 @@ def user_inputs(root):
         
 # 4) TIME:
     st.subheader('Time')
-    st.write("Current time:", datetime.datetime.now().strftime("%Y-%m-%d | %H:%M:%S"))
+    st.write("Current time:", datetime.datetime.now().strftime("%Y-%m-%d | %H:%M:%S"),
+             datetime.datetime.now(datetime.timezone.utc).astimezone().tzinfo)
     
     col5, col6, col7 = st.beta_columns(3)    
     with col5:
