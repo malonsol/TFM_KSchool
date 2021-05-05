@@ -710,14 +710,32 @@ if __name__=='__main__':
                 - On the contrary, blue variables drive the prediction to **ON-TIME**.
             """)
             explainer, shap_values = load_shap_explainer(root + 'shap_treeExplainer.bz2', X_test_transformed)
-            st_shap(shap.force_plot(explainer.expected_value, shap_values[0,:], X_test.iloc[0,:]))
+            st_shap(shap.force_plot(explainer.expected_value, shap_values[0,:], X_test.iloc[0,:], link='logit'))
+            
+            # -----------
+
+            shap.decision_plot(base_value=explainer.expected_value, shap_values=shap_values[:1],
+                               features=X_test, link='logit', feature_display_range=slice(None, -X_test.shape[1]-1, -1),
+                               return_objects=True, show=False, y_demarc_color='#00172b')
+            fig = plt.gcf()
+            ax = plt.gca()
+            fig.patch.set_facecolor('#00172b')
+            ax.set_facecolor('#00172b')
+            ax.set_xlabel('Probability', fontsize=16, color='white')
+            ax.tick_params(axis='both', colors='white')
+            ax.grid(axis='both', color='white', linestyle='-', linewidth=0.25)
+            for ln in ax.lines:
+                ln.set_linewidth(3)
+            for text in ax.texts:
+                text.set_color('white')
+                text.set_alpha(0.75)
+            st.pyplot(fig)
+            
+            # -----------
     
-    # SHAP values general overview:
-    shapSummary = st.checkbox(label="SHAP Summary Plot")
-    if shapSummary:
-        st.image(root + 'shap_summaryPlot.png')
-                    
-   # END:
-    st.markdown('---')
-    
-    
+#     # SHAP values general overview:
+#     shapSummary = st.checkbox(label="SHAP Summary Plot")
+#     if shapSummary:
+#         st.image(root + 'shap_summaryPlot.png')
+
+       
