@@ -649,16 +649,16 @@ if __name__=='__main__':
     transformer = pipe[:-1]
     model = pipe.named_steps['clf']
     
-#     # Load the general HMI framework:
-#     col1, col2, col3 = st.beta_columns([1,1.25,1])
-#     with col1:
-#         st.write("")
-#     with col2:
-#         st.image('logo1.jpg')
-#     with col3:
-#         st.write("")
+    # Load the general HMI framework:
+    col1, col2, col3 = st.beta_columns([0.1,1.25,0.1])
+    with col1:
+        st.write("")
+    with col2:
+        st.image('logo3.jpeg')
+    with col3:
+        st.write("")
         
-    frontend_appearance()
+#     frontend_appearance()
     
     # Load the input fields:
 #     inputs = user_inputs(df)
