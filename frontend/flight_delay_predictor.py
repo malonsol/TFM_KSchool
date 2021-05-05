@@ -654,7 +654,7 @@ if __name__=='__main__':
     with col1:
         st.write("")
     with col2:
-        st.image('logo3.jpeg')
+        st.image(root + 'logo3.jpeg')
     with col3:
         st.write("")
         
