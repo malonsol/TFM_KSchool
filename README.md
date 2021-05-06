@@ -72,6 +72,8 @@ conda create --name <env> --file src/requirements-conda.txt
 
 *(An utterly useful Conda official cheatsheet can be found [here](https://docs.conda.io/projects/conda/en/latest/_downloads/843d9e0198f2a193a3484886fa28163c/conda-cheatsheet.pdf))*
 
+---
+
 ### 2. Download the data
 The whole project has been zipped and uploaded to Google Drive. Here is the [link](https://drive.google.com/drive/folders/11dHZbCN1WCdrYVgMQM8FwV2x2KzdewXI)  
   
@@ -79,7 +81,9 @@ The whole project has been zipped and uploaded to Google Drive. Here is the [lin
 
 Relative paths have been used throughout all the notebooks in order to ensure complete reproducibility. DO NOT change directory arborescence !!!
 
-*NOTE: At certain points in the project, computation times are quite long. Therefore, notebooks are already run so the reader can review their contents without having to run them. 
+*NOTE: At certain points in the notebooks, computation times are quite long. Therefore, these are already pre-run so the reader can review their contents without having to run them.* 
+
+---
 
 ### 3. Running the Jupyter Notebooks
 The proper way to fully reproduce the project is to run the notebooks in the corresponding order. To ease this process, these have been numbered:
