@@ -1,7 +1,7 @@
 # Predicting Flight Delays in Commercial Aviation
 &nbsp;
 
-*(Instructions on how to run the code for the project can be found at the end of the README)*
+*(Instructions on how to run the code for the project can be found at the end of this README)*
 &nbsp;
 
 &nbsp;
