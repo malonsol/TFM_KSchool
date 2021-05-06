@@ -63,6 +63,13 @@ conda create --name <env> --file src/requirements-conda.txt
 
 *(An utterly useful Conda official cheatsheet can be found [here](https://docs.conda.io/projects/conda/en/latest/_downloads/843d9e0198f2a193a3484886fa28163c/conda-cheatsheet.pdf))*
 
+### Download the data
+The whole project has been zipped and uploaded to Google Drive. Here is the [link](https://drive.google.com/drive/folders/11dHZbCN1WCdrYVgMQM8FwV2x2KzdewXI)  
+  
+:warning: **RELATIVE PATHS WARNING** :warning:  
+
+Relative paths have been used throughout all the notebooks in order to ensure complete reproducibility. DO NOT change directory arborescence !!!
+
 ### Running the Jupyter Notebooks
 The proper way to fully reproduce the project is to run the notebooks in the corresponding order. To ease this process, these have been numbered:
 - [1_otp_preprocessing](notebooks/1_otp_preprocessing.ipynb)
@@ -72,5 +79,7 @@ The proper way to fully reproduce the project is to run the notebooks in the cor
 - [5.1_model_various_classifiers](notebooks/5.1_model_various_classifiers.ipynb)
 - [5.2_model_xgboost](notebooks/5.2_model_xgboost.ipynb)
 - [6_shap_values](notebooks/6_shap_values.ipynb)
+- [7_frontend](https://github.com/malonsol/TFM_KSchool/tree/main/frontend) → *It has its own self-contained directory within this repo, so as to better organize the workflow*
 
-*The Frontend has its own self-contained directory within this repo, so as to better organize the workflow.*
+
+
