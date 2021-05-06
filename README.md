@@ -31,16 +31,25 @@ Airborne transportation is widely accepted as a cornerstone in mobility worldwid
 
 ### Confusion matrix and Classification report
 
+
+<center>
+
 |                |     precision    |     recall    |     f1-score    |
 |----------------|------------------|---------------|-----------------|
 |     on-time    |     0.89         |     0.70      |     0.78        |
 |     delayed    |     0.34         |     0.65      |     0.44        |
 
-![confusion_matrix](https://user-images.githubusercontent.com/71399207/117335574-97826080-ae9b-11eb-8db9-fe170161a2e3.png)
+</center>
+  
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/71399207/117335574-97826080-ae9b-11eb-8db9-fe170161a2e3.png">
+</p>
 
 ### ROC curve analysis
 
-![ROC curve analysis](https://user-images.githubusercontent.com/71399207/117335798-d4e6ee00-ae9b-11eb-8821-2643de56633d.png)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/71399207/117335798-d4e6ee00-ae9b-11eb-8821-2643de56633d.png">
+</p>
 &nbsp;
 
 &nbsp;
@@ -49,7 +58,7 @@ Airborne transportation is widely accepted as a cornerstone in mobility worldwid
 
 ## Instructions
 
-### Installing libraries
+### 1. Create an environment with the required libraries
 
 This project has been built upon [`Anaconda`](https://www.anaconda.com/distribution/) with Python version 3.8 . However, a superior version of the Anaconda distribution should also work.
 
@@ -63,14 +72,16 @@ conda create --name <env> --file src/requirements-conda.txt
 
 *(An utterly useful Conda official cheatsheet can be found [here](https://docs.conda.io/projects/conda/en/latest/_downloads/843d9e0198f2a193a3484886fa28163c/conda-cheatsheet.pdf))*
 
-### Download the data
+### 2. Download the data
 The whole project has been zipped and uploaded to Google Drive. Here is the [link](https://drive.google.com/drive/folders/11dHZbCN1WCdrYVgMQM8FwV2x2KzdewXI)  
   
 :warning: **RELATIVE PATHS WARNING** :warning:  
 
 Relative paths have been used throughout all the notebooks in order to ensure complete reproducibility. DO NOT change directory arborescence !!!
 
-### Running the Jupyter Notebooks
+*NOTE: At certain points in the project, computation times are quite long. Therefore, notebooks are already run so the reader can review their contents without having to run them. 
+
+### 3. Running the Jupyter Notebooks
 The proper way to fully reproduce the project is to run the notebooks in the corresponding order. To ease this process, these have been numbered:
 - [1_otp_preprocessing](notebooks/1_otp_preprocessing.ipynb)
 - [2_wban_iata](notebooks/2_wban_iata.ipynb)
