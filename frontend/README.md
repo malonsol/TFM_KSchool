@@ -3,8 +3,15 @@
 </p>
 &nbsp;
 
-## :airplane: :link: [*CLEAR SKY app*](https://share.streamlit.io/malonsol/tfm_kschool/main/frontend/flight_delay_predictor.py) :link: :airplane:
+<h1 style="text-align:center">
+  <img width=30 style="float: right;" src="https://docs.streamlit.io/en/0.79.0/_static/favicon.png">
+  &#128279 &#128313 &#128311 &#128313 &#9992 &#128104;&#8205;&#9992;&#65039;
+  <a href="https://share.streamlit.io/malonsol/tfm_kschool/main/frontend/flight_delay_predictor.py">→ CLEAR SKY ←</a>
+  &#128105;&#8205;&#9992;&#65039; &#9992 &#128313 &#128311 &#128313 &#128279
+  <img width=30 style="float: right;" src="https://docs.streamlit.io/en/0.79.0/_static/favicon.png">
+</h1>
 &nbsp;
+
 
 *An independent README file has been created for the Frontend section in order to tidy up the repo.*  
 *:arrow_right_hook: For those users interested in a comprehensive explanation about the underlying project behind the application, it can be found [here](https://github.com/malonsol/TFM_KSchool/blob/main/README.md).*
@@ -27,3 +34,28 @@ Of course, please do not hesitate to contact me should any doubt may arise durin
 &nbsp;&nbsp;&nbsp;m.alonso.lopez123@gmail.com
 
 **Constructive feedback is also more than welcome!**
+&nbsp;
+
+## Quick user guide
+
+There are many different logics applying behind each field. Behaviour is defined in accordance with user sequential inputs. Hereafter are defined some of these dynamics.  
+*:arrow_right_hook: Complete code can be checked out [here](./7_frontend.ipynb).*
+
+### Flight data
+#### Origin and Destination
+- `Carrier` : ordered in accordance with total number of flights in 2019
+- `Origin` / `Destination` : user can either select 
+  - an airport currently operated by the airline, or
+  - any airport in the database
+- `Latitude` / `Longitude` : provided for information purposes
+- `Taxi-out time` / `Taxi-int time` : 
+  - if the airline has flown from/to the airport before, the median of its times is set as default
+  - otherwise, a general default value is provided based on the entire dataset
+- `Distance` : informative value, calculated based on Origin and Destination geographic location. The distance is computed drawing upon the [Haversine formula](https://en.wikipedia.org/wiki/Haversine_formula), which determines the great-circle distance between two points on a sphere given their longitudes and latitudes
+#### Time
+- `Flight date` : initialized with current date (UTC)
+- `Departure time hour` : initialized on 0 by default
+- `Arrival time hour` : based on the most frequent value *(mode)* for the combination of: Origin, Destination, Carrier and Departure time hour
+
+### Meteorological data
+
