@@ -75,4 +75,5 @@ There are many different logics applying behind each field. Behaviour is defined
 - A couple of `logit`-based plots are displayed, showing the log odds transformed into probabilities for readability convenience:
   - Force plot
   - Decision plot
+  
 Both graphs reflect the same information; while the force plot better highlights those features which have a higher impact on final prediction, the decision plot fully describes each contribution to the result. The latter is recommended when the model presents many features.
