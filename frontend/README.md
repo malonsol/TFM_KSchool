@@ -36,6 +36,8 @@ Of course, please do not hesitate to contact me should any doubt may arise durin
 **Constructive feedback is also more than welcome!**
 &nbsp;
 
+&nbsp;
+
 ## Quick user guide
 
 There are many different logics applying behind each field. Behaviour is defined in accordance with user sequential inputs. Hereafter are defined some of these dynamics.  
