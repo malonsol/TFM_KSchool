@@ -41,8 +41,9 @@ Of course, please do not hesitate to contact me should any doubt may arise durin
 There are many different logics applying behind each field. Behaviour is defined in accordance with user sequential inputs. Hereafter are defined some of these dynamics.  
 *:arrow_right_hook: Complete code can be checked out [here](./7_frontend.ipynb).*
 
-### Flight data
-#### Origin and Destination
+### Input data
+#### Flight data
+##### Origin and Destination
 - `Carrier` : ordered in accordance with total number of flights in 2019
 - `Origin` / `Destination` : user can either select 
   - an airport currently operated by the airline, or
@@ -52,10 +53,24 @@ There are many different logics applying behind each field. Behaviour is defined
   - if the airline has flown from/to the airport before, the median of its times is set as default
   - otherwise, a general default value is provided based on the entire dataset
 - `Distance` : informative value, calculated based on Origin and Destination geographic location. The distance is computed drawing upon the [Haversine formula](https://en.wikipedia.org/wiki/Haversine_formula), which determines the great-circle distance between two points on a sphere given their longitudes and latitudes
-#### Time
+##### Time
 - `Flight date` : initialized with current date (UTC)
 - `Departure time hour` : initialized on 0 by default
 - `Arrival time hour` : based on the most frequent value *(mode)* for the combination of: Origin, Destination, Carrier and Departure time hour
 
-### Meteorological data
+#### Meteorological data
+- If the flight is planned to happen during the following 48h, weather data is automtically filled by scraping a meteorological forecast from [`OpenWeather's One Call API`](https://openweathermap.org/api/one-call-api)
+- Otherwise, fields are set by default with reasonably educated values based on:
+  - when available, the International Standard Atmosphere (ISA) model: temperature and altimeter setting (i.e. pressure), or
+  - median values from the dataset (e.g. wind speed set to 8 kt)
 
+
+### Output data
+#### Prediction outcome
+- A single outcome label is provided, stating whether the flight was predicted to be on-time / delayed
+- The probability of the prediction is also displayed, so the user can have a better understanding of how likely is the prediction to guess correctly
+#### Prediction's local interpretability
+- A couple of `logit`-based plots are displayed, showing the log odds transformed into probabilities for readability convenience:
+  - Force plot
+  - Decision plot
+Both graphs reflect the same information; while the force plot better highlights those features which have a higher impact on final prediction, the decision plot fully describes each contribution to the result. The latter is recommended when the model presents many features.
