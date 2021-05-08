@@ -1,6 +1,7 @@
 # Predicting Flight Delays in Commercial Aviation
 
-*:arrow_right_hook: (Instructions on how to run the code for the project can be found at the end of this README)*
+*:arrow_right_hook: (Instructions on how to run the code for the project can be found at the end of this README)*  
+*:arrow_right_hook: (A dedicated directory has been created for the [web-based frontend application](https://github.com/malonsol/TFM_KSchool/tree/main/frontend) :airplane:)*
 &nbsp;
 
 &nbsp;
@@ -48,6 +49,18 @@ Airborne transportation is widely accepted as a cornerstone in mobility worldwid
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/71399207/117335798-d4e6ee00-ae9b-11eb-8821-2643de56633d.png">
+</p>
+
+### SHAP - Global interpretability
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/71399207/117538677-98d09c00-b007-11eb-840d-a874f2d4284e.png">
+</p>
+
+### SHAP - Local interpretability
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/71399207/117538708-b1d94d00-b007-11eb-8b9e-ea443d4bf653.png">
 </p>
 &nbsp;
 
