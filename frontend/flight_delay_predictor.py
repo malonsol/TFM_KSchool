@@ -714,9 +714,9 @@ if __name__=='__main__':
             
             # -----------
 
-            shap.decision_plot(base_value=explainer.expected_value, shap_values=shap_values[:1],
-                               features=X_test, link='logit', feature_display_range=slice(None, -X_test.shape[1]-1, -1),
-                               return_objects=True, show=False, y_demarc_color='#00172b')
+            shap.decision_plot(base_value=explainer.expected_value, shap_values=shap_values[0],
+                              features=X_test.iloc[0,:], link='logit', feature_display_range=slice(None, -X_test.shape[1]-1, -1),
+                              return_objects=True, show=False, y_demarc_color='#00172b')
             fig = plt.gcf()
             ax = plt.gca()
             fig.patch.set_facecolor('#00172b')
