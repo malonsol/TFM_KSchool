@@ -302,6 +302,9 @@ def user_inputs(root):
     carrier = st.selectbox('Carrier', carriers, format_func = carriers_dict.get)
     
 # 2) ORIGIN:
+    with open(root + "dict_mappers/airports_dict.pkl", "rb") as f:
+        airports_dict = pickle.load(f)
+    
     st.subheader('Origin')
     
     # Origin:
@@ -310,11 +313,11 @@ def user_inputs(root):
         with open(root + "dict_mappers/carrierOrigins_dict.pkl", "rb") as f:
             carrierOrigins_dict = pickle.load(f)
             origins = carrierOrigins_dict[carrier]
-        origin = st.selectbox('Origin', origins)
+        origin = st.selectbox('Origin', origins, format_func = airports_dict.get)
     elif originType == 'All airports':
         with open(root + "dict_mappers/origins_sorted_list.pkl", "rb") as f:
             origins = pickle.load(f)
-        origin = st.selectbox('Origin', origins)
+        origin = st.selectbox('Origin', origins, format_func = airports_dict.get)
 
     # Latitude / Longitude - ORIGIN:
     with open(root + "dict_mappers/latitude_dict.pkl", "rb") as f:
@@ -351,11 +354,11 @@ def user_inputs(root):
         with open(root + "dict_mappers/carrierDests_dict.pkl", "rb") as f:
             carrierDests_dict = pickle.load(f)
             dests = carrierDests_dict[carrier]
-        dest = st.selectbox('Dest', dests)
+        dest = st.selectbox('Destination', dests, format_func = airports_dict.get)
     elif destType == 'All airports':
         with open(root + "dict_mappers/dests_sorted_list.pkl", "rb") as f:
             dests = pickle.load(f)
-        dest = st.selectbox('Destination', dests)
+        dest = st.selectbox('Destination', dests, format_func = airports_dict.get)
 
     # Latitude / Longitude - DESTINATION:
     col3, col4, = st.beta_columns(2)
@@ -637,8 +640,8 @@ def st_shap(plot, height=None):
 
 if __name__=='__main__': 
     
-#     root = "/app/tfm_kschool/frontend/" # Used for deployment on Streamlit Sharing platform
-    root = "" # Used for running local tests
+    root = "/app/tfm_kschool/frontend/" # Used for deployment on Streamlit Sharing platform
+#     root = "" # Used for running local tests
     
     # Let the user know the data is loading and load the data:
 #     df, X, y = load_data()
