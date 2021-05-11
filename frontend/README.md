@@ -20,7 +20,7 @@
 
 ## Description
 
-A light web-based application under the name of ***CLEAR SKY*** was both developed and deployed using Streamlit. The main purpose of this service is to ease airlines workload concerning flight planning operations.
+A light web-based application under the name of ***CLEAR SKY*** was both developed and deployed using Streamlit. The main purpose of this service is to ease airlines workload concerning flight planning operations, by providing them with a prediction about the flight punctuality: on-time or delayed. In addition, a local interpretation of the model is also displayed for better outcome understanding. Airlines would eventually transform these insights into actionable data-driven business decisions.
 
 I happily encourage everybody to have a look and play with it freely!
 
