@@ -391,7 +391,7 @@ def user_inputs(root):
     with col5:
         # Date:
         fdate = st.date_input("Flight date", value=datetime.date.today(),
-                              min_value=datetime.date(2019, 1, 1), max_value=datetime.date(2022, 12, 31))
+                              min_value=datetime.date(2019, 1, 1), max_value=datetime.date(2023, 12, 31))
         fmonth = str(fdate.month)
         fweekday = str(fdate.isoweekday())    
     with col6:
